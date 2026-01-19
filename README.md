@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Replateo (Web)
 
 A food donation platform with AI-powered safety analysis.
@@ -48,3 +49,6 @@ The backend requires a `.env` file in the `backend/` directory with the followin
 
 *   `GEMINI_API_KEY`: Google Gemini API Key
 *   `PORT`: 5000
+=======
+# REPLATEO-APP
+>>>>>>> 2bec1bb063ed581b7d60c34b8cd4100938949264
