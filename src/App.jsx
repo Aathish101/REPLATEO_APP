@@ -1,8 +1,19 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 
+// 🔐 ADMIN
+import AdminLayout from "./pages/Admin/AdminLayout";
+import AdminLogin from "./pages/Admin/AdminLogin";
+import AdminDashboard from "./pages/Admin/Dashboard";
+import Analytics from "./pages/Admin/Analytics";
+import Orders from "./pages/Admin/Orders";
+import Receivers from "./pages/Admin/Receivers";
+import Settings from "./pages/Admin/Settings";
+import UserManagement from "./pages/Admin/UserManagement";
+import AdminRoute from "./components/AdminRoute";
+
+// 🌍 USER
 import Navbar from "./components/Navbar";
-
 import Home from "./components/Home";
 import GoodFood from "./components/GoodFood";
 import NonEdible from "./components/NonEdible";
@@ -17,29 +28,24 @@ import AuthModal from "./components/AuthModal";
 import DonationModal from "./components/DonationModal";
 import SaleModal from "./components/SaleModal";
 
-// PRODUCTS
-import Products from "./pages/products/Products";
-import Medications from "./pages/products/Medications";
-import Accessories from "./pages/products/Accessories";
-import ResalableClothes from "./pages/products/ResalableClothes";
-
 export default function App() {
+  const location = useLocation();
+  const isAdminPage = location.pathname.startsWith("/admin");
+
   const [authOpen, setAuthOpen] = useState(false);
   const [donationOpen, setDonationOpen] = useState(false);
   const [saleOpen, setSaleOpen] = useState(false);
+  const [donationType, setDonationType] = useState(null);
 
-  const [donationType, setDonationType] = useState("null");
-/////////////////////////
-const openDonationModal = (type) => {
-  setDonationType(type);
-  setDonationOpen(true);
-};
-/////////////////////////////
   return (
     <div className="w-full min-h-screen overflow-x-hidden">
-      <Navbar openAuthModal={() => setAuthOpen(true)} />
+      {/* ✅ Hide Navbar on Admin Pages */}
+      {!isAdminPage && (
+        <Navbar openAuthModal={() => setAuthOpen(true)} />
+      )}
 
       <Routes>
+        {/* 🌍 PUBLIC ROUTES */}
         <Route path="/" element={<Home />} />
 
         <Route
@@ -82,58 +88,48 @@ const openDonationModal = (type) => {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        <Route path="/products" element={<Products />} />
+        {/* 🔐 ADMIN AUTH */}
+        <Route path="/admin/login" element={<AdminLogin />} />
 
+        {/* 🔐 ADMIN LAYOUT + PAGES */}
         <Route
-          path="/products/medications"
+          path="/admin"
           element={
-            <Medications
-              openDonationModal={() => {
-                setDonationType("medications");
-                setDonationOpen(true);
-              }}
-            />
+            <AdminRoute>
+              <AdminLayout />
+            </AdminRoute>
           }
-        />
+        >
+          <Route index element={<Navigate to="dashboard" replace />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="analytics" element={<Analytics />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="receivers" element={<Receivers />} />
+          <Route path="users" element={<UserManagement />} />
+          <Route path="settings" element={<Settings />} />
+        </Route>
 
-        <Route
-          path="/products/accessories"
-          element={
-            <Accessories
-              openDonationModal={() => {
-                setDonationType("accessories");
-                setDonationOpen(true);
-              }}
-            />
-          }
-        />
-
-        <Route
-          path="/products/resalable-clothes"
-          element={
-            <ResalableClothes
-              openDonationModal={() => {
-                setDonationType("clothes");
-                setDonationOpen(true);
-              }}
-            />
-          }
-        />
+        {/* 🔁 FALLBACK */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
-      <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
+      {/* 🔔 MODALS (USER ONLY) */}
+      {!isAdminPage && (
+        <>
+          <AuthModal open={authOpen} onClose={() => setAuthOpen(false)} />
 
-      <DonationModal
-  open={donationOpen}
-  type={donationType}
-  onClose={() => {
-    setDonationOpen(false);
-    setDonationType(null);
-  }}
-/>
+          <DonationModal
+            open={donationOpen}
+            type={donationType}
+            onClose={() => {
+              setDonationOpen(false);
+              setDonationType(null);
+            }}
+          />
 
-
-      <SaleModal open={saleOpen} onClose={() => setSaleOpen(false)} />
+          <SaleModal open={saleOpen} onClose={() => setSaleOpen(false)} />
+        </>
+      )}
     </div>
   );
 }
