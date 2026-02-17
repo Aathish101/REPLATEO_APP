@@ -11,7 +11,7 @@ import Dashboard from "./components/Dashboard";
 import Directory from "./components/Directory";
 import Contact from "./components/Contact";
 import AuthPage from "./components/AuthPage";
-import ForgotPassword from "./components/ForgotPassword";
+// import ForgotPassword from "./components/ForgotPassword";
 
 import AuthModal from "./components/AuthModal";
 import DonationModal from "./components/DonationModal";
@@ -61,7 +61,7 @@ export default function App() {
           <Route path="/directory" element={<Directory />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/auth" element={<AuthPage />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
+          {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
 
          {/* --- ADMIN ROUTES --- */}
 <Route path="/admin/login" element={<AdminLogin />} />

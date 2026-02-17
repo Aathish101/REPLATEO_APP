@@ -1,0 +1,232 @@
+{
+  "language.english": "ಇಂಗ್ಲಿಷ್",
+  "language.hindi": "ಹಿಂದಿ",
+  "language.tamil": "ತಮಿಳು",
+  "language.telugu": "ತೆಲುಗು",
+  "language.kannada": "ಕನ್ನಡ",
+  "language.malayalam": "ಮಲಯಾಳಂ",
+
+  "nav.home": "ಮುಖಪುಟ",
+  "nav.edible": "ತಿಂದುಬಲ್ಲದು",
+  "nav.nonEdible": "ತಿಂದುಬಾರದದು",
+  "nav.directory": "ಡೈರೆಕ್ಟರಿ",
+  "nav.listings": "ಪಟ್ಟಿಗಳು",
+  "nav.support": "ಸಹಾಯ",
+  "nav.login": "ಲಾಗಿನ್",
+  "nav.logout": "ಲಾಗ್ಔಟ್",
+
+  "home.hero.title": "ಆಹಾರಕ್ಕೆ ಎರಡನೇ ಅವಕಾಶ ನೀಡೋಣ.",
+  "home.hero.subtitle": "ಶೂನ್ಯ ಆಹಾರ ವ್ಯರ್ಥ. ಹಂಚಿಕೊಳ್ಳಿ. ಮರುಬಳಕೆ. ಸ್ಥಿರತೆ.",
+  "home.hero.description": "ಅಧಿಕ ಆಹಾರವನ್ನು ಅವಶ್ಯಕತೆ ಇರುವವರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುವ ನಮ್ಮ ಸ್ಮಾರ್ಟ್ ವೇದಿಕೆಯಲ್ಲಿ ಸೇರಿ. ಒಟ್ಟಿಗೆ ನಾವು ಶೂನ್ಯ ವ್ಯರ್ಥ ಭವಿಷ್ಯ ನಿರ್ಮಿಸಬಹುದು.",
+  "home.hero.btnDonor": "ನನ್ನ ಬಳಿ ತಿನ್ನಲು ಯೋಗ್ಯವಾದ ಆಹಾರ ಇದೆ",
+  "home.hero.btnReceiver": "ನನಗೆ ಮರುಬಳಕೆ ಬೇಕು",
+
+  "home.title": "ಅಧಿಕ ತಿಂದುಬಲ್ಲ ಆಹಾರವನ್ನು ನಿರ್ವಹಿಸಿ",
+  "home.subtitle": "ಅಧಿಕ ಆಹಾರವನ್ನು ಪೌಷ್ಟಿಕತೆ ಮತ್ತು ಸಮುದಾಯ ಬೆಂಬಲವಾಗಿ ಪರಿವರ್ತಿಸಿ. ಒಳ್ಳೆಯ ಆಹಾರ ವ್ಯರ್ಥವಾಗದಂತೆ ನಮ್ಮ ಜಾಲಕ್ಕೆ ಸೇರಿ.",
+  "home.cardDonate.title": "ಆಹಾರ ದಾನ ಮಾಡಿ",
+  "home.cardDonate.text": "ತಾಜಾ, ಉತ್ತಮ ಗುಣಮಟ್ಟದ ಅಧಿಕ ಆಹಾರವನ್ನು ಸ್ಥಳೀಯ ಎನ್‌ಜಿಒಗಳು ಮತ್ತು ಸಮುದಾಯಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ.",
+  "home.cardListings.title": "ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ",
+  "home.cardListings.text": "ಎಲ್ಲಾ ಸಕ್ರಿಯ ದಾನಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಎನ್‌ಜಿಒ ವಿತರಿಸಬಲ್ಲವನ್ನೇ ಕ್ಲೈಮ್ ಮಾಡಿ.",
+  "buttons.donate": "ದಾನ ಪ್ರಾರಂಭಿಸಿ",
+  "buttons.listings": "ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ",
+
+  "home.how.title": "ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ",
+  "home.how.subtitle": "ಸರಳ, ಪಾರದರ್ಶಕ ಮತ್ತು ಪರಿಣಾಮಕಾರಿ. ಕೇವಲ ಮೂರು ಹಂತಗಳು.",
+  "home.how.step1.title": "ನಿಮ್ಮ ಆಹಾರವನ್ನು ಪಟ್ಟಿ ಮಾಡಿ",
+  "home.how.step1.text": "ಅಧಿಕ ತಿಂದುಬಲ್ಲ ಆಹಾರವನ್ನು ಪೋಸ್ಟ್ ಮಾಡಿ.",
+  "home.how.step2.title": "ಎನ್‌ಜಿಒಗಳು ಕಂಡುಹಿಡಿಯುತ್ತವೆ",
+  "home.how.step2.text": "ಹತ್ತಿರದ ಎನ್‌ಜಿಒಗಳು ತಮ್ಮ ಅಗತ್ಯದ ಆಹಾರವನ್ನು ಕ್ಲೈಮ್ ಮಾಡುತ್ತಾರೆ.",
+  "home.how.step3.title": "ಪ್ರಭಾವ ಉಂಟುಮಾಡಿ",
+  "home.how.step3.text": "ಆಹಾರ ಅಗತ್ಯವಿರುವವರವರೆಗೆ ತಲುಪುತ್ತದೆ. ಶೂನ್ಯ ವ್ಯರ್ಥ.",
+
+  "home.impact.title": "ಸಮುದಾಯಗಳಲ್ಲಿ ನಿಜವಾದ ಪ್ರಭಾವ",
+  "home.impact.text": "ಪ್ರತಿ ದಿನ ಲಕ್ಷಾಂತರ ಟನ್ ಆಹಾರ ವ್ಯರ್ಥವಾಗುತ್ತದೆ, ಜನರು ಹಸಿವಿನಿಂದ ಬಳಲುತ್ತಿದ್ದಾರೆ. ಸ್ಥಿರ ಆಹಾರ ಪರಿಸರ ವ್ಯವಸ್ಥೆಯನ್ನು ನಿರ್ಮಿಸುವ ಮೂಲಕ Replate ಈ ಅಂತರವನ್ನು ಭರ್ತಿ ಮಾಡುತ್ತದೆ.",
+  "home.impact.bullet1": "ಆಹಾರ ವ್ಯರ್ಥವನ್ನು ಕಡಿಮೆ ಮಾಡಿ",
+  "home.impact.bullet2": "ಹಸಿವನ್ನು ಎದುರಿಸಿ",
+  "home.impact.bullet3": "ಸಮುದಾಯವನ್ನು ನಿರ್ಮಿಸಿ",
+  "home.impact.stat1.label": "ಲ್ಯಾಂಡ್‌ಫಿಲ್‌ನಿಂದ ಉಳಿಸಿದ ಟನ್‌ಗಳು",
+  "home.impact.stat2.label": "ಈ ವರ್ಷ ಆಹಾರ ಪಡೆದ ಜನರು",
+  "home.impact.stat3.label": "ಮರು ಹಂಚಿಕೆಗೊಂಡ ಆಹಾರದ ಮೌಲ್ಯ",
+
+  "home.stories.title": "ಯಶಸ್ಸಿನ ಕಥೆಗಳು",
+  "home.stories.subtitle": "ನಮ್ಮ ಸಮುದಾಯದಿಂದ ಬಂದ ಬದಲಾವಣೆಯ ನಿಜವಾದ ಕ್ಷಣಗಳು.",
+  "home.stories.card1.tag": "ಸಮುದಾಯ",
+  "home.stories.card1.title": "ಮಕ್ಕಳಿಗೆ ಆಹಾರ",
+  "home.stories.card1.text": "ಸ್ಥಳೀಯ ಮದುವೆಯಲ್ಲಿ ಉಳಿದ ಆಹಾರವನ್ನು ಪೌಷ್ಟಿಕ ಆಹಾರವಾಗಿ ಹಂಚಲಾಯಿತು.",
+  "home.stories.card2.tag": "ಶೂನ್ಯ ವ್ಯರ್ಥ",
+  "home.stories.card2.title": "ತರಹುಳಿಯನ್ನು ಉಳಿಸುವುದು",
+  "home.stories.card2.text": "ಸ್ಥಳೀಯ ರೈತರು ಎನ್‌ಜಿಒಗಳೊಂದಿಗೆ ಜೊತೆಯಾಗಿದು 200 ಕೆಜಿ ತಾಜಾ ತರಕಾರಿಯನ್ನು ಉಳಿಸಿದರು.",
+  "home.stories.card3.tag": "ಪ್ರಭಾವ",
+  "home.stories.card3.title": "ಸ್ಥಳೀಯ ನಾಯಕರನ್ನು ಶಕ್ತಿಶಾಲಿಗಳಾಗಿಸುವುದು",
+  "home.stories.card3.text": "ರೆಸ್ಟೋರೆಂಟ್‌ಗಳು ಮತ್ತು ಆಹಾರ ಭದ್ರತೆ ಕೊರತೆಯಿಂದ ಬಳಲುವವರ ನಡುವೆ ಸೇತುವೆಯಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುವುದು.",
+
+  "home.gallery.title": "ಪ್ರತಿ ಹಂಚಿದ ಊಟವು ಒಂದು ಜೀವವನ್ನು ಬದಲಿಸುತ್ತದೆ",
+  "home.gallery.subtitle": "ಈಗ ಉಳಿಸಲಾಗುತ್ತಿರುವ ತಾಜಾ ಸಂಪನ್ಮೂಲಗಳನ್ನು ನೋಡಿ",
+
+  "home.cta.title": "ಇಂದು ಬದಲಾವಣೆ ಮಾಡಲು ಸಿದ್ಧವೇ?",
+  "home.cta.text": "ಒಳ್ಳೆಯ ಆಹಾರವನ್ನು ಲ್ಯಾಂಡ್‌ಫಿಲ್‌ಗೆ ಹೋಗಲು ಬಿಡಬೇಡಿ. ನಿಮ್ಮ ಅಧಿಕ ಆಹಾರವು ಯಾರೋ ಒಬ್ಬರ ಮುಂದಿನ ಊಟವಾಗಬಹುದು.",
+  "home.cta.button": "ಈಗ ದಾನ ಮಾಡಿ",
+
+  "auth.userTab": "ಬಳಕೆದಾರ",
+  "auth.ngoTab": "ಎನ್‌ಜಿಒ",
+  "auth.loginTab": "ಲಾಗಿನ್",
+  "auth.registerTab": "ರಿಜಿಸ್ಟರ್",
+  "auth.field.name": "ಹೆಸರು",
+  "auth.field.ngoLicense": "ಎನ್‌ಜಿಒ ಪರವಾನಗಿ ID",
+  "auth.field.email": "ಇಮೇಲ್",
+  "auth.field.password": "ಪಾಸ್‌ವರ್ಡ್",
+  "auth.submit": "ಸಲ್ಲಿಸಿ",
+  "auth.continueGoogle": "Google ಮೂಲಕ ಮುಂದುವರಿಸಿ",
+  "auth.loading": "ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ...",
+
+  "auth.toast.licenceRequired": "ಎನ್‌ಜಿಒಗಳಿಗೆ ಪರವಾನಗಿ ID ಅಗತ್ಯವಿದೆ",
+  "auth.toast.loginSuccess": "ಲಾಗಿನ್ ಯಶಸ್ವಿಯಾಯಿತು",
+  "auth.toast.registerSuccess": "ಖಾತೆ ರಚಿಸಲಾಗಿದೆ",
+  "auth.toast.error": "ಪ್ರಮಾಣೀಕರಣ ದೋಷ",
+
+  "footer.tagline": "ಆಹಾರಕ್ಕೆ ಎರಡನೇ ಅವಕಾಶ. ಸಂಪರ್ಕಿಸಿ, ಹಂಚಿಕೊಳ್ಳಿ ಮತ್ತು ಜೀವಗಳನ್ನು ಉಳಿಸಿ.",
+  "footer.madeWith": "ಆಹಾರ ವ್ಯರ್ಥವನ್ನು ಕೊನೆಗಾಣಿಸಲು ❤️ ಜೊತೆಗೆ ತಯಾರಿಸಲಾಗಿದೆ",
+  "footer.quickLinks.title": "ತ್ವರಿತ ಲಿಂಕ್‌ಗಳು",
+  "footer.donors.title": "ದಾನಿಗಳಿಗಾಗಿ",
+  "footer.contact.title": "ಸಂಪರ್ಕ",
+  "footer.link.home": "ಮುಖಪುಟ",
+  "footer.link.edible": "ತಿಂದುಬಲ್ಲದು",
+  "footer.link.nonEdible": "ತಿಂದುಬಾರದದು",
+  "footer.link.directory": "ಡೈರೆಕ್ಟರಿ",
+  "footer.link.support": "ಸಹಾಯ",
+  "footer.link.postFood": "ಆಹಾರವನ್ನು ಪೋಸ್ಟ್ ಮಾಡಿ",
+  "footer.link.myDonations": "ನನ್ನ ದಾನಗಳು",
+  "footer.link.faqs": "ಪದೇಪದೇ ಕೇಳುವ ಪ್ರಶ್ನೆಗಳು",
+  "footer.link.guidelines": "ಮಾರ್ಗಸೂಚಿಗಳು",
+  "footer.contact.email": "support@replate.com",
+  "footer.contact.phone": "+1-800-REPLATE",
+  "footer.contact.cities": "50+ ನಗರಗಳಲ್ಲಿ",
+  "footer.contact.social": "Replateo",
+  "footer.copyright": "© 2026 REPLATE. ಎಲ್ಲಾ ಹಕ್ಕುಗಳು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ.",
+
+  "dashboard.title": "ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+  "dashboard.subtitle": "ದಾನಗಳು, ಪಿಕಪ್‌ಗಳು ಮತ್ತು ಪ್ರಭಾವದ ಸಂಕ್ಷಿಪ್ತ ದೃಶ್ಯ",
+  "contact.title": "ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ",
+  "contact.subtitle": "ಎನ್‌ಜಿಒಗಳು, ದಾನಿಗಳು ಮತ್ತು ಸ್ವಯಂಸೇವಕರಿಗೆ ಸಹಾಯ ಮಾಡಲು ನಾವು ಇಲ್ಲಿ ಇದ್ದೇವೆ.",
+    "edible.title": "ತಿನ್ನಬಹುದಾದ ಹೆಚ್ಚುವರಿ ಆಹಾರವನ್ನು ನಿರ್ವಹಿಸಿ",
+  "edible.subtitle": "ಹೆಚ್ಚುವರಿ ಆಹಾರವನ್ನು ಪೌಷ್ಟಿಕಾಂಶ ಮತ್ತು ಸಮುದಾಯ ಬೆಂಬಲವಾಗಿ ಪರಿವರ್ತಿಸಿ. ಒಂದು ಒಳ್ಳೆಯ ಊಟವೂ ವ್ಯರ್ಥವಾಗದಂತೆ ನಮ್ಮ ಜಾಲಕ್ಕೆ ಸೇರಿ.",
+
+  "edible.cardDonate.title": "ಆಹಾರ ದೇಣಿಗೆ ನೀಡಿ",
+  "edible.cardDonate.text": "ತಾಜಾ, ಉತ್ತಮ ಗುಣಮಟ್ಟದ ಹೆಚ್ಚುವರಿ ಆಹಾರವನ್ನು ಸ್ಥಳೀಯ ಎನ್‌ಜಿಓಗಳೊಂದಿಗೆ ಹಂಚಿಕೊಳ್ಳಿ. ಕುಟುಂಬಗಳಿಗೆ ಊಟ ನೀಡಿ ಮತ್ತು ಸಮುದಾಯದಲ್ಲಿ ಹಸಿವನ್ನು ಕಡಿಮೆ ಮಾಡಲು ಸಹಾಯ ಮಾಡಿ.",
+  "edible.cardDonate.button": "ದೇಣಿಗೆ ಪ್ರಾರಂಭಿಸಿ",
+
+  "edible.cardListings.title": "ಪಟ್ಟಿಗಳನ್ನು ನೋಡಿ",
+  "edible.cardListings.text": "ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿನ ಎಲ್ಲಾ ಸಕ್ರಿಯ ಆಹಾರ ದೇಣಿಗೆಗಳನ್ನೂ ಬ್ರೌಸ್ ಮಾಡಿ. ಅಗತ್ಯವಿರುವವರಿಗೆ ವಿತರಿಸಲು ಲಭ್ಯವಿರುವ ಊಟಗಳನ್ನು ಕಲೆಹಾಕಿ.",
+  "edible.cardListings.button": "ಪಟ್ಟಿಗಳನ್ನು ಅನ್ವೇಷಿಸಿ",
+
+  "edible.why.title": "ತಿನ್ನಬಹುದಾದ ಹೆಚ್ಚುವರಿ ಆಹಾರವನ್ನು ಯಾಕೆ ದೇಣಿಗೆ ನೀಡಬೇಕು?",
+
+  "edible.why.safety.title": "ಭದ್ರತೆ ಮೊದಲ ಆದ್ಯತೆ",
+  "edible.why.safety.text": "ಕಠಿಣ ಗುಣಮಟ್ಟದ ಮಾರ್ಗಸೂಚಿಗಳು ಮತ್ತು AI ಪರಿಶೀಲನೆಗಳು ಹಂಚಿಕೊಳ್ಳುವ ಎಲ್ಲಾ ಆಹಾರವೂ ಸುರಕ್ಷಿತವಾಗಿಯೂ ತಾಜವಾಗಿಯೂ ಇರುವುದು ಎಂದು ಖಚಿತಪಡಿಸುತ್ತವೆ.",
+
+  "edible.why.impact.title": "ತಕ್ಷಣದ ಪರಿಣಾಮ",
+  "edible.why.impact.text": "ನಮ್ಮ ಲಾಜಿಸ್ಟಿಕ್ಸ್ ಜಾಲವು ದಾತರನ್ನು ಸಮೀಪದ ಎನ್‌ಜಿಓಗಳಿಗೆ ನೇರವಾಗಿ ಸಂಪರ್ಕಿಸಿ, ವೇಗವಾದ ಅದೇ ದಿನ ಪಿಕಪ್ ಅನ್ನು ಸಾಧ್ಯಮಾಡುತ್ತದೆ.",
+
+  "edible.why.empower.title": "ಜೀವಗಳನ್ನು ಶಕ್ತಿಶಾಲಿಗಳನ್ನು ಮಾಡಿ",
+  "edible.why.empower.text": "ಪ್ರತಿಯೊಂದು ದೇಣಿಗೆಯೂ ಹಸಿವಿನ ಅಂತರವನ್ನು ಕಡಿಮೆ ಮಾಡಿ, ದುರ್ಬಲ ಕುಟುಂಬಗಳಿಗೆ ಅಗತ್ಯ ಪೌಷ್ಟಿಕಾಂಶವನ್ನು ಒದಗಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ.",
+
+   "nonEdible.hero.titleLine1": "ಅಹಾರಯೋಗ್ಯವಲ್ಲದ ತ್ಯಾಜ್ಯ",
+  "nonEdible.hero.titleLine2": "ನಿರ್ವಹಣೆ",
+  "nonEdible.hero.subtitle": "ತಪ್ಪಿಸಲಾಗದ ಆಹಾರ ತ್ಯಾಜ್ಯವನ್ನು ಶಕ್ತಿ, ಕಾಂಪೋಸ್ಟ್ ಮತ್ತು ಮಣ್ಣಿನ ಆರೋಗ್ಯಕ್ಕೆ ಪರಿವರ್ತಿಸಿ. ಮರುಬಳಕೆ ಕೇಂದ್ರಗಳು ಮತ್ತು ಸದಾಕಾಲಿಕ ಕೃಷಿ ಭೂಮಿಗಳ ನಮ್ಮ ಜಾಲಕ್ಕೆ ಸೇರಿ.",
+
+  "nonEdible.cards.recycling.title": "ರಿಸೈಕ್ಲಿಂಗ್ ಮತ್ತು ಕಾಂಪೋಸ್ಟಿಂಗ್",
+  "nonEdible.cards.recycling.text": "ಆಹಾರದ ಅವಶೇಷಗಳನ್ನು ಉನ್ನತ ಗುಣಮಟ್ಟದ ಸಾವಯವ ಕಾಂಪೋಸ್ಟ್ ಅಥವಾ ಸ್ವಚ್ಛ ಜೈವಿಕ ಇಂಧನವಾಗಿ ರೂಪಾಂತರಿಸಿ. ತ್ಯಾಜ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಸಮೀಪದ ಪರವಾನಗಿ ಪಡೆದ ಘಟಕಗಳನ್ನು ಹುಡುಕಿ.",
+  "nonEdible.cards.recycling.button": "ಭಾಗಿದಾರರನ್ನು ಹುಡುಕಿ",
+
+  "nonEdible.cards.agriculture.title": "ಕೃಷಿ ಬಳಕೆ",
+  "nonEdible.cards.agriculture.text": "ಪೋಷಕಾಂಶಗಳಿಂದ ಸಮೃದ್ಧವಾದ ಉಪ ಉತ್ಪನ್ನಗಳನ್ನು ಸ್ಥಳೀಯ ರೈತರಿಗೆ ದಾನ ಮಾಡಿ, ಮಣ್ಣು ಸಮೃದ್ಧಗೊಳ್ಳಲು ಸಹಾಯ ಮಾಡಿ. ಭೂಮಿಯಿಂದಲೇ ಮತ್ತೆ ಆರಂಭವಾಗುವ ವಲಯ ಆರ್ಥಿಕತೆಯನ್ನು ನಿರ್ಮಿಸಲು ನೆರವಾಗಿರಿ.",
+  "nonEdible.cards.agriculture.button": "ರೈತರಿಗೆ ದಾನ ಮಾಡಿ",
+
+  "nonEdible.info.title": "ಅಹಾರಯೋಗ್ಯವಲ್ಲದ ಆಹಾರವನ್ನು ಏಕೆ ರಿಸೈಕಲ್ ಮಾಡಬೇಕು?",
+  "nonEdible.info.methane.title": "ಮೀಥೇನ್ ಕುಗ್ಗಿಸಿ",
+  "nonEdible.info.methane.text": "ಲ್ಯಾಂಡ್‌ಫಿಲ್‌ನಲ್ಲಿ ಕೊಳೆಯುವುದನ್ನು ತಡೆಯುವುದರಿಂದ ಹಾನಿಕಾರಕ ಹಸಿರುಮನೆ ಅನಿಲಗಳ ಉತ್ಸರ್ಗ ಕಡಿಮೆಯಾಗುತ್ತದೆ.",
+  "nonEdible.info.soil.title": "ಮಣ್ಣು ಪುನರುಜ್ಜೀವನಗೊಳಿಸಿ",
+  "nonEdible.info.soil.text": "ಸಾವಯವ ತ್ಯಾಜ್ಯವು ಶ್ರಮಿತ ಕೃಷಿ ಭೂಮಿಗೆ ಅಗತ್ಯವಾದ ಪೋಷಕಾಂಶಗಳನ್ನು ಮರು ನೀಡುತ್ತದೆ.",
+  "nonEdible.info.energy.title": "ಶಕ್ತಿಯನ್ನು ನಿರ್ಮಿಸಿ",
+  "nonEdible.info.energy.text": "ಅನವಾಯು ಜೀರ್ಣಕ್ರಿಯೆಯ ಮೂಲಕ ತ್ಯಾಜ್ಯವು ನವೀಕರಿಸಬಹುದಾದ ಬಯೋಗ್ಯಾಸ್ ಆಗಿ ಪರಿವರ್ತಿತವಾಗುತ್ತದೆ.",
+  
+  "donation.nonEdible.title": "ತಿನ್ನಲು ಅಯೋಗ್ಯ ವಸ್ತುಗಳನ್ನು ದಾನ ಮಾಡಿ",
+  "donation.nonEdible.itemName.placeholder": "ವಸ್ತುವಿನ ಹೆಸರು",
+"donation.nonEdible.item.placeholder": "ವಸ್ತುವಿನ ಹೆಸರು",
+"donation.nonEdible.image.placeholder": "ಚಿತ್ರ URL (ಐಚ್ಛಿಕ)",
+"donation.nonEdible.notes.placeholder": "ಯಾವುದೇ ವಿಶೇಷ ಹ್ಯಾಂಡ್ಲಿಂಗ್ ಅಥವಾ ಸೂಚನೆಗಳಿವೆಯೇ?",
+
+  "donation.medications.title": "ಔಷಧಿಗಳನ್ನು ದಾನ ಮಾಡಿ",
+  "donation.medications.itemName.placeholder": "ಔಷಧಿಯ ಹೆಸರು",
+
+  "donation.accessories.title": "ಸಹಾಯಕ ವಸ್ತುಗಳನ್ನು ದಾನ ಮಾಡಿ",
+  "donation.accessories.itemName.placeholder": "ಸಹಾಯಕ ವಸ್ತುವಿನ ಹೆಸರು",
+
+  "donation.clothes.title": "ಬಟ್ಟೆಗಳನ್ನು ದಾನ ಮಾಡಿ",
+  "donation.clothes.itemName.placeholder": "ಬಟ್ಟೆಯ ಹೆಸರು",
+
+  "donation.imageUrl.optional": "ಚಿತ್ರ URL (ಐಚ್ಛಿಕ)",
+
+ 
+  "directory.title": "ರಿಸೈಕ್ಲಿಂಗ್ ಮತ್ತು ಎನ್‌ಜಿಒ ಡೈರೆಕ್ಟರಿ",
+  "directory.subtitle": "ಆಹಾರ ತ್ಯಾಜ್ಯವನ್ನು ಜವಾಬ್ದಾರಿಯುತವಾಗಿ ನಿರ್ವಹಿಸುವ ನಂಬಲರ್ಹ ರಿಸೈಕ್ಲಿಂಗ್ ಪಾಲುದಾರರು, ಎನ್‌ಜಿಒಗಳು ಮತ್ತು ಕೃಷಿ ಸಂಸ್ಥೆಗಳೊಂದಿಗೆ ಸಂಪರ್ಕ ಕಲ್ಪಿಸುತ್ತದೆ.",
+
+  "directory.card1.title": "ಸಮುದಾಯ ಆಹಾರ ಬ್ಯಾಂಕ್",
+  "directory.card1.text": "ತಿನ್ನಬಹುದಾದ ಹೆಚ್ಚಿನ ಆಹಾರವನ್ನು ಸ್ವೀಕರಿಸಿ ಆಶ್ರಯಗಳು ಮತ್ತು ಮಕ್ಕಳ ಆರೈಕೆ ಕೇಂದ್ರಗಳಿಗೆ ಹಂಚುತ್ತದೆ.",
+  "directory.card1.button": "ಸಂಪರ್ಕಿಸಿ",
+
+  "directory.card2.title": "ಗ್ರೀನ್ಸೈಕಲ್ ಕಂಪೋಸ್ಟರ್ಸ್",
+  "directory.card2.text": "ತಿನ್ನಲಾಗದ ಆಹಾರ ತ್ಯಾಜ್ಯವನ್ನು ಕಂಪೋಸ್ಟ್ ಮತ್ತು ಜೈವಿಕ ರಸಗೊಬ್ಬರವಾಗಿ ಪರಿವರ್ತಿಸುತ್ತದೆ.",
+  "directory.card2.button": "ಪಿಕ್‌ಅಪ್ ವಿನಂತಿ",
+
+  "directory.card3.title": "ಅಗ್ರೋಫಾರ್ಮ್ ಕಲೆಕ್ಟಿವ್",
+  "directory.card3.text": "ಕೃಷಿಕರೊಂದಿಗೆ ಸೇರಿ ಆಹಾರ ಉಪ ಉತ್ಪನ್ನಗಳನ್ನು ಮಣ್ಣಿನ ಪೋಷಕಾಂಶಗಳನ್ನು ಹೆಚ್ಚಿಸುವ ವಸ್ತುಗಳಾಗಿ ಮರುಬಳಕೆ ಮಾಡುತ್ತದೆ.",
+  "directory.card3.button": "ವಿನಂತಿ ಕಳುಹಿಸಿ",
+
+  "listings.title": "ಸಾರ್ವಜನಿಕ ಪಟ್ಟಿಗಳು",
+  "listings.subtitle": "ಬಳಕೆದಾರರು ಹಂಚಿದ ಲಭ್ಯವಿರುವ ಆಹಾರ ಮತ್ತು ವಸ್ತುಗಳು",
+  "listings.filter.type": "ಎಲ್ಲಾ ಪ್ರಕಾರಗಳು",
+  "listings.filter.category": "ಎಲ್ಲಾ ವರ್ಗಗಳು",
+  "listings.empty": "ಯಾವುದೇ ಪಟ್ಟಿಗಳು ಕಂಡುಬಂದಿಲ್ಲ",
+
+  "contact.title": "ಸಂಪರ್ಕ & ಬೆಂಬಲ",
+  "contact.subtitle": "ನಿಮಗೆ ಪ್ರಶ್ನೆಗಳಿವೆಯೆ, ಸಹಾಯ ಬೇಕೆ ಅಥವಾ ನಮ್ಮೊಂದಿಗೆ ಸಹಭಾಗಿತ್ವ ಬೇಕೆ? ನಾವು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿ ಇದ್ದೇವೆ.",
+  "contact.fullName": "ಪೂರ್ಣ ಹೆಸರು",
+  "contact.fullName.placeholder": "ನಿಮ್ಮ ಹೆಸರನ್ನು ನಮೂದಿಸಿ",
+  "contact.email": "ಇಮೇಲ್ ವಿಳಾಸ",
+  "contact.email.placeholder": "ನಿಮ್ಮ ಇಮೇಲ್ ನಮೂದಿಸಿ",
+  "contact.message": "ಸಂದೇಶ",
+  "contact.message.placeholder": "ನಾವು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?",
+  "contact.send": "ಸಂದೇಶ ಕಳುಹಿಸಿ",
+
+ "donation.title": "ಆಹಾರ ದಾನ",
+
+  "donation.foodTitle.label": "ಆಹಾರದ ಹೆಸರು",
+  "donation.foodTitle.placeholder": "ಆಹಾರದ ಹೆಸರನ್ನು ನಮೂದಿಸಿ",
+
+  "donation.quantity.label": "ಪ್ರಮಾಣ",
+  "donation.quantity.placeholder": "ಉದಾ: 10 ತಟ್ಟೆ, 5 ಕೆಜಿ, 20 ಪ್ಯಾಕೆಟ್",
+
+  "donation.address.label": "ಪಿಕಪ್ ವಿಳಾಸ",
+  "donation.address.placeholder": "ಪೂರ್ಣ ಪಿಕಪ್ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ",
+
+  "donation.image.label": "ಆಹಾರದ ಚಿತ್ರ",
+  "donation.image.upload": "ಚಿತ್ರವನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",
+  "donation.image.capture": "ಫೋಟೋ ತೆಗೆದುಕೊಳ್ಳಿ",
+
+  "donation.prepTime.label": "ಹಾಕಿದ (ಸಿದ್ಧವಾದ) ಸಮಯ",
+  "donation.prepTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.packageTime.label": "ಪ್ಯಾಕ್ ಮಾಡಿದ ಸಮಯ",
+  "donation.packageTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.notes.label": "ಹೆಚ್ಚುವರಿ ಟಿಪ್ಪಣಿಗಳು",
+  "donation.notes.placeholder": "ಯಾವುದೇ ವಿಶೇಷ ಸೂಚನೆಗಳು ಅಥವಾ ಜಾಗರೂಕತೆಗಳಿದ್ದರೆ ಇಲ್ಲಿ ಬರೆಯಿರಿ",
+
+  "donation.submit": "ದಾನವನ್ನು ಸಲ್ಲಿಸಿ"
+
+
+
+
+
+}

@@ -1,0 +1,233 @@
+{
+  "language.english": "English",
+  "language.hindi": "Hindi",
+  "language.tamil": "Tamil",
+  "language.telugu": "Telugu",
+  "language.kannada": "Kannada",
+  "language.malayalam": "Malayalam",
+
+  "nav.home": "Home",
+  "nav.edible": "Edible",
+  "nav.nonEdible": "Non-Edible",
+  "nav.directory": "Directory",
+  "nav.listings": "Listings",
+  "nav.support": "Support",
+  "nav.login": "Login",
+  "nav.logout": "Logout",
+
+  "home.hero.title": "Giving Food A Second Chance.",
+  "home.hero.subtitle": "Zero Food Waste. Share. Recycle. Sustain.",
+  "home.hero.description": "Join our smart platform connecting surplus resources with those who need them most. Together, we can build a zero-waste future.",
+  "home.hero.btnDonor": "I Have Edible Food",
+  "home.hero.btnReceiver": "I Need Recycling",
+
+  "home.title": "Manage Edible Surplus Food",
+  "home.subtitle": "Turning surplus food into nutrition and community support. Join our network to ensure no good meal goes to waste.",
+  "home.cardDonate.title": "Donate Food",
+  "home.cardDonate.text": "Share fresh, high-quality surplus food with local NGOs and communities.",
+  "home.cardListings.title": "View Listings",
+  "home.cardListings.text": "Browse all active food donations and claim what your NGO can distribute.",
+  "buttons.donate": "Start Donation",
+  "buttons.listings": "View Listings",
+
+  "home.how.title": "How It Works",
+  "home.how.subtitle": "Simple, transparent, and impactful. Just three steps.",
+  "home.how.step1.title": "List Your Food",
+  "home.how.step1.text": "Post edible surplus food items.",
+  "home.how.step2.title": "NGOs Discover",
+  "home.how.step2.text": "Nearby NGOs claim what they need.",
+  "home.how.step3.title": "Make Impact",
+  "home.how.step3.text": "Food reaches those in need. Zero waste.",
+
+  "home.impact.title": "Making Real Impact in Communities",
+  "home.impact.text": "Every day, millions of tons of food go to waste while people go hungry. Replate bridges this gap by creating a sustainable food ecosystem.",
+  "home.impact.bullet1": "Reduce Food Waste",
+  "home.impact.bullet2": "Combat Hunger",
+  "home.impact.bullet3": "Build Community",
+  "home.impact.stat1.label": "TONNES SAVED FROM LANDFILL",
+  "home.impact.stat2.label": "PEOPLE FED THIS YEAR",
+  "home.impact.stat3.label": "VALUE OF FOOD REDISTRIBUTED",
+
+  "home.stories.title": "Success Stories",
+  "home.stories.subtitle": "Real moments of change from our community.",
+  "home.stories.card1.tag": "COMMUNITY",
+  "home.stories.card1.title": "Feeding Children",
+  "home.stories.card1.text": "Surplus from a local wedding was redistributed to provide nutritious meals.",
+  "home.stories.card2.tag": "ZERO WASTE",
+  "home.stories.card2.title": "Redirecting Fresh Harvest",
+  "home.stories.card2.text": "Local farmers connected with NGOs to save 200kg of fresh vegetables.",
+  "home.stories.card3.tag": "IMPACT",
+  "home.stories.card3.title": "Empowering Local Heroes",
+  "home.stories.card3.text": "Bridging the gap between restaurants and those struggling with food insecurity.",
+
+  "home.gallery.title": "Every Meal Shared Is a Life Changed",
+  "home.gallery.subtitle": "See the fresh resources being saved right now",
+
+  "home.cta.title": "Ready to make a difference today?",
+  "home.cta.text": "Don't let good food go to landfill. Your surplus can become someone's next meal.",
+  "home.cta.button": "Donate Now",
+
+  "auth.userTab": "USER",
+  "auth.ngoTab": "NGO",
+  "auth.loginTab": "Login",
+  "auth.registerTab": "Register",
+  "auth.field.name": "Name",
+  "auth.field.ngoLicense": "NGO Licence ID",
+  "auth.field.email": "Email",
+  "auth.field.password": "Password",
+  "auth.submit": "Submit",
+  "auth.continueGoogle": "Continue with Google",
+  "auth.loading": "Please wait...",
+
+  "auth.toast.licenceRequired": "Licence ID is required for NGOs",
+  "auth.toast.loginSuccess": "Login successful",
+  "auth.toast.registerSuccess": "Account created",
+  "auth.toast.error": "Authentication error",
+
+  "footer.tagline": "Giving food a second chance. Connect, share, and save lives.",
+  "footer.madeWith": "Made with ❤️ to end food waste",
+  "footer.quickLinks.title": "Quick Links",
+  "footer.donors.title": "For Donors",
+  "footer.contact.title": "Contact",
+  "footer.link.home": "Home",
+  "footer.link.edible": "Edible",
+  "footer.link.nonEdible": "Non-Edible",
+  "footer.link.directory": "Directory",
+  "footer.link.support": "Support",
+  "footer.link.postFood": "Post Food",
+  "footer.link.myDonations": "My Donations",
+  "footer.link.faqs": "FAQs",
+  "footer.link.guidelines": "Guidelines",
+  "footer.contact.email": "support@replate.com",
+  "footer.contact.phone": "+1-800-REPLATE",
+  "footer.contact.cities": "Across 50+ Cities",
+  "footer.contact.social": "Replateo",
+  "footer.copyright": "© 2026 REPLATE. All rights reserved.",
+
+  "dashboard.title": "Dashboard",
+  "dashboard.subtitle": "Overview of donations, pickups and impact",
+  "contact.title": "Contact Us",
+  "contact.subtitle": "We’re here to help NGOs, donors and volunteers.",
+  "edible.title": "Manage Edible Surplus Food",
+  "edible.subtitle": "Turning surplus food into nutrition and community support. Join our network to ensure no good meal goes to waste.",
+
+  "edible.cardDonate.title": "Donate Food",
+  "edible.cardDonate.text": "Share fresh, high-quality surplus food with local NGOs. Help feed families and reduce community hunger today.",
+  "edible.cardDonate.button": "Start Donation",
+
+  "edible.cardListings.title": "View Listings",
+  "edible.cardListings.text": "Browse all active food donations in your area. Claim available meals for distribution to those in need.",
+  "edible.cardListings.button": "Explore Listings",
+
+  "edible.why.title": "Why Donate Edible Surplus?",
+
+  "edible.why.safety.title": "Safety First",
+  "edible.why.safety.text": "Strict quality guidelines and AI checks ensure all shared food is safe and fresh for consumption.",
+
+  "edible.why.impact.title": "Immediate Impact",
+  "edible.why.impact.text": "Our logistics network connects donors directly to nearby NGOs for fast, same-day pickup.",
+
+  "edible.why.empower.title": "Empower Lives",
+  "edible.why.empower.text": "Every donation helps bridge the hunger gap, providing essential nutrition to vulnerable families.",
+
+
+  "nonEdible.hero.titleLine1": "Non-Edible Waste",
+  "nonEdible.hero.titleLine2": "Management",
+  "nonEdible.hero.subtitle": "Turning unavoidable food waste into energy, compost, and soil health. Join our network of recycling centers and sustainable farms.",
+
+  "nonEdible.cards.recycling.title": "Recycling & Composting",
+  "nonEdible.cards.recycling.text": "Convert food scraps into premium organic compost or clean bio-energy. Find licensed facilities nearby to handle waste.",
+  "nonEdible.cards.recycling.button": "Find Partners",
+
+  "nonEdible.cards.agriculture.title": "Agricultural Use",
+  "nonEdible.cards.agriculture.text": "Donate nutrient-rich byproducts to local farmers for soil enrichment. Help build a circular economy that starts back in the earth.",
+  "nonEdible.cards.agriculture.button": "Donate to Farms",
+
+  "nonEdible.info.title": "Why Recycle Non-Edible Food?",
+  "nonEdible.info.methane.title": "Reduce Methane",
+  "nonEdible.info.methane.text": "Preventing landfill rot reduces harmful greenhouse gas emissions.",
+  "nonEdible.info.soil.title": "Restore Soil",
+  "nonEdible.info.soil.text": "Organic waste returns vital nutrients to exhausted farming soil.",
+  "nonEdible.info.energy.title": "Create Energy",
+  "nonEdible.info.energy.text": "Anaerobic digestion turns waste into renewable biogas.",
+  
+  "donation.nonEdible.title": "Donate Non-Edible Items",
+  "donation.nonEdible.itemName.placeholder": "Item Name",
+  "donation.nonEdible.image.placeholder": "Image URL (optional)",
+  "donation.nonEdible.notes.placeholder": "Any special handling or instructions?",
+
+  "donation.medications.title": "Donate Medications",
+  "donation.medications.itemName.placeholder": "Medicine Name",
+
+  "donation.accessories.title": "Donate Accessories",
+  "donation.accessories.itemName.placeholder": "Accessory Name",
+
+  "donation.clothes.title": "Donate Clothes",
+  "donation.clothes.itemName.placeholder": "Clothing Item",
+
+  "donation.imageUrl.optional": "Image URL (optional)",
+
+
+  "directory.title": "Recycling & NGO Directory",
+  "directory.subtitle": "Connect with trusted recycling partners, NGOs, and agricultural organizations who responsibly manage food waste.",
+
+  "directory.card1.title": "Community Food Bank",
+  "directory.card1.text": "Accepts edible surplus food and distributes to shelters & child-care centers.",
+  "directory.card1.button": "Contact",
+
+  "directory.card2.title": "GreenCycle Composters",
+  "directory.card2.text": "Transforms non-edible food waste into compost and bio-organic fertilizer.",
+  "directory.card2.button": "Request Pickup",
+
+  "directory.card3.title": "AgroFarm Collective",
+  "directory.card3.text": "Works with farmers to recycle food byproducts into soil boosters.",
+  "directory.card3.button": "Send Request",
+
+  "listings.title": "Public Listings",
+  "listings.subtitle": "Available food & items shared by users",
+  "listings.filter.type": "All Types",
+  "listings.filter.category": "All Categories",
+  "listings.empty": "No listings found",
+
+  "contact.title": "Contact & Support",
+  "contact.subtitle": "Have questions, need help, or want to partner with us? We're here to support you.",
+  "contact.fullName": "Full Name",
+  "contact.fullName.placeholder": "Enter your name",
+  "contact.email": "Email Address",
+  "contact.email.placeholder": "Enter your email",
+  "contact.message": "Message",
+  "contact.message.placeholder": "How can we assist you?",
+  "contact.send": "Send Message",
+
+ "donation.title": "Donate Food",
+
+  "donation.foodTitle.label": "Food Title",
+  "donation.foodTitle.placeholder": "Enter food name",
+
+  "donation.quantity.label": "Quantity",
+  "donation.quantity.placeholder": "Eg. 10 plates, 5 kg, 20 packs",
+
+  "donation.address.label": "Pickup Address",
+  "donation.address.placeholder": "Enter complete pickup address",
+
+  "donation.image.label": "Food Image",
+  "donation.image.upload": "Upload Image",
+  "donation.image.capture": "Take Photo",
+
+  "donation.prepTime.label": "Preparation Time",
+  "donation.prepTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.packageTime.label": "Package Time",
+  "donation.packageTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.notes.label": "Additional notes",
+  "donation.notes.placeholder": "Any special handling or instructions?",
+
+  "donation.submit": "Submit Donation",
+   "directory.toast.contact": "Contact request sent!",
+  "directory.toast.pickup": "Pickup request created!",
+  "directory.toast.farm": "Farm request submitted!"
+
+  
+
+}

@@ -103,3 +103,42 @@ body {
 .animate-fadeIn {
   animation: fadeIn 200ms ease-out;
 }
+/* ================================
+   GLOBAL RESPONSIVE PAGE PADDING
+   Works for mobile / tablet / laptop / desktop
+================================ */
+
+/* Base padding (mobile first) */
+.app-container {
+  padding: 12px;
+}
+
+/* Small tablets */
+@media (min-width: 640px) {
+  .app-container {
+    padding: 16px;
+  }
+}
+
+/* Tablets / small laptops */
+@media (min-width: 768px) {
+  .app-container {
+    padding: 24px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) {
+  .app-container {
+    padding: 32px;
+  }
+}
+
+/* Large desktops */
+@media (min-width: 1280px) {
+  .app-container {
+    padding: 5px;
+    max-width: 1280px;
+    margin: 0 auto; /* center content */
+  }
+}

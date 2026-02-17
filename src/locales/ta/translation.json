@@ -1,0 +1,235 @@
+{
+  "language.english": "ஆங்கிலம்",
+  "language.hindi": "ஹிந்தி",
+  "language.tamil": "தமிழ்",
+  "language.telugu": "தெலுங்கு",
+  "language.kannada": "கன்னடம்",
+  "language.malayalam": "மலையாளம்",
+
+  "nav.home": "முகப்பு",
+  "nav.edible": "உண்ணக்கூடியது",
+  "nav.nonEdible": "உண்ணக்கூடாதது",
+  "nav.directory": "அடைவுப் பட்டியல்",
+  "nav.listings": "பட்டியல்",
+  "nav.support": "உதவி",
+  "nav.login": "லாகின்",
+  "nav.logout": "லாக்அவுட்",
+
+  "home.hero.title": "உணவுக்கு இரண்டாம் வாய்ப்பு.",
+  "home.hero.subtitle": "பூஜ்ய உணவு வீண். பகிர். மறுசுழற்சி செய். நிலைத்தன்மை.",
+  "home.hero.description": "அதிகமாக உள்ள வளங்களை அவசியம் உள்ளவர்களுடன் இணைக்கும் எங்கள் ஸ்மார்ட் தளத்தில் சேருங்கள். ஒன்றாக இணைந்து பூஜ்ய-வீண் எதிர்காலத்தை உருவாக்கலாம்.",
+  "home.hero.btnDonor": "என்னிடம் உண்ணக்கூடிய உணவு உள்ளது",
+  "home.hero.btnReceiver": "எனக்கு மறுசுழற்சி தேவை",
+
+  "home.title": "அதிகமான உண்ணக்கூடிய உணவை நிர்வகிக்கவும்",
+  "home.subtitle": "அதிகமான உணவை ஊட்டச்சத்து மற்றும் சமூக ஆதரவாக மாற்றுங்கள். நல்ல உணவு வீணாகாமல் இருக்க எங்கள் வலையமைப்பில் சேருங்கள்.",
+  "home.cardDonate.title": "உணவு தானம் செய்யுங்கள்",
+  "home.cardDonate.text": "உள்ளூர் என்.ஜி.ஓ மற்றும் சமூகங்களுடன் புதிய, தரமான அதிகமான உணவை பகிருங்கள்.",
+  "home.cardListings.title": "பட்டியலைப் பார்க்கவும்",
+  "home.cardListings.text": "அனைத்து செயலில் உள்ள தானங்களையும் பார்க்கவும், உங்கள் என்.ஜி.ஓ வழங்க முடிவதைக் கிளைம் செய்யவும்.",
+  "buttons.donate": "தானம் தொடங்கவும்",
+  "buttons.listings": "பட்டியலைப் பார்க்கவும்",
+
+  "home.how.title": "இது எப்படி வேலை செய்கிறது",
+  "home.how.subtitle": "எளிமையானது, வெளிப்படையானது, தாக்கமிக்கது. மூன்று படிகள் மட்டுமே.",
+  "home.how.step1.title": "உங்கள் உணவை பட்டியலிடுங்கள்",
+  "home.how.step1.text": "அதிகமான உண்ணக்கூடிய உணவுப் பொருட்களை பதிவிடுங்கள்.",
+  "home.how.step2.title": "என்.ஜி.ஓக்கள் கண்டுபிடிக்கும்",
+  "home.how.step2.text": "அருகிலுள்ள என்.ஜி.ஓக்கள் தங்களுக்கு தேவையானதை கிளைம் செய்கின்றன.",
+  "home.how.step3.title": "தாக்கத்தை உருவாக்குங்கள்",
+  "home.how.step3.text": "உணவு தேவைப்படுவோரிடம் சேர்கிறது. பூஜ்ய வீணாக்கம்.",
+
+  "home.impact.title": "சமூகங்களில் உண்மையான தாக்கம்",
+  "home.impact.text": "ஒவ்வொரு நாளும் கோடிக்கணக்கான டன் உணவு வீணாகிறது, ஆனால் மக்கள் பசியால் தவிக்கிறார்கள். இந்த இடைவெளியை நிரப்பும் நிலையான உணவு சூழலை Replate உருவாக்குகிறது.",
+  "home.impact.bullet1": "உணவு வீணாவதை குறைக்கவும்",
+  "home.impact.bullet2": "பசியை எதிர்கொள்க",
+  "home.impact.bullet3": "சமூகத்தை உருவாக்குங்கள்",
+  "home.impact.stat1.label": "குப்பைக் குழியிலிருந்து காப்பாற்றப்பட்ட டன்",
+  "home.impact.stat2.label": "இந்த ஆண்டு உணவு பெற்றவர்கள்",
+  "home.impact.stat3.label": "மீளவழங்கப்பட்ட உணவின் மதிப்பு",
+
+  "home.stories.title": "வெற்றிக் கதைகள்",
+  "home.stories.subtitle": "எங்கள் சமூகத்திலிருந்து மாற்றத்தின் உண்மையான தருணங்கள்.",
+  "home.stories.card1.tag": "சமூகம்",
+  "home.stories.card1.title": "குழந்தைகளுக்கு உணவு",
+  "home.stories.card1.text": "ஒரு உள்ளூர் திருமணத்தில் இருந்த அதிக உணவு சத்தான உணவாக வழங்கப்பட்டது.",
+  "home.stories.card2.tag": "பூஜ்ய வீணாக்கம்",
+  "home.stories.card2.title": "புதிய அறுவடை காப்பாற்றல்",
+  "home.stories.card2.text": "உள்ளூர் விவசாயிகள் என்.ஜி.ஓக்களுடன் இணைந்து 200 கிலோ புதிய காய்கறிகளை காப்பாற்றினர்.",
+  "home.stories.card3.tag": "தாக்கம்",
+  "home.stories.card3.title": "உள்ளூர் ஹீரோக்களை வலுப்படுத்தல்",
+  "home.stories.card3.text": "உணவகங்கள் மற்றும் உணவு பாதுகாப்பின்மை அனுபவிக்கும் மக்களுக்கிடையே பாலமாக செயல்படுகிறது.",
+
+  "home.gallery.title": "ஒவ்வொரு பகிர்ந்த உணவும் ஒரு வாழ்கையை மாற்றும்",
+  "home.gallery.subtitle": "இப்போது காப்பாற்றப்படும் புதிய வளங்களைப் பார்க்கவும்",
+
+  "home.cta.title": "இன்று மாற்றம் செய்ய தயாரா?",
+  "home.cta.text": "நல்ல உணவை குப்பைக்குத் தள்ள வேண்டாம். உங்கள் அதிக உணவு ஒருவரின் அடுத்த உணவாக மாறலாம்.",
+  "home.cta.button": "இப்போது தானம் செய்யுங்கள்",
+
+  "auth.userTab": "பயனர்",
+  "auth.ngoTab": "என்.ஜி.ஓ",
+  "auth.loginTab": "லாகின்",
+  "auth.registerTab": "பதிவு",
+  "auth.field.name": "பெயர்",
+  "auth.field.ngoLicense": "என்.ஜி.ஓ உரிமம் ஐடி",
+  "auth.field.email": "மின்னஞ்சல்",
+  "auth.field.password": "கடவுச்சொல்",
+  "auth.submit": "சமர்ப்பிக்கவும்",
+  "auth.continueGoogle": "Google மூலம் தொடரவும்",
+  "auth.loading": "தயவு செய்து காத்திருக்கவும்...",
+
+  "auth.toast.licenceRequired": "என்.ஜி.ஓக்களுக்கு உரிமம் ஐடி அவசியம்",
+  "auth.toast.loginSuccess": "லாகின் வெற்றிகரமாக முடிந்தது",
+  "auth.toast.registerSuccess": "கணக்கு உருவாக்கப்பட்டது",
+  "auth.toast.error": "அங்கீகாரத்தில் பிழை ஏற்பட்டது",
+
+  "footer.tagline": "உணவிற்கு இரண்டாம் வாய்ப்பு. இணைக, பகிர்க, உயிர்களை காப்பாற்றுங்கள்.",
+  "footer.madeWith": "உணவு வீணாவதை முடிவுக்கு கொண்டு வர ❤️ கொண்டு உருவாக்கப்பட்டது",
+  "footer.quickLinks.title": "விரைவு இணைப்புகள்",
+  "footer.donors.title": "தானதாரர்களுக்கு",
+  "footer.contact.title": "தொடர்புக்கு",
+  "footer.link.home": "முகப்பு",
+  "footer.link.edible": "உண்ணக்கூடியது",
+  "footer.link.nonEdible": "உண்ணக்கூடாதது",
+  "footer.link.directory": "அடைவு",
+  "footer.link.support": "உதவி",
+  "footer.link.postFood": "உணவை பதிவிடுங்கள்",
+  "footer.link.myDonations": "என் தானங்கள்",
+  "footer.link.faqs": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+  "footer.link.guidelines": "வழிகாட்டுதல்கள்",
+  "footer.contact.email": "support@replate.com",
+  "footer.contact.phone": "+1-800-REPLATE",
+  "footer.contact.cities": "50+ நகரங்களில்",
+  "footer.contact.social": "Replateo",
+  "footer.copyright": "© 2026 REPLATE. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
+
+  "dashboard.title": "டாஷ்போர்டு",
+  "dashboard.subtitle": "தானங்கள், பிக்-அப் மற்றும் தாக்கத்தின் ஒதுக்கீடு",
+  "contact.title": "எங்களை தொடர்பு கொள்ள",
+  "contact.subtitle": "என்.ஜி.ஓ, தானதாரர்கள் மற்றும் தன்னார்வலர்களுக்கு உதவ நாங்கள் இங்கே இருக்கிறோம்.",
+    "edible.title": "உண்ணக்கூடிய அதிகப்படியான உணவை நிர்வகிக்கவும்",
+  "edible.subtitle": "அதிகமாக இருக்கும் உணவை சத்தான உணவாகவும் சமூக ஆதரவாகவும் மாற்றுங்கள். ஒரு நல்ல உணவும் வீணாகாமல் இருக்க எங்கள் வலையமைப்பில் சேருங்கள்.",
+
+  "edible.cardDonate.title": "உணவு தானம் செய்யவும்",
+  "edible.cardDonate.text": "புதியது, உயர்தரமான அதிகப்படியான உணவை உள்ளூர் என்.ஜி.ஒ. களுடன் பகிருங்கள். குடும்பங்களுக்கு உணவளித்து சமூக பசியை குறைக்க உதவுங்கள்.",
+  "edible.cardDonate.button": "தானம் தொடங்குங்கள்",
+
+  "edible.cardListings.title": "பட்டியலை பார்க்கவும்",
+  "edible.cardListings.text": "உங்கள் பகுதியில் உள்ள அனைத்து செயலில் இருக்கும் உணவு தானங்களையும் பாருங்கள். தேவையுள்ளவர்களுக்கு விநியோகிக்க கிடைக்கும் உணவுகளை முன்பதிவு செய்யுங்கள்.",
+  "edible.cardListings.button": "பட்டியலை ஆராயுங்கள்",
+
+  "edible.why.title": "உண்ணக்கூடிய அதிகப்படியான உணவை ஏன் தானம் செய்ய வேண்டும்?",
+
+  "edible.why.safety.title": "பாதுகாப்பே முதன்மை",
+  "edible.why.safety.text": "கடுமையான தரக் கோட்பாடுகள் மற்றும் ஏ.ஐ. சரிபார்ப்புகள் பகிரப்படும் உணவு பாதுகாப்பானதும் புதியதுமாக இருப்பதை உறுதி செய்கின்றன.",
+
+  "edible.why.impact.title": "உடனடி தாக்கம்",
+  "edible.why.impact.text": "நமது லாஜிஸ்டிக்ஸ் வலையமைப்பு தானதாரர்களை அருகிலுள்ள என்.ஜி.ஒ. களை நேரடியாக இணைத்து, அதே நாளில் விரைவான சேகரிப்பை உறுதி செய்கிறது.",
+
+  "edible.why.empower.title": "வாழ்க்கைகளை வலுப்படுத்துங்கள்",
+  "edible.why.empower.text": "ஒவ்வொரு தானமும் பசியின் இடைவெளியை குறைத்து, நலிவடைந்த குடும்பங்களுக்கு தேவையான சத்துணவை வழங்க உதவுகிறது.",
+
+   "nonEdible.hero.titleLine1": "உண்ண முடியாத கழிவு",
+  "nonEdible.hero.titleLine2": "மேலாண்மை",
+  "nonEdible.hero.subtitle": "தவிர்க்க முடியாத உணவுக் கழிவுகளை ஆற்றல், கம்போஸ்ட் மற்றும் மண் ஆரோக்கியமாக மாற்றுங்கள். மறுசுழற்சி மையங்கள் மற்றும் நிலையான பண்ணைகளின் எங்கள் வலையமைப்பில் சேருங்கள்.",
+
+  "nonEdible.cards.recycling.title": "மறுசுழற்சி & கம்போஸ்டிங்",
+  "nonEdible.cards.recycling.text": "உணவு மீதிகளை உயர்தர இயற்கை கம்போஸ்ட் அல்லது சுத்தமான உயிர்-எரிசக்தியாக மாற்றுங்கள். கழிவுகளை கையாள அருகிலுள்ள உரிமம் பெற்ற மையங்களை கண்டறியுங்கள்.",
+  "nonEdible.cards.recycling.button": "கூட்டாளிகளை தேடுங்கள்",
+
+  "nonEdible.cards.agriculture.title": "விவசாய பயன்பாடு",
+  "nonEdible.cards.agriculture.text": "சத்து நிறைந்த துணை உற்பத்திகளை உள்ளூர் விவசாயிகளுக்கு தானமாக அளித்து மண்ணை செழுமைப்படுத்துங்கள். பூமியிலிருந்து மீண்டும் தொடங்கும் சுற்றுச்சுழல் பொருளாதாரத்தை உருவாக்க உதவுங்கள்.",
+  "nonEdible.cards.agriculture.button": "விவசாயிகளுக்கு தானம் செய்யுங்கள்",
+
+  "nonEdible.info.title": "உண்ண முடியாத உணவை ஏன் மறுசுழற்சி செய்ய வேண்டும்?",
+  "nonEdible.info.methane.title": "மீத்தேன் குறைப்பு",
+  "nonEdible.info.methane.text": "குப்பை மேட்டில் சிதைவதைத் தடுப்பதால் தீங்கான காழ்வாயு உமிழ்வுகள் குறைகின்றன.",
+  "nonEdible.info.soil.title": "மண்ணை மீட்டெடுக்கவும்",
+  "nonEdible.info.soil.text": "இயற்கை கழிவு சோர்ந்துபோன பயிர் நிலங்களுக்கு தேவையான சத்துகளை மீண்டும் வழங்குகிறது.",
+  "nonEdible.info.energy.title": "ஆற்றலை உருவாக்குங்கள்",
+  "nonEdible.info.energy.text": "ஆக்சிஜன் இல்லா சிதைவு முறையில் கழிவு புதுப்பிக்கத்தக்க பயோகாஸாக மாற்றப்படுகிறது.",
+  
+  "donation.nonEdible.title": "உண்ண முடியாத பொருட்களை தானமாக அளிக்கவும்",
+  "donation.nonEdible.itemName.placeholder": "பொருளின் பெயர்",
+  
+  "donation.nonEdible.item.placeholder": "உருப்படி பெயர்",
+  "donation.nonEdible.image.placeholder": "பட URL (விருப்பத்தேர்வு)",
+  "donation.nonEdible.notes.placeholder": "ஏதேனும் சிறப்பு கையாளுதல் அல்லது வழிமுறைகள்?",
+
+  "donation.medications.title": "மருந்துகளை தானமாக அளிக்கவும்",
+  "donation.medications.itemName.placeholder": "மருந்தின் பெயர்",
+
+  "donation.accessories.title": "அனுசரணப் பொருட்களை தானமாக அளிக்கவும்",
+  "donation.accessories.itemName.placeholder": "அனுசரணப் பொருளின் பெயர்",
+
+  "donation.clothes.title": "ஆடைகளை தானமாக அளிக்கவும்",
+  "donation.clothes.itemName.placeholder": "ஆடை வகையின் பெயர்",
+
+  "donation.imageUrl.optional": "பட URL (விருப்பத்தேர்வு)",
+
+
+  "directory.title": "மீள்சுழற்சி & என்.ஜி.ஓ அடைவு",
+  "directory.subtitle": "உணவு கழிவை பொறுப்புடன் நிர்வகிக்கும் நம்பகமான மீள்சுழற்சி பங்குதாரர்கள், என்.ஜி.ஓக்கள் மற்றும் விவசாய அமைப்புகளுடன் தொடர்பு கொள்ளுங்கள்.",
+
+  "directory.card1.title": "உள்ளூர் உணவுக் வங்கி",
+  "directory.card1.text": "மீதமுள்ள உண்ணக்கூடிய உணவை ஏற்று, தங்கும் மையங்கள் மற்றும் குழந்தைகள் பராமரிப்பு மையங்களுக்கு வழங்குகிறது.",
+  "directory.card1.button": "தொடர்பு",
+
+  "directory.card2.title": "க்ரீன்சைக்கிள் கம்போஸ்டர்ஸ்",
+  "directory.card2.text": "உண்ண இயலாத உணவு கழிவை கம்போஸ்ட் மற்றும் பயோ–ஆர்கானிக் உரமாக மாற்றுகிறது.",
+  "directory.card2.button": "பிக்கப் கோரிக்கை",
+
+  "directory.card3.title": "அக்ரோஃபார்ம் கலெக்டிவ்",
+  "directory.card3.text": "விவசாயிகளுடன் இணைந்து உணவு துணைத் தயாரிப்புகளை மண்ணை செழுமைப்படுத்தும் சத்துக்களாக மீள்சுழற்சி செய்கிறது.",
+  "directory.card3.button": "கோரிக்கை அனுப்பவும்",
+
+  "listings.title": "பொது பட்டியல்கள்",
+  "listings.subtitle": "பயனர்கள் பகிர்ந்துள்ள கிடைக்கக்கூடிய உணவு மற்றும் பொருட்கள்",
+  "listings.filter.type": "அனைத்து வகைகள்",
+  "listings.filter.category": "அனைத்து பிரிவுகள்",
+  "listings.empty": "பட்டியல்கள் எதுவும் இல்லை",
+
+  "contact.title": "தொடர்பு & ஆதரவு",
+  "contact.subtitle": "உங்களுக்குக் கேள்விகள் உள்ளதா, உதவி தேவையா அல்லது எங்களுடன் இணைக்க விரும்புகிறீர்களா? நாங்கள் உதவ தயாராக உள்ளோம்.",
+  "contact.fullName": "முழுப் பெயர்",
+  "contact.fullName.placeholder": "உங்கள் பெயரை உள்ளிடவும்",
+  "contact.email": "மின்னஞ்சல் முகவரி",
+  "contact.email.placeholder": "உங்கள் மின்னஞ்சலை உள்ளிடவும்",
+  "contact.message": "செய்தி",
+  "contact.message.placeholder": "நாங்கள் உங்களுக்கு எவ்வாறு உதவலாம்?",
+  "contact.send": "செய்தியை அனுப்பு",
+
+"donation.title": "உணவு தானம்",
+
+  "donation.foodTitle.label": "உணவு பெயர்",
+  "donation.foodTitle.placeholder": "உணவு பெயரை உள்ளிடவும்",
+
+  "donation.quantity.label": "அளவு",
+  "donation.quantity.placeholder": "உதா: 10 தட்டு, 5 கிலோ, 20 பாக்கெட்",
+
+  "donation.address.label": "எடுக்கும் முகவரி",
+  "donation.address.placeholder": "முழு எடுக்கும் முகவரியை உள்ளிடவும்",
+
+  "donation.image.label": "உணவு படம்",
+  "donation.image.upload": "படத்தை ஏற்றவும்",
+  "donation.image.capture": "புகைப்படம் எடுக்கவும்",
+
+  "donation.prepTime.label": "சமைத்த நேரம்",
+  "donation.prepTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.packageTime.label": "பேக் செய்த நேரம்",
+  "donation.packageTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.notes.label": "கூடுதல் குறிப்புகள்",
+  "donation.notes.placeholder": "சிறப்பு வழிமுறைகள் அல்லது கவனிக்க வேண்டியவை?",
+
+  "donation.submit": "தானத்தை சமர்ப்பிக்கவும்",
+ "directory.toast.contact": "தொடர்பு கோரிக்கை அனுப்பப்பட்டது!",
+  "directory.toast.pickup": "பிக்கப் கோரிக்கை உருவாக்கப்பட்டது!",
+  "directory.toast.farm": "பண்ணை கோரிக்கை சமர்ப்பிக்கப்பட்டது!"
+
+
+
+
+}

@@ -1,0 +1,236 @@
+{
+  "language.english": "अंग्रेज़ी",
+  "language.hindi": "हिन्दी",
+  "language.tamil": "तमिल",
+  "language.telugu": "तेलुगु",
+  "language.kannada": "कन्नड़",
+  "language.malayalam": "मलयालम",
+
+  "nav.home": "होम",
+  "nav.edible": "खाद्य",
+  "nav.nonEdible": "गैर-खाद्य",
+  "nav.directory": "डायरेक्टरी",
+  "nav.listings": "सूची",
+  "nav.support": "सहायता",
+  "nav.login": "लॉगिन",
+  "nav.logout": "लॉगआउट",
+
+  "home.hero.title": "भोजन को दूसरा मौका दें।",
+  "home.hero.subtitle": "शून्य फूड वेस्ट। साझा करें. रीसायकल करें. टिकाऊ बनाएं.",
+  "home.hero.description": "हमारे स्मार्ट प्लेटफ़ॉर्म से जुड़ें जो अतिरिक्त संसाधनों को उन लोगों से जोड़ता है जिन्हें उनकी सबसे ज़्यादा ज़रूरत है। मिलकर हम ज़ीरो-वेस्ट भविष्य बना सकते हैं।",
+  "home.hero.btnDonor": "मेरे पास खाने योग्य भोजन है",
+  "home.hero.btnReceiver": "मुझे रीसाइक्लिंग चाहिए",
+
+  "home.title": "अतिरिक्त खाने योग्य भोजन प्रबंधन करें",
+  "home.subtitle": "अतिरिक्त भोजन को पोषण और सामुदायिक सहायता में बदलें। हमारे नेटवर्क से जुड़ें ताकि अच्छा भोजन बर्बाद न हो।",
+  "home.cardDonate.title": "भोजन दान करें",
+  "home.cardDonate.text": "ताज़ा, उच्च गुणवत्ता वाला अतिरिक्त भोजन स्थानीय एनजीओ और समुदायों के साथ साझा करें।",
+  "home.cardListings.title": "सूची देखें",
+  "home.cardListings.text": "सभी सक्रिय फूड डोनेशन देखें और जिसे आपका एनजीओ वितरित कर सकता है उसे क्लेम करें।",
+  "buttons.donate": "दान शुरू करें",
+  "buttons.listings": "सूची देखें",
+
+  "home.how.title": "यह कैसे काम करता है",
+  "home.how.subtitle": "सरल, पारदर्शी और प्रभावशाली। सिर्फ तीन चरण।",
+  "home.how.step1.title": "अपना भोजन सूचीबद्ध करें",
+  "home.how.step1.text": "अतिरिक्त खाने योग्य भोजन की वस्तुएं पोस्ट करें।",
+  "home.how.step2.title": "एनजीओ खोजें",
+  "home.how.step2.text": "नज़दीकी एनजीओ अपनी ज़रूरत के अनुसार क्लेम करते हैं।",
+  "home.how.step3.title": "प्रभाव बनाएं",
+  "home.how.step3.text": "भोजन ज़रूरतमंदों तक पहुँचता है। शून्य बर्बादी।",
+
+  "home.impact.title": "समुदायों में वास्तविक प्रभाव",
+  "home.impact.text": "हर दिन लाखों टन भोजन बर्बाद हो जाता है जबकि लोग भूखे रहते हैं। Replate एक टिकाऊ फूड इकोसिस्टम बनाकर इस अंतर को भरता है।",
+  "home.impact.bullet1": "भोजन की बर्बादी कम करें",
+  "home.impact.bullet2": "भूख से लड़ें",
+  "home.impact.bullet3": "समुदाय बनाएं",
+  "home.impact.stat1.label": "लैंडफिल से बचाए गए टन",
+  "home.impact.stat2.label": "इस वर्ष भोजन पाए लोग",
+  "home.impact.stat3.label": "पुनर्वितरित भोजन का मूल्य",
+
+  "home.stories.title": "सफलता की कहानियाँ",
+  "home.stories.subtitle": "हमारे समुदाय से बदलाव के असली पल।",
+  "home.stories.card1.tag": "समुदाय",
+  "home.stories.card1.title": "बच्चों को भोजन",
+  "home.stories.card1.text": "स्थानीय शादी से बचा भोजन पोषक भोजन के रूप में बाँटा गया।",
+  "home.stories.card2.tag": "ज़ीरो वेस्ट",
+  "home.stories.card2.title": "ताज़ी फ़सल बचाना",
+  "home.stories.card2.text": "स्थानीय किसानों ने एनजीओ से जुड़कर 200 किलोग्राम ताज़ी सब्जियाँ बचाईं।",
+  "home.stories.card3.tag": "प्रभाव",
+  "home.stories.card3.title": "स्थानीय नायकों को सशक्त बनाना",
+  "home.stories.card3.text": "रेस्तरां और खाद्य असुरक्षा झेल रहे लोगों के बीच पुल बनाना।",
+
+  "home.gallery.title": "हर साझा भोजन एक बदली हुई ज़िंदगी",
+  "home.gallery.subtitle": "अभी बचाए जा रहे ताज़ा संसाधन देखें",
+
+  "home.cta.title": "क्या आप आज बदलाव लाने के लिए तैयार हैं?",
+  "home.cta.text": "अच्छा भोजन लैंडफिल में न जाने दें। आपका अतिरिक्त किसी का अगला भोजन बन सकता है।",
+  "home.cta.button": "अभी दान करें",
+
+  "auth.userTab": "यूज़र",
+  "auth.ngoTab": "एनजीओ",
+  "auth.loginTab": "लॉगिन",
+  "auth.registerTab": "रजिस्टर",
+  "auth.field.name": "नाम",
+  "auth.field.ngoLicense": "एनजीओ लाइसेंस आईडी",
+  "auth.field.email": "ईमेल",
+  "auth.field.password": "पासवर्ड",
+  "auth.submit": "सबमिट",
+  "auth.continueGoogle": "Google से जारी रखें",
+  "auth.loading": "कृपया प्रतीक्षा करें...",
+
+  "auth.toast.licenceRequired": "एनजीओ के लिए लाइसेंस आईडी अनिवार्य है",
+  "auth.toast.loginSuccess": "लॉगिन सफल",
+  "auth.toast.registerSuccess": "खाता बना दिया गया",
+  "auth.toast.error": "प्रमाणीकरण में त्रुटि",
+
+  "footer.tagline": "भोजन को दूसरा मौका देना। जुड़ें, साझा करें और जानें बचाएं।",
+  "footer.madeWith": "फूड वेस्ट ख़त्म करने के लिए ❤️ से बनाया गया",
+  "footer.quickLinks.title": "क्विक लिंक्स",
+  "footer.donors.title": "डोनर्स के लिए",
+  "footer.contact.title": "संपर्क",
+  "footer.link.home": "होम",
+  "footer.link.edible": "खाद्य",
+  "footer.link.nonEdible": "गैर-खाद्य",
+  "footer.link.directory": "डायरेक्टरी",
+  "footer.link.support": "सहायता",
+  "footer.link.postFood": "भोजन पोस्ट करें",
+  "footer.link.myDonations": "मेरे दान",
+  "footer.link.faqs": "प्रश्नोत्तर",
+  "footer.link.guidelines": "मार्गदर्शिका",
+  "footer.contact.email": "support@replate.com",
+  "footer.contact.phone": "+1-800-REPLATE",
+  "footer.contact.cities": "50+ शहरों में",
+  "footer.contact.social": "Replateo",
+  "footer.copyright": "© 2026 REPLATE. सर्वाधिकार सुरक्षित.",
+
+  "dashboard.title": "डैशबोर्ड",
+  "dashboard.subtitle": "दान, पिकअप और प्रभाव का अवलोकन",
+  "contact.title": "संपर्क करें",
+  "contact.subtitle": "हम एनजीओ, डोनर्स और स्वयंसेवकों की मदद के लिए यहाँ हैं।",
+    "edible.title": "खाने योग्य अधिशेष भोजन का प्रबंधन करें",
+  "edible.subtitle": "अधिशेष भोजन को पोषण और सामुदायिक सहायता में बदलें। हमारे नेटवर्क से जुड़ें ताकि एक भी अच्छा भोजन व्यर्थ न जाए।",
+
+  "edible.cardDonate.title": "भोजन दान करें",
+  "edible.cardDonate.text": "ताज़ा, उच्च गुणवत्ता वाला अधिशेष भोजन स्थानीय एनजीओ के साथ साझा करें। परिवारों को भोजन दें और सामुदायिक भूख कम करने में मदद करें।",
+  "edible.cardDonate.button": "दान शुरू करें",
+
+  "edible.cardListings.title": "सूचियाँ देखें",
+  "edible.cardListings.text": "अपने क्षेत्र में सभी सक्रिय भोजन दान देखें। ज़रूरतमंदों को वितरण के लिए उपलब्ध भोजन का दावा करें।",
+  "edible.cardListings.button": "सूचियाँ देखें",
+
+  "edible.why.title": "खाने योग्य अधिशेष क्यों दान करें?",
+
+  "edible.why.safety.title": "सुरक्षा सर्वोपरि",
+  "edible.why.safety.text": "कड़े गुणवत्ता दिशानिर्देश और एआई जाँच यह सुनिश्चित करते हैं कि साझा किया गया भोजन सुरक्षित और ताज़ा हो।",
+
+  "edible.why.impact.title": "तुरंत असर",
+  "edible.why.impact.text": "हमारा लॉजिस्टिक्स नेटवर्क दाताओं को नज़दीकी एनजीओ से सीधे जोड़ता है, ताकि तेज़ और उसी दिन पिकअप हो सके।",
+
+  "edible.why.empower.title": "जीवन को सशक्त बनाएं",
+  "edible.why.empower.text": "हर दान भूख की खाई को कम करने में मदद करता है और ज़रूरतमंद परिवारों को आवश्यक पोषण प्रदान करता है।",
+
+"nonEdible.hero.titleLine1": "अखाद्य अपशिष्ट",
+  "nonEdible.hero.titleLine2": "प्रबंधन",
+  "nonEdible.hero.subtitle": "अपरिहार्य खाद्य अपशिष्ट को ऊर्जा, कम्पोस्ट और मिट्टी के स्वास्थ्य में बदलें। हमारे रीसाइक्लिंग केंद्रों और टिकाऊ खेतों के नेटवर्क से जुड़ें।",
+
+  "nonEdible.cards.recycling.title": "रीसाइक्लिंग और कम्पोस्टिंग",
+  "nonEdible.cards.recycling.text": "खाद्य अवशेषों को प्रीमियम जैविक कम्पोस्ट या स्वच्छ बायो-ऊर्जा में बदलें। आसपास के लाइसेंस प्राप्त केंद्र खोजें जो अपशिष्ट संभाल सकें।",
+  "nonEdible.cards.recycling.button": "साझेदार खोजें",
+
+  "nonEdible.cards.agriculture.title": "कृषि उपयोग",
+  "nonEdible.cards.agriculture.text": "पोषक तत्वों से भरपूर उपउत्पाद स्थानीय किसानों को दान करें ताकि मिट्टी समृद्ध हो सके। ऐसा परिपत्र अर्थतंत्र बनाएँ जो फिर से धरती से शुरू होता है।",
+  "nonEdible.cards.agriculture.button": "किसानों को दान करें",
+
+  "nonEdible.info.title": "अखाद्य भोजन को रीसायकल क्यों करें?",
+  "nonEdible.info.methane.title": "मीथेन कम करें",
+  "nonEdible.info.methane.text": "लैंडफिल में सड़न को रोकने से हानिकारक ग्रीनहाउस गैस उत्सर्जन घटता है।",
+  "nonEdible.info.soil.title": "मिट्टी को पुनर्स्थापित करें",
+  "nonEdible.info.soil.text": "जैविक अपशिष्ट थकी हुई खेती की मिट्टी में आवश्यक पोषक तत्व वापस लाता है।",
+  "nonEdible.info.energy.title": "ऊर्जा बनाएं",
+  "nonEdible.info.energy.text": "एनेरोबिक डाइजेशन अपशिष्ट को नवीकरणीय बायोगैस में बदलता है।",
+  
+  "donation.nonEdible.title": "अखाद्य वस्तुएँ दान करें",
+  "donation.nonEdible.itemName.placeholder": "वस्तु का नाम",
+"donation.nonEdible.item.placeholder": "वस्तु का नाम",
+"donation.nonEdible.image.placeholder": "छवि URL (वैकल्पिक)",
+"donation.nonEdible.notes.placeholder": "कोई विशेष हैंडलिंग या निर्देश?",
+
+  "donation.medications.title": "दवाइयाँ दान करें",
+  "donation.medications.itemName.placeholder": "दवा का नाम",
+
+  "donation.accessories.title": "एक्सेसरीज़ दान करें",
+  "donation.accessories.itemName.placeholder": "एक्सेसरी का नाम",
+
+  "donation.clothes.title": "कपड़े दान करें",
+  "donation.clothes.itemName.placeholder": "कपड़े का प्रकार",
+
+  "donation.imageUrl.optional": "इमेज URL (वैकल्पिक)",
+
+
+  "directory.title": "रिसाइक्लिंग एवं एनजीओ निर्देशिका",
+  "directory.subtitle": "विश्वसनीय रिसाइक्लिंग भागीदारों, एनजीओ और कृषि संगठनों से जुड़ें जो जिम्मेदारी से खाद्य अपशिष्ट का प्रबंधन करते हैं।",
+
+  "directory.card1.title": "कम्युनिटी फूड बैंक",
+  "directory.card1.text": "खाने योग्य अतिरिक्त भोजन स्वीकार करता है और उसे आश्रयों व बाल देखभाल केंद्रों तक पहुँचाता है।",
+  "directory.card1.button": "संपर्क करें",
+
+  "directory.card2.title": "ग्रीनसाइकಲ್ कम्पोस्टर्स",
+  "directory.card2.text": "अखाद्य खाद्य अपशिष्ट को कम्पोस्ट और जैविक उर्वरक में बदलता है।",
+  "directory.card2.button": "पिकअप अनुरोध",
+
+  "directory.card3.title": "एग्रोफार्म कलेक्टिव",
+  "directory.card3.text": "किसानों के साथ मिलकर खाद्य उपउत्पादों को मिट्टी की उर्वரக शक्ति बढ़ाने वाले पदार्थों में रिसाइक್ಲింగ్ करता है।",
+  "directory.card3.button": "अनुरोध भेजें",
+
+  "listings.title": "सार्वजनिक लिस्टिंग",
+  "listings.subtitle": "उपयोगकर्ताओं द्वारा साझा किए गए उपलब्ध भोजन और वस्तुएँ",
+  "listings.filter.type": "सभी प्रकार",
+  "listings.filter.category": "सभी श्रेणियाँ",
+  "listings.empty": "कोई लिस्टिंग नहीं मिली",
+
+  "contact.title": "संपर्क और सहायता",
+  "contact.subtitle": "क्या आपके पास प्रश्न हैं, सहायता चाहिए या हमारे साथ साझेदारी करना चाहते हैं? हम आपकी मदद के लिए यहाँ हैं।",
+  "contact.fullName": "पूरा नाम",
+  "contact.fullName.placeholder": "अपना नाम दर्ज करें",
+  "contact.email": "ईमेल पता",
+  "contact.email.placeholder": "अपना ईमेल दर्ज करें",
+  "contact.message": "संदेश",
+  "contact.message.placeholder": "हम आपकी कैसे सहायता कर सकते हैं?",
+  "contact.send": "संदेश भेजें",
+
+  "donation.title": "भोजन दान करें",
+
+  "donation.foodTitle.label": "भोजन का नाम",
+  "donation.foodTitle.placeholder": "भोजन का नाम लिखें",
+
+  "donation.quantity.label": "मात्रा",
+  "donation.quantity.placeholder": "जैसे 10 प्लेट, 5 किलो, 20 पैकेट",
+
+  "donation.address.label": "पिकअप पता",
+  "donation.address.placeholder": "पूरा पिकअप पता लिखें",
+
+  "donation.image.label": "भोजन की तस्वीर",
+  "donation.image.upload": "तस्वीर अपलोड करें",
+  "donation.image.capture": "फोटो लें",
+
+  "donation.prepTime.label": "भोजन बनने का समय",
+  "donation.prepTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.packageTime.label": "पैक करने का समय",
+  "donation.packageTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.notes.label": "अतिरिक्त जानकारी",
+  "donation.notes.placeholder": "कोई विशेष निर्देश या ध्यान देने योग्य बात?",
+
+  "donation.submit": "दान सबमिट करें",
+ "directory.toast.contact": "संपर्क अनुरोध भेजा गया!",
+  "directory.toast.pickup": "पिकअप अनुरोध बनाया गया!",
+  "directory.toast.farm": "फार्म अनुरोध सबमिट किया गया!"
+
+
+
+
+
+
+}

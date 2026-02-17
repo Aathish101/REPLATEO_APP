@@ -1,9 +1,12 @@
+// src/components/Contact.jsx
 import { useState, useEffect } from "react";
 import { motion, useSpring } from "framer-motion";
 import { useToast } from "../context/ToastContext";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
   const { addToast } = useToast();
+  const { t } = useTranslation();
 
   const [form, setForm] = useState({
     name: "",
@@ -11,22 +14,23 @@ export default function Contact() {
     message: "",
   });
 
-  // 1. Setup Mouse Tracking for Glow
+  // Mouse tracking for glow
   const mouseX = useSpring(0, { stiffness: 40, damping: 25 });
   const mouseY = useSpring(0, { stiffness: 40, damping: 25 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      // Centers the 800px glow on the cursor
       mouseX.set(e.clientX - 400);
       mouseY.set(e.clientY - 400);
     };
+
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     addToast("Your message has been sent!", "success");
 
     setForm({
@@ -38,30 +42,27 @@ export default function Contact() {
 
   return (
     <section className="page-section relative min-h-screen overflow-hidden bg-white">
-      
       {/* ================= INTERACTIVE ORANGE GLOW ================= */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <motion.div
           style={{
             x: mouseX,
             y: mouseY,
-            // High intensity orange gradient matching the home page
-            background: "radial-gradient(circle, rgba(255, 120, 40, 0.45) 0%, rgba(255, 160, 80, 0.25) 35%, rgba(255, 255, 255, 0) 70%)"
+            background:
+              "radial-gradient(circle, rgba(255, 120, 40, 0.45) 0%, rgba(255, 160, 80, 0.25) 35%, rgba(255, 255, 255, 0) 70%)",
           }}
           className="absolute w-[800px] h-[800px] rounded-full blur-[90px]"
         />
       </div>
 
       <div className="page-container relative z-10">
-
         {/* HEADER */}
         <div className="text-center mb-14">
           <h2 className="text-5xl font-extrabold text-orange-800 drop-shadow-sm">
-            Contact & Support
+            {t("contact.title")}
           </h2>
           <p className="text-lg text-orange-700 mt-3 max-w-2xl mx-auto">
-            Have questions, need help, or want to partner with us?  
-            We’re here to support you.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -74,20 +75,23 @@ export default function Contact() {
           "
         >
           <form onSubmit={handleSubmit} className="space-y-6">
-
             {/* NAME */}
             <div>
-              <label className="text-orange-800 font-semibold">Full Name</label>
+              <label className="text-orange-800 font-semibold">
+                {t("contact.fullName")}
+              </label>
               <input
                 type="text"
                 required
                 value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-                placeholder="Enter your name"
+                onChange={(e) =>
+                  setForm({ ...form, name: e.target.value })
+                }
+                placeholder={t("contact.fullName.placeholder")}
                 className="
-                  w-full p-3 mt-1 rounded-xl 
+                  w-full p-3 mt-1 rounded-xl
                   bg-white/50 border border-white/40
-                  focus:ring-2 focus:ring-orange-400 
+                  focus:ring-2 focus:ring-orange-400
                   focus:bg-white/70 transition
                 "
               />
@@ -95,17 +99,21 @@ export default function Contact() {
 
             {/* EMAIL */}
             <div>
-              <label className="text-orange-800 font-semibold">Email Address</label>
+              <label className="text-orange-800 font-semibold">
+                {t("contact.email")}
+              </label>
               <input
                 type="email"
                 required
                 value={form.email}
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-                placeholder="Enter your email"
+                onChange={(e) =>
+                  setForm({ ...form, email: e.target.value })
+                }
+                placeholder={t("contact.email.placeholder")}
                 className="
-                  w-full p-3 mt-1 rounded-xl 
+                  w-full p-3 mt-1 rounded-xl
                   bg-white/50 border border-white/40
-                  focus:ring-2 focus:ring-orange-400 
+                  focus:ring-2 focus:ring-orange-400
                   focus:bg-white/70 transition
                 "
               />
@@ -113,17 +121,21 @@ export default function Contact() {
 
             {/* MESSAGE */}
             <div>
-              <label className="text-orange-800 font-semibold">Message</label>
+              <label className="text-orange-800 font-semibold">
+                {t("contact.message")}
+              </label>
               <textarea
                 rows="5"
                 required
                 value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                placeholder="How can we assist you?"
+                onChange={(e) =>
+                  setForm({ ...form, message: e.target.value })
+                }
+                placeholder={t("contact.message.placeholder")}
                 className="
-                  w-full p-3 mt-1 rounded-xl 
+                  w-full p-3 mt-1 rounded-xl
                   bg-white/50 border border-white/40
-                  focus:ring-2 focus:ring-orange-400 
+                  focus:ring-2 focus:ring-orange-400
                   focus:bg-white/70 transition
                 "
               ></textarea>
@@ -133,17 +145,16 @@ export default function Contact() {
             <button
               type="submit"
               className="
-                w-full py-3 rounded-xl font-semibold text-white 
-                bg-orange-600 hover:bg-orange-700 
-                shadow-lg shadow-orange-400/40 
+                w-full py-3 rounded-xl font-semibold text-white
+                bg-orange-600 hover:bg-orange-700
+                shadow-lg shadow-orange-400/40
                 transition
               "
             >
-              Send Message
+              {t("contact.send")}
             </button>
           </form>
         </div>
-
       </div>
     </section>
   );

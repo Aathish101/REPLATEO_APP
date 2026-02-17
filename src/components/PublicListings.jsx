@@ -1,5 +1,6 @@
+// src/components/PublicListings.jsx
 import { useEffect, useState } from "react";
-import { motion, useSpring } from "framer-motion"; // Added for glow
+import { motion, useSpring } from "framer-motion";
 import { db } from "../firebase";
 import {
   collection,
@@ -15,6 +16,7 @@ import { useAuth } from "../context/AuthContext";
 import { useToast } from "../context/ToastContext";
 import ExpiryTimer from "./ExpiryTimer";
 import { MapPin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function PublicListings() {
   const [items, setItems] = useState([]);
@@ -23,17 +25,19 @@ export default function PublicListings() {
 
   const { user, authLoading } = useAuth();
   const { addToast } = useToast();
+  const { t } = useTranslation();
 
-  // 1. Setup Mouse Tracking for Glow
+  // Cursor glow
   const mouseX = useSpring(0, { stiffness: 40, damping: 25 });
   const mouseY = useSpring(0, { stiffness: 40, damping: 25 });
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      // Centers the 800px glow on the cursor
+      // Center the 800px glow on the cursor
       mouseX.set(e.clientX - 400);
       mouseY.set(e.clientY - 400);
     };
+
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
@@ -86,7 +90,9 @@ export default function PublicListings() {
           senderEmail: user.email,
           itemId: item.id,
           itemName: item.title,
-          message: `Your item "${item.title}" has been claimed by ${user.displayName || "an NGO"}.`,
+          message: `Your item "${item.title}" has been claimed by ${
+            user.displayName || "an NGO"
+          }.`,
           type: "claim",
           isRead: false,
           createdAt: serverTimestamp(),
@@ -102,34 +108,34 @@ export default function PublicListings() {
 
   const filteredItems = items.filter((item) => {
     const typeMatch = typeFilter === "all" || item.type === typeFilter;
-    const categoryMatch = categoryFilter === "all" || item.category === categoryFilter;
+    const categoryMatch =
+      categoryFilter === "all" || item.category === categoryFilter;
     return typeMatch && categoryMatch;
   });
 
   return (
     <section className="min-h-screen bg-white pt-28 relative overflow-hidden">
-      
       {/* ================= HIGH INTENSITY ORANGE GLOW ================= */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <motion.div
           style={{
             x: mouseX,
             y: mouseY,
-            background: "radial-gradient(circle, rgba(255, 120, 40, 0.45) 0%, rgba(255, 160, 80, 0.25) 35%, rgba(255, 255, 255, 0) 70%)"
+            background:
+              "radial-gradient(circle, rgba(255, 120, 40, 0.45) 0%, rgba(255, 160, 80, 0.25) 35%, rgba(255, 255, 255, 0) 70%)",
           }}
           className="absolute w-[800px] h-[800px] rounded-full blur-[90px]"
         />
       </div>
 
       <div className="page-container relative z-10">
-
         {/* TITLE */}
         <div className="text-center mb-10">
           <h2 className="text-4xl font-extrabold text-orange-700">
-            Public Listings
+            {t("listings.title")}
           </h2>
           <p className="text-gray-600 mt-2">
-            Available food & items shared by users
+            {t("listings.subtitle")}
           </p>
         </div>
 
@@ -140,7 +146,7 @@ export default function PublicListings() {
             onChange={(e) => setTypeFilter(e.target.value)}
             className="border rounded-lg px-4 py-2 bg-white/80 backdrop-blur-sm"
           >
-            <option value="all">All Types</option>
+            <option value="all">{t("listings.filter.type")}</option>
             <option value="donation">Donation</option>
           </select>
 
@@ -149,7 +155,7 @@ export default function PublicListings() {
             onChange={(e) => setCategoryFilter(e.target.value)}
             className="border rounded-lg px-4 py-2 bg-white/80 backdrop-blur-sm"
           >
-            <option value="all">All Categories</option>
+            <option value="all">{t("listings.filter.category")}</option>
             <option value="edible">Edible</option>
             <option value="non-edible">Non-Edible</option>
           </select>
@@ -199,7 +205,8 @@ export default function PublicListings() {
                 </p>
               )}
 
-              {(item.pickupAddress || (item.createdBy && item.createdBy.address)) && (
+              {(item.pickupAddress ||
+                (item.createdBy && item.createdBy.address)) && (
                 <a
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
                     item.pickupAddress || item.createdBy.address
@@ -215,9 +222,15 @@ export default function PublicListings() {
 
               {isNGO && item.createdBy && (
                 <div className="mt-4 bg-orange-50/50 p-4 rounded-lg text-sm">
-                  <p><b>User:</b> {item.createdBy.name}</p>
-                  <p><b>Email:</b> {item.createdBy.email}</p>
-                  <p><b>Address:</b> {item.createdBy.address || "N/A"}</p>
+                  <p>
+                    <b>User:</b> {item.createdBy.name}
+                  </p>
+                  <p>
+                    <b>Email:</b> {item.createdBy.email}
+                  </p>
+                  <p>
+                    <b>Address:</b> {item.createdBy.address || "N/A"}
+                  </p>
                 </div>
               )}
 
@@ -241,7 +254,7 @@ export default function PublicListings() {
 
         {filteredItems.length === 0 && (
           <p className="text-center text-gray-500 mt-16">
-            No listings found
+            {t("listings.empty")}
           </p>
         )}
       </div>

@@ -1,0 +1,237 @@
+{
+  "language.english": "ఇంగ్లీష్",
+  "language.hindi": "హిందీ",
+  "language.tamil": "తమిళం",
+  "language.telugu": "తెలుగు",
+  "language.kannada": "కన్నడ",
+  "language.malayalam": "మలయాళం",
+
+  "nav.home": "హోం",
+  "nav.edible": "తినదగినది",
+  "nav.nonEdible": "తినరాని",
+  "nav.directory": "డైరెక్టరీ",
+  "nav.listings": "జాబితాలు",
+  "nav.support": "సహాయం",
+  "nav.login": "లాగిన్",
+  "nav.logout": "లాగౌట్",
+
+  "home.hero.title": "ఆహారానికి రెండో అవకాశం ఇవ్వండి.",
+  "home.hero.subtitle": "జీరో ఫుడ్ వేస్ట్. పంచుకోండి. రీసైకిల్ చేయండి. నిలబెట్టండి.",
+  "home.hero.description": "అదనపు వనరులను అవసరమైన వారికి కలిపే మా స్మార్ట్ ప్లాట్‌ఫార్మ్‌లో చేరండి. కలసి మనం జీరో-వేస్ట్ భవిష్యత్తును నిర్మించవచ్చు.",
+  "home.hero.btnDonor": "నా దగ్గర తినదగిన ఆహారం ఉంది",
+  "home.hero.btnReceiver": "నాకు రీసైక్లింగ్ అవసరం",
+
+  "home.title": "అదనపు తినదగిన ఆహారాన్ని నిర్వహించండి",
+  "home.subtitle": "అదనపు ఆహారాన్ని పోషకాహారం, సామాజిక మద్దతుగా మార్చండి. మంచి ఆహారం వృథా కాకుండా మా నెట్‌వర్క్‌లో చేరండి.",
+  "home.cardDonate.title": "ఆహారం దానం చేయండి",
+  "home.cardDonate.text": "తాజా, నాణ్యమైన అదనపు ఆహారాన్ని స్థానిక ఎన్జీఓలు మరియు కమ్యూనిటీలతో పంచుకోండి.",
+  "home.cardListings.title": "జాబితాలు చూడండి",
+  "home.cardListings.text": "అన్ని యాక్టివ్ ఫుడ్ డోనేషన్స్‌ని బ్రౌజ్ చేసి, మీ ఎన్జీఓ పంపిణీ చేయగలిగిన వాటిని క్లెయిమ్ చేయండి.",
+  "buttons.donate": "దానం ప్రారంభించండి",
+  "buttons.listings": "జాబితాలు చూడండి",
+
+  "home.how.title": "ఇది ఎలా పనిచేస్తుంది",
+  "home.how.subtitle": "సరళం, పారదర్శకం, ప్రభావవంతం. కేవలం మూడు దశలు.",
+  "home.how.step1.title": "మీ ఆహారాన్ని జాబితాలో చేర్చండి",
+  "home.how.step1.text": "అదనపు తినదగిన ఆహారాన్ని పోస్ట్ చేయండి.",
+  "home.how.step2.title": "ఎన్జీఓలు కనుగొంటారు",
+  "home.how.step2.text": "సమీపంలోని ఎన్జీఓలు తాము అవసరమైన వాటిని క్లెయిమ్ చేస్తారు.",
+  "home.how.step3.title": "ప్రభావాన్ని సృష్టించండి",
+  "home.how.step3.text": "ఆహారం అవసరమైన వారి వరకు చేరుతుంది. జీరో వేస్ట్.",
+
+  "home.impact.title": "సమాజాల్లో నిజమైన ప్రభావం",
+  "home.impact.text": "ప్రతి రోజు కోట్ల టన్నుల ఆహారం వృథా అవుతుంటే, ప్రజలు ఆకలితో ఉంటున్నారు. స్థిరమైన ఆహార వ్యవస్థను నిర్మించి Replate ఈ గ్యాప్‌ని పూరిస్తుంది.",
+  "home.impact.bullet1": "ఆహార వ్యర్థాన్ని తగ్గించండి",
+  "home.impact.bullet2": "ఆకలితో పోరాడండి",
+  "home.impact.bullet3": "సమాజాన్ని నిర్మించండి",
+  "home.impact.stat1.label": "ల్యాండ్ఫిల్‌ నుండి నిలిపిన టన్నులు",
+  "home.impact.stat2.label": "ఈ సంవత్సరం ఆహారం పొందిన ప్రజలు",
+  "home.impact.stat3.label": "మళ్లీ పంపిణీ చేసిన ఆహారం విలువ",
+
+  "home.stories.title": "విజయ కథలు",
+  "home.stories.subtitle": "మా కమ్యూనిటీ నుంచి వచ్చిన నిజమైన మార్పు క్షణాలు.",
+  "home.stories.card1.tag": "కమ్యూనిటీ",
+  "home.stories.card1.title": "పిల్లలకు ఆహారం",
+  "home.stories.card1.text": "ఒక స్థానిక పెళ్లి నుండి మిగిలిన ఆహారం పౌష్టికాహారంగా పునర్వ్యవహరించబడింది.",
+  "home.stories.card2.tag": "జీరో వేస్ట్",
+  "home.stories.card2.title": "కొత్త పంటను కాపాడటం",
+  "home.stories.card2.text": "స్థానిక రైతులు ఎన్జీఓలతో కలిసి 200 కిలోల తాజా కూరగాయలను కాపాడారు.",
+  "home.stories.card3.tag": "ప్రభావం",
+  "home.stories.card3.title": "లోకల్ హీరోలను శక్తివంతం చేయడం",
+  "home.stories.card3.text": "రెస్టారెంట్లు మరియు ఆహార అసురక్షితతను ఎదుర్కొంటున్న వారి మధ్య వారధిగా ఉండటం.",
+
+  "home.gallery.title": "ప్రతి పంచుకున్న భోజనం ఒక జీవితాన్ని మారుస్తుంది",
+  "home.gallery.subtitle": "ఇప్పుడే సేవ్ అవుతున్న తాజా వనరులను చూడండి",
+
+  "home.cta.title": "ఈ రోజు మార్పు చేయడానికి సిద్ధంగా ఉన్నారా?",
+  "home.cta.text": "మంచి ఆహారం ల్యాండ్ఫిల్‌కి వెళ్లనీయొద్దు. మీ అదనపు ఆహారం ఎవరో ఒకరి తదుపరి భోజనమవుతుంది.",
+  "home.cta.button": "ఇప్పుడే దానం చేయండి",
+
+  "auth.userTab": "వినియోగదారు",
+  "auth.ngoTab": "ఎన్జీఓ",
+  "auth.loginTab": "లాగిన్",
+  "auth.registerTab": "రిజిస్టర్",
+  "auth.field.name": "పేరు",
+  "auth.field.ngoLicense": "ఎన్జీఓ లైసెన్స్ ID",
+  "auth.field.email": "ఈమెయిల్",
+  "auth.field.password": "పాస్‌వర్డ్",
+  "auth.submit": "సబ్మిట్",
+  "auth.continueGoogle": "Google తో కొనసాగించండి",
+  "auth.loading": "దయచేసి వేచి ఉండండి...",
+
+  "auth.toast.licenceRequired": "ఎన్జీఓలకు లైసెన్స్ ID అవసరం",
+  "auth.toast.loginSuccess": "లాగిన్ విజయవంతం అయ్యింది",
+  "auth.toast.registerSuccess": "ఖాతా సృష్టించబడింది",
+  "auth.toast.error": "ఆథెంటికేషన్ లో లోపం",
+
+  "footer.tagline": "ఆహారానికి రెండో అవకాశం. కనెక్ట్ అవ్వండి, పంచుకోండి, ప్రాణాలను రక్షించండి.",
+  "footer.madeWith": "ఆహార వ్యర్థాన్ని ముగించడానికి ❤️ తో తయారు చేయబడింది",
+  "footer.quickLinks.title": "త్వరిత లింకులు",
+  "footer.donors.title": "దాతల కోసం",
+  "footer.contact.title": "సంప్రదించండి",
+  "footer.link.home": "హోం",
+  "footer.link.edible": "తినదగినది",
+  "footer.link.nonEdible": "తినరాని",
+  "footer.link.directory": "డైరెక్టరీ",
+  "footer.link.support": "సహాయం",
+  "footer.link.postFood": "ఆహారాన్ని పోస్ట్ చేయండి",
+  "footer.link.myDonations": "నా దానాలు",
+  "footer.link.faqs": "తరచుగా అడిగే ప్రశ్నలు",
+  "footer.link.guidelines": "మార్గదర్శకాలు",
+  "footer.contact.email": "support@replate.com",
+  "footer.contact.phone": "+1-800-REPLATE",
+  "footer.contact.cities": "50+ నగరాలలో",
+  "footer.contact.social": "Replateo",
+  "footer.copyright": "© 2026 REPLATE. అన్ని హక్కులుสงరక్షితం.",
+
+  "dashboard.title": "డాష్‌బోర్డ్",
+  "dashboard.subtitle": "దానాలు, పికప్‌లు మరియు ప్రభావం యొక్క అవలోకనం",
+  "contact.title": "మమ్మల్ని సంప్రదించండి",
+  "contact.subtitle": "ఎన్జీఓలు, దాతలు మరియు స్వచ్ఛంద కార్యకర్తలకు సహాయం చేయడానికి మేము ఇక్కడ ఉన్నాము.",
+    "edible.title": "తినదగిన అదనపు ఆహారాన్ని నిర్వహించండి",
+  "edible.subtitle": "అధిక ఆహారాన్ని పోషకాహారంగా మరియు సమాజ సహాయంగా మార్చండి. ఏ మంచి భోజనం వృథా కాకుండా ఉండేందుకు మా నెట్‌వర్క్‌లో చేరండి.",
+
+  "edible.cardDonate.title": "ఆహారం దానం చేయండి",
+  "edible.cardDonate.text": "తాజా, అధిక నాణ్యత గల అదనపు ఆహారాన్ని స్థానిక స్వచ్ఛంద సంస్థలతో పంచుకోండి. కుటుంబాలకు భోజనం అందించి సమాజంలో ఆకలిని తగ్గించండి.",
+  "edible.cardDonate.button": "దానం ప్రారంభించండి",
+
+  "edible.cardListings.title": "జాబితాలను చూడండి",
+  "edible.cardListings.text": "మీ ప్రాంతంలో ఉన్న అన్ని సక్రియ ఆహార దానాలను చూడండి. అవసరమైన వారికి పంపిణీ కోసం అందుబాటులో ఉన్న భోజనాలను క్లెయిమ్ చేయండి.",
+  "edible.cardListings.button": "జాబితాలను అన్వేషించండి",
+
+  "edible.why.title": "తినదగిన అదనపు ఆహారాన్ని ఎందుకు దానం చేయాలి?",
+
+  "edible.why.safety.title": "ముందు భద్రత",
+  "edible.why.safety.text": "కఠినమైన నాణ్యత మార్గదర్శకాలు మరియు AI తనిఖీలు పంచుకున్న ఆహారం సురక్షితంగా మరియు తాజాగా ఉండేలా చూస్తాయి.",
+
+  "edible.why.impact.title": "తక్షణ ప్రభావం",
+  "edible.why.impact.text": "మా లాజిస్టిక్స్ నెట్‌వర్క్ దాతలను సమీపంలోని స్వచ్ఛంద సంస్థలతో నేరుగా కలిపి, వేగవంతమైన, అదే రోజు పికప్‌ను కల్పిస్తుంది.",
+
+  "edible.why.empower.title": "జీవితాలను శక్తివంతం చేయండి",
+  "edible.why.empower.text": "ప్రతి దానం ఆకలి అంతరాన్ని తగ్గించి, బలహీన కుటుంబాలకు అవసరమైన పోషకాహారాన్ని అందించడంలో సహాయపడుతుంది.",
+"nonEdible.hero.titleLine1": "తినలేని వ్యర్థాల",
+  "nonEdible.hero.titleLine2": "నిర్వహణ",
+  "nonEdible.hero.subtitle": "తప్పనిసరి ఆహార వ్యర్థాలను శక్తి, కంపోస్ట్ మరియు మట్టి ఆరోగ్యంగా మార్చండి. రీసైక్లింగ్ కేంద్రాలు మరియు స్థిరమైన రైతు పొలాల మా నెట్‌వర్క్‌లో చేరండి.",
+
+  "nonEdible.cards.recycling.title": "రీసైక్లింగ్ & కంపోస్టింగ్",
+  "nonEdible.cards.recycling.text": "ఆహార మిగతాలను ప్రీమియమ్ సేంద్రీయ కంపోస్ట్ లేదా పరిశుభ్రమైన బయో-ఎనర్జీగా మార్చండి. వ్యర్థాలను నిర్వహించడానికి సమీపంలోని లైసెన్స్ పొందిన కేంద్రాలను కనుగొనండి.",
+  "nonEdible.cards.recycling.button": "భాగస్వాములను కనుగొనండి",
+
+  "nonEdible.cards.agriculture.title": "వ్యవసాయ వినియోగం",
+  "nonEdible.cards.agriculture.text": "పోషకాలు అధికంగా ఉన్న ఉప ఉత్పత్తులను స్థానిక రైతులకు విరాళంగా ఇచ్చి నేల సారాన్ని పెంచండి. భూమి నుంచే మళ్లీ ప్రారంభమయ్యే వలయాకార ఆర్థిక వ్యవస్థను నిర్మించడంలో సహాయపడండి.",
+  "nonEdible.cards.agriculture.button": "రైతులకు విరాళం ఇవ్వండి",
+
+  "nonEdible.info.title": "తినలేని ఆహారాన్ని ఎందుకు రీసైకిల్ చేయాలి?",
+  "nonEdible.info.methane.title": "మీథేన్ తగ్గింపు",
+  "nonEdible.info.methane.text": "ల్యాండ్‌ఫిల్‌లో పాడుబడి పోవడం నివారించడం వల్ల హానికరమైన గ్రీన్‌హౌస్ వాయు ఉద్గారాలు తగ్గుతాయి.",
+  "nonEdible.info.soil.title": "నేలను పునరుద్ధరించండి",
+  "nonEdible.info.soil.text": "సేంద్రీయ వ్యర్థాలు అలసిపోయిన వ్యవసాయ భూములకు అవసరమైన పోషకాలను తిరిగి అందిస్తాయి.",
+  "nonEdible.info.energy.title": "శక్తిని సృష్టించండి",
+  "nonEdible.info.energy.text": "అనాయిరోబిక్ డైజెషన్ ద్వారా వ్యర్థాలు పునరుత్పాదక బయోగ్యాస్‌గా మారుతాయి.",
+
+  "donation.nonEdible.title": "తినలేని వస్తువులను దానం చేయండి",
+    "donation.nonEdible.itemName.placeholder": "వస్తువు పేరు",
+  "donation.nonEdible.item.placeholder": "వస్తువు పేరు",
+  "donation.nonEdible.image.placeholder": "చిత్ర URL (ఐచ్చికం)",
+  "donation.nonEdible.notes.placeholder": "ఏదైనా ప్రత్యేక నిర్వహణ లేదా సూచనలున్నాయా?",
+
+  "donation.medications.title": "ఔషధాలను దానం చేయండి",
+  "donation.medications.itemName.placeholder": "ఔషధం పేరు",
+
+  "donation.accessories.title": "యాక్సెసరీలను దానం చేయండి",
+  "donation.accessories.itemName.placeholder": "యాక్సెసరీ పేరు",
+
+  "donation.clothes.title": "బట్టలను దానం చేయండి",
+  "donation.clothes.itemName.placeholder": "దుస్తుల పేరు",
+
+  "donation.imageUrl.optional": "చిత్రం URL (ఐచ్చికం)",
+
+
+  "directory.title": "రీసైక్లింగ్ & ఎన్‌జీఓ డైరెక్టరీ",
+  "directory.subtitle": "ఆహార వ్యర్థాలను బాధ్యతగా నిర్వహించే నమ్మకమైన రీసైక్లింగ్ భాగస్వాములు, ఎన్‌జీఓలు మరియు వ్యవసాయ సంస్థలతో కలుపుతుంది.",
+
+  "directory.card1.title": "కమ్యూనిటీ ఫుడ్ బ్యాంక్",
+  "directory.card1.text": "తినదగిన అదనపు ఆహారాన్ని స్వీకరించి ఆశ్రయాలు మరియు చిన్నారుల సంరక్షణ కేంద్రాలకు పంపిణీ చేస్తుంది.",
+  "directory.card1.button": "సంప్రదించండి",
+
+  "directory.card2.title": "గ్రీన్సైకిల్ కంపోస్టర్స్",
+  "directory.card2.text": "తినలేని ఆహార వ్యర్థాన్ని కంపోస్టుగా మరియు బయో–ఆర్గానిక్ ఎరువుగా మారుస్తుంది.",
+  "directory.card2.button": "పికప్ అభ్యర్థన",
+
+  "directory.card3.title": "అగ్రోఫార్మ్ కలెక్టివ్",
+  "directory.card3.text": "రైతులతో కలిసి ఆహార ఉప–ఉత్పత్తులను నేల శక్తిని పెంచే పదార్థాలుగా రీసైకిల్ చేస్తుంది.",
+  "directory.card3.button": "అభ్యర్థన పంపండి",
+  
+  "listings.title": "పబ్లిక్ లిస్టింగ్స్",
+  "listings.subtitle": "వినియోగదారులు పంచుకున్న అందుబాటులో ఉన్న ఆహారం మరియు వస్తువులు",
+  "listings.filter.type": "అన్ని రకాలూ",
+  "listings.filter.category": "అన్ని వర్గాలు",
+  "listings.empty": "ఎటువంటి లిస్టింగ్స్ కనబడలేదు",
+
+  "contact.title": "సంప్రదించండి & మద్దతు",
+  "contact.subtitle": "ప్రశ్నలున్నాయా, సహాయం కావాలా లేదా మాతో భాగస్వామ్యం కావాలనుకుంటున్నారా? మేము మీకు సహాయం చేయడానికి సిద్ధంగా ఉన్నాము.",
+  "contact.fullName": "పూర్తి పేరు",
+  "contact.fullName.placeholder": "మీ పేరును నమోదు చేయండి",
+  "contact.email": "ఇమెయిల్ చిరునామా",
+  "contact.email.placeholder": "మీ ఇమెయిల్‌ను నమోదు చేయండి",
+  "contact.message": "సందేశం",
+  "contact.message.placeholder": "మేము మీకు ఎలా సహాయం చేయగలము?",
+  "contact.send": "సందేశాన్ని పంపండి",
+
+"donation.title": "ఆహారం దానం చేయండి",
+
+  "donation.foodTitle.label": "ఆహారం పేరు",
+  "donation.foodTitle.placeholder": "ఆహారం పేరును నమోదు చేయండి",
+
+  "donation.quantity.label": "పరిమాణం",
+  "donation.quantity.placeholder": "ఉదా: 10 ప్లేట్లు, 5 కిలోలు, 20 ప్యాక్‌లు",
+
+  "donation.address.label": "పికప్ చిరునామా",
+  "donation.address.placeholder": "పూర్తి పికప్ చిరునామాను నమోదు చేయండి",
+
+  "donation.image.label": "ఆహారం ఫోటో",
+  "donation.image.upload": "చిత్రాన్ని ఎక్కించండి",
+  "donation.image.capture": "ఫోటో తీయండి",
+
+  "donation.prepTime.label": "తయారుచేసిన సమయం",
+  "donation.prepTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.packageTime.label": "ప్యాక్ చేసిన సమయం",
+  "donation.packageTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.notes.label": "అదనపు గమనికలు",
+  "donation.notes.placeholder": "ఏవైనా ప్రత్యేక సూచనలు లేదా జాగ్రత్తలు ఉంటే ఇక్కడ వ్రాయండి",
+
+  "donation.submit": "దానం సమర్పించండి",
+ "directory.toast.contact": "సంప్రదింపు అభ్యర్థన పంపబడింది!",
+  "directory.toast.pickup": "పికప్ అభ్యర్థన సృష్టించబడింది!",
+  "directory.toast.farm": "ఫారం అభ్యర్థన సమర్పించబడింది!",
+ "directory.toast.contact": "ಸಂಪರ್ಕ ವಿನಂತಿ ಕಳುಹಿಸಲಾಗಿದೆ!",
+  "directory.toast.pickup": "ಪಿಕಪ್ ವಿನಂತಿ ಸೃಷ್ಟಿಸಲಾಗಿದೆ!",
+  "directory.toast.farm": "ಫಾರ್ಮ್ ವಿನಂತಿ ಸಲ್ಲಿಸಲಾಗಿದೆ!"
+
+
+
+
+
+}

@@ -1,0 +1,235 @@
+{
+  "language.english": "ഇംഗ്ലീഷ്",
+  "language.hindi": "ഹിന്ദി",
+  "language.tamil": "തമിഴ്",
+  "language.telugu": "తెలുങ്ക്",
+  "language.kannada": "കന്നഡ",
+  "language.malayalam": "മലയാളം",
+
+  "nav.home": "ഹോം",
+  "nav.edible": "ഭക്ഷ്യയോഗ്യം",
+  "nav.nonEdible": "അഭക്ഷ്യം",
+  "nav.directory": "ഡയറക്ടറി",
+  "nav.listings": "ലിസ്റ്റിംഗ്സ്",
+  "nav.support": "സഹായം",
+  "nav.login": "ലോഗിൻ",
+  "nav.logout": "ലോഗൗട്ട്",
+
+  "home.hero.title": "ഭക്ഷണത്തിന് രണ്ടാംൊരു അവസരം.",
+  "home.hero.subtitle": "സീറോ ഫുഡ് വെയ്സ്റ്റ്. പങ്കിടൂ. റീസൈക്കിൾ ചെയ്യൂ. നിലനിർത്തൂ.",
+  "home.hero.description": "അധികമായ വിഭവങ്ങൾ ആവശ്യമുള്ളവരുമായി ബന്ധിപ്പിക്കുന്ന നമ്മുടെ സ്മാർട്ട് പ്ലാറ്റ്ഫോമിൽ ചേരൂ. ഒത്തു ചേർന്ന് നാം സീറോ വെയ്സ്റ്റ് ഭാവി സൃഷ്ടിക്കാം.",
+  "home.hero.btnDonor": "എന്നെക്കാൾ ഭക്ഷ്യയോഗ്യമായ ഭക്ഷണം ഉണ്ട്",
+  "home.hero.btnReceiver": "എനിക്ക് റീസൈക്ലിംഗ് വേണം",
+
+  "home.title": "അധിക ഭക്ഷ്യയോഗ്യമായ ഭക്ഷണം മാനേജ് ചെയ്യൂ",
+  "home.subtitle": "അധികമായ ഭക്ഷണത്തെ പോഷകാഹാരത്തിലും സമൂഹ സഹായത്തിലും മാറ്റാം. നല്ല ഭക്ഷണം കളയാതെ ഇരിക്കാൻ ഞങ്ങളുടെ നെറ്റ്‌വർക്കിൽ ചേരൂ.",
+  "home.cardDonate.title": "ഭക്ഷണം ദാനം ചെയ്യൂ",
+  "home.cardDonate.text": "പുതിയ, ഉയർന്ന നിലവാരമുള്ള അധിക ഭക്ഷണം പ്രാദേശിക എൻജിഒകളുമായി, സമൂഹവുമായി പങ്കിടൂ.",
+  "home.cardListings.title": "ലിസ്റ്റിംഗ്സ് കാണുക",
+  "home.cardListings.text": "സജീവമായ എല്ലാ ഫുഡ് ഡൊണേഷൻസും ബ്രൗസ് ചെയ്ത് നിങ്ങളുടെ എൻജിഒക്ക് വിതരണം ചെയ്യാൻ കഴിയുന്നവ ക്ലെയിം ചെയ്യൂ.",
+  "buttons.donate": "ദാനം ആരംഭിക്കുക",
+  "buttons.listings": "ലിസ്റ്റിംഗ്സ് കാണുക",
+
+  "home.how.title": "ഇത് എങ്ങനെ പ്രവർത്തിക്കുന്നു",
+  "home.how.subtitle": "ലളിതം, സുതാര്യവും, വലിയ സ്വാധീനവുമുള്ളത്. മൂന്നു ഘട്ടങ്ങൾ മാത്രം.",
+  "home.how.step1.title": "നിങ്ങളുടെ ഭക്ഷണം ലിസ്റ്റ് ചെയ്യൂ",
+  "home.how.step1.text": "അധിക ഭക്ഷ്യയോഗ്യമായ വിഭവങ്ങൾ പോസ്റ്റ് ചെയ്യൂ.",
+  "home.how.step2.title": "എൻജിഒകൾ കണ്ടെത്തും",
+  "home.how.step2.text": "അടുത്തുള്ള എൻജിഒകൾ തങ്ങൾക്ക് വേണ്ടതെല്ലാം ക്ലെയിം ചെയ്യും.",
+  "home.how.step3.title": "സ്വാധീനം സൃഷ്ടിക്കൂ",
+  "home.how.step3.text": "ഭക്ഷണം ആവശ്യമുള്ളവരുടെ കൈകളിലെത്തും. സീറോ വെയ്സ്റ്റ്.",
+
+  "home.impact.title": "സമൂഹങ്ങളിൽ യഥാർത്ഥ സ്വാധീനം",
+  "home.impact.text": "പ്രതിദിനം ലക്ഷക്കണക്കിന് ടൺ ഭക്ഷണം പാഴാകുമ്പോൾ ആളുകൾ വിശന്നിരിക്കുകയാണ്. സ്ഥിരതയുള്ള ഫുഡ് ഇക്കോസിസ്റ്റം രൂപീകരിച്ച് Replate ഈ വിടവ് നികത്തുന്നു.",
+  "home.impact.bullet1": "ഭക്ഷണ പാഴ് കുറയ്ക്കുക",
+  "home.impact.bullet2": "വിശപ്പിനെ നേരിടുക",
+  "home.impact.bullet3": "സമൂഹം നിർമ്മിക്കുക",
+  "home.impact.stat1.label": "ലാൻഡ്‌ഫില്ലിൽ നിന്ന് രക്ഷപ്പെടുത്തിയ ടൺകൾ",
+  "home.impact.stat2.label": "ഈ വർഷം ഭക്ഷണം ലഭിച്ചവർ",
+  "home.impact.stat3.label": "മറവിന്യാസം ചെയ്ത ഭക്ഷണത്തിന്റെ മൂല്യം",
+
+  "home.stories.title": "വിജയകഥകൾ",
+  "home.stories.subtitle": "നമ്മുടെ സമൂഹത്തിൽ നിന്നും വരുന്ന മാറ്റത്തിന്റെ യഥാർത്ഥ നിമിഷങ്ങൾ.",
+  "home.stories.card1.tag": "സമൂഹം",
+  "home.stories.card1.title": "കുട്ടികൾക്ക് ഭക്ഷണം",
+  "home.stories.card1.text": "ഒരു പ്രാദേശിക വിവാഹത്തിൽ നിന്നുള്ള അധിക ഭക്ഷണം പോഷകാഹാരമായി വിതരണം ചെയ്തു.",
+  "home.stories.card2.tag": "സീറോ വെയ്സ്റ്റ്",
+  "home.stories.card2.title": "പുതിയ വിളവ് രക്ഷപ്പെടുത്തൽ",
+  "home.stories.card2.text": "പ്രാദേശിക കർഷകർ എൻജിഒകളുമായി ചേർന്ന് 200 കിലോ പുതിയ പച്ചക്കറികൾ രക്ഷപ്പെടുത്തി.",
+  "home.stories.card3.tag": "സ്വാധീനം",
+  "home.stories.card3.title": "പ്രാദേശിക നായകരെ ശക്തരാക്കൽ",
+  "home.stories.card3.text": "റസ്റ്റോറന്റുകളും ഭക്ഷ്യ സുരക്ഷയില്ലാത്തവരും തമ്മിലുള്ള ഇടവഴി മൂടുന്നു.",
+
+  "home.gallery.title": "ഓരോ പങ്കുവെച്ച ഭക്ഷണവും ഒരു ജീവിതം മാറ്റുന്നു",
+  "home.gallery.subtitle": "ഇപ്പോൾ തന്നെ രക്ഷിക്കപ്പെടുന്ന പുതിയ വിഭവങ്ങൾ കാണൂ",
+
+  "home.cta.title": "ഇന്ന് മാറ്റം സൃഷ്ടിക്കാൻ തയ്യാറാണോ?",
+  "home.cta.text": "നല്ല ഭക്ഷണം ലാൻഡ്‌ഫില്ലിലേക്ക് പോകാൻ അനുവദിക്കരുത്. നിങ്ങളുടെ അധികം ആരെങ്കിലും അടുത്ത വിഭവമാകാം.",
+  "home.cta.button": "ഇപ്പോൾ തന്നെ ദാനം ചെയ്യൂ",
+
+  "auth.userTab": "ഉപയോക്താവ്",
+  "auth.ngoTab": "എൻജിഒ",
+  "auth.loginTab": "ലോഗിൻ",
+  "auth.registerTab": "രജിസ്റ്റർ",
+  "auth.field.name": "പേര്",
+  "auth.field.ngoLicense": "എൻജിഒ ലൈസൻസ് ഐഡി",
+  "auth.field.email": "ഇമെയിൽ",
+  "auth.field.password": "പാസ്‌വേഡ്",
+  "auth.submit": "സമർപ്പിക്കുക",
+  "auth.continueGoogle": "Google ഉപയോഗിച്ച് തുടരുക",
+  "auth.loading": "ദയവായി കാത്തിരിക്കുക...",
+
+  "auth.toast.licenceRequired": "എൻജിഒകൾക്ക് ലൈസൻസ് ഐഡി ആവശ്യമാണ്",
+  "auth.toast.loginSuccess": "ലോഗിൻ വിജയകരം",
+  "auth.toast.registerSuccess": "അക്കൗണ്ട് സൃഷ്ടിച്ചു",
+  "auth.toast.error": "അധികൃതീകരണ പിശക്",
+
+  "footer.tagline": "ഭക്ഷണത്തിന് രണ്ടാം അവസരം. ബന്ധപ്പെടൂ, പങ്കിടൂ, ജീവനുകൾ രക്ഷിക്കൂ.",
+  "footer.madeWith": "ഭക്ഷണ പാഴ് അവസാനിപ്പിക്കാൻ ❤️ കൊണ്ട് സൃഷ്ടിച്ചത്",
+  "footer.quickLinks.title": "ഫാസ്റ്റ് ലിങ്കുകൾ",
+  "footer.donors.title": "ദാതാക്കൾക്ക്",
+  "footer.contact.title": "ബന്ധപ്പെടുക",
+  "footer.link.home": "ഹോം",
+  "footer.link.edible": "ഭക്ഷ്യയോഗ്യം",
+  "footer.link.nonEdible": "അഭക്ഷ്യം",
+  "footer.link.directory": "ഡയറക്ടറി",
+  "footer.link.support": "സഹായം",
+  "footer.link.postFood": "ഭക്ഷണം പോസ്റ്റ് ചെയ്യൂ",
+  "footer.link.myDonations": "എന്റെ ദാനങ്ങൾ",
+  "footer.link.faqs": "ചോദ്യോത്തരങ്ങൾ",
+  "footer.link.guidelines": "നിർദ്ദേശങ്ങൾ",
+  "footer.contact.email": "support@replate.com",
+  "footer.contact.phone": "+1-800-REPLATE",
+  "footer.contact.cities": "50+ നഗരങ്ങളിൽ",
+  "footer.contact.social": "Replateo",
+  "footer.copyright": "© 2026 REPLATE. എല്ലാ അവകാശങ്ങളും സംരക്ഷിതമാണ്.",
+
+  "dashboard.title": "ഡാഷ്‌ബോർഡ്",
+  "dashboard.subtitle": "ദാനങ്ങൾ, പിക്കപ്പ്‌കൾ, സ്വാധീനം എന്നിവയുടെ അവലോകനം",
+  "contact.title": "ഞങ്ങളെ ബന്ധപ്പെടുക",
+  "contact.subtitle": "എൻജിഒകൾക്കും ദാതാക്കൾക്കും സന്നദ്ധ പ്രവർത്തകർക്കും സഹായിക്കാൻ ഞങ്ങൾ ഇവിടെ ഇരിക്കുന്നു.",
+    "edible.title": "ഭക്ഷിക്കാവുന്ന അധിക ആഹാരം നിയന്ത്രിക്കുക",
+  "edible.subtitle": "അധികമായി ഉള്ള ഭക്ഷണത്തെ പോഷകാഹാരമായും സമൂഹ സഹായമായും മാറ്റുക. ഒരു നല്ല ഭക്ഷണവും പാഴാകാതിരിക്കാൻ ഞങ്ങളുടെ നെറ്റ്വർക്കിൽ ചേരുക.",
+
+  "edible.cardDonate.title": "ഭക്ഷണം ദാനം ചെയ്യുക",
+  "edible.cardDonate.text": "പുതിയതും ഉയർന്ന നിലവാരമുള്ളതുമായ അധിക ആഹാരം പ്രാദേശിക എൻ.ജിഒ.കളുമായി പങ്കിടുക. കുടുംബങ്ങൾക്ക് ഭക്ഷണം നൽകി സമൂഹത്തിലെ വിശപ്പു കുറയ്ക്കാൻ സഹായിക്കുക.",
+  "edible.cardDonate.button": "ദാനം തുടങ്ങുക",
+
+  "edible.cardListings.title": "ലിസ്റ്റുകൾ കാണുക",
+  "edible.cardListings.text": "നിങ്ങളുടെ പ്രദേശത്തിലെ എല്ലാ സജീവ ഭക്ഷണ ദാനങ്ങളും ബ്രൗസ് ചെയ്യുക. ആവശ്യമുള്ളവർക്ക് വിതരണം ചെയ്യാൻ ലഭ്യമായ ഭക്ഷണങ്ങൾ ക്ലെയിം ചെയ്യുക.",
+  "edible.cardListings.button": "ലിസ്റ്റുകൾ അന്വേഷിക്കുക",
+
+  "edible.why.title": "ഭക്ഷിക്കാവുന്ന അധികം എന്തിന് ദാനം ചെയ്യണം?",
+
+  "edible.why.safety.title": "സുരക്ഷ ആദ്യം",
+  "edible.why.safety.text": "കടുത്ത ഗുണനിലവാര മാർഗ്ഗനിർദ്ദേശങ്ങളും AI പരിശോധനകളും പങ്കിടുന്ന ഭക്ഷണം സുരക്ഷിതവും പുതിയതുമാണെന്ന് ഉറപ്പാക്കുന്നു.",
+
+  "edible.why.impact.title": "ഉടൻ ഫലം",
+  "edible.why.impact.text": "ഞങ്ങളുടെ ലോജിസ്റ്റിക് നെറ്റ്വർക്കിലൂടെ ദാതാക്കളെ അടുത്തുള്ള എൻ.ജിഒ.കളുമായി നേരിട്ട് ബന്ധിപ്പിക്കുന്നു, അതുവഴി വേഗത്തിലുള്ള അതേ ദിവസത്തെ പിക്കപ്പ് സാധ്യമാകുന്നു.",
+
+  "edible.why.empower.title": "ജീവിതങ്ങളെ ശക്തിപ്പെടുത്തുക",
+  "edible.why.empower.text": "ഓരോ ദാനവും വിശപ്പിന്റെ അന്തരം കുറച്ച്, ദുർബലമായ കുടുംബങ്ങൾക്ക് അത്യാവശ്യമായ പോഷകാഹാരം നൽകാൻ സഹായിക്കുന്നു.",
+
+ "nonEdible.hero.titleLine1": "ഭക്ഷിക്കാനാവാത്ത മാലിന്യ",
+  "nonEdible.hero.titleLine2": "നിയന്ത്രണം",
+  "nonEdible.hero.subtitle": "അനിയന്ത്രിക്കാനാകാത്ത ഭക്ഷ്യ മാലിന്യങ്ങളെ ഊർജ്ജം, കോംപോസ്റ്റ്, മണ്ണിന്റെ ആരോഗ്യമായി മാറ്റുക. റിസൈക്ലിംഗ് കേന്ദ്രങ്ങളും സുസ്ഥിര കൃഷി നിലങ്ങളും ഉൾപ്പെടുന്ന ഞങ്ങളുടെ നെറ്റ്വർക്കിൽ ചേരുക.",
+
+  "nonEdible.cards.recycling.title": "റിസൈക്ലിംഗ് & കോംപോസ്റ്റിംഗ്",
+  "nonEdible.cards.recycling.text": "ഭക്ഷ്യ അവശിഷ്ടങ്ങളെ ഉയർന്ന നിലവാരമുള്ള ഓർഗാനിക് കോംപോസ്റ്റ് അല്ലെങ്കിൽ ശുദ്ധമായ ബയോ-എനർജിയായി മാറ്റുക. മാലിന്യം കൈകാര്യം ചെയ്യാൻ സമീപത്തുള്ള ലൈസൻസ് ലഭിച്ച സ്ഥാപനങ്ങളെ കണ്ടെത്തുക.",
+  "nonEdible.cards.recycling.button": "പങ്കാളികളെ കണ്ടെത്തുക",
+
+  "nonEdible.cards.agriculture.title": "കൃഷി ഉപയോഗം",
+  "nonEdible.cards.agriculture.text": "പോഷക സമൃദ്ധമായ ഉപോത്പന്നങ്ങൾ പ്രാദേശിക കർഷകർക്ക് ദാനം ചെയ്ത് മണ്ണിന്റെ സാരം വർധിപ്പിക്കുക. ഭൂമിയിൽ നിന്ന് തിരികെ ആരംഭിക്കുന്ന വൃത്താകാര സമ്പദ് വ്യവസ്ഥ പണിയാൻ സഹായിക്കുക.",
+  "nonEdible.cards.agriculture.button": "കർഷകർക്ക് ദാനം ചെയ്യുക",
+
+  "nonEdible.info.title": "ഭക്ഷിക്കാനാവാത്ത ഭക്ഷണം എന്തിന് റിസൈക്ല്‍ ചെയ്യണം?",
+  "nonEdible.info.methane.title": "മീഥേൻ കുറയ്ക്കുക",
+  "nonEdible.info.methane.text": "ലാൻഡ്‌ഫില്ലിൽ പൊഴിഞ്ഞ് കെടുന്നത് തടയുന്നത് ഹാനികരമായ ഹരിതഗൃഹ വാതക ഉത്സർഗം കുറയ്ക്കുന്നു.",
+  "nonEdible.info.soil.title": "മണ്ണിനെ പുനഃസ്ഥാപിക്കുക",
+  "nonEdible.info.soil.text": "ഓർഗാനിക് മാലിന്യം ക്ഷീണിതമായ വയലുകളിൽ അത്യാവശ്യ പോഷകങ്ങൾ തിരികെ എത്തിക്കുന്നു.",
+  "nonEdible.info.energy.title": "ഊർജം സൃഷ്ടിക്കുക",
+  "nonEdible.info.energy.text": "അനയറോബിക് ഡൈജെസ്റ്റഷൻ മാലിന്യങ്ങളെ പുനരുപയോഗിക്കാവുന്ന ബയോ ഗ്യാസാക്കി മാറ്റുന്നു.",
+  
+  "donation.nonEdible.title": "ഭക്ഷിക്കാനാവാത്ത വസ്തുക്കൾ ദാനം ചെയ്യുക",
+  "donation.nonEdible.itemName.placeholder": "വസ്തുവിന്റെ പേര്",
+"donation.nonEdible.item.placeholder": "ഇനം പേര്",
+"donation.nonEdible.image.placeholder": "ചിത്ര URL (ഐച്ഛികം)",
+"donation.nonEdible.notes.placeholder": "പ്രത്യേക കൈകാര്യം ചെയ്യൽ അല്ലെങ്കിൽ നിർദേശങ്ങളുണ്ടോ?",
+
+  "donation.medications.title": "മരുന്നുകൾ ദാനം ചെയ്യുക",
+  "donation.medications.itemName.placeholder": "മരുന്നിന്റെ പേര്",
+
+  "donation.accessories.title": "ആക്സസറികൾ ദാനം ചെയ്യുക",
+  "donation.accessories.itemName.placeholder": "ആക്സസറിയുടെ പേര്",
+
+  "donation.clothes.title": "വസ്ത്രങ്ങൾ ദാനം ചെയ്യുക",
+  "donation.clothes.itemName.placeholder": "വസ്ത്രത്തിന്റെ പേര്",
+
+  "donation.imageUrl.optional": "ഇമേജ് URL (ഐച്ഛികം)",
+
+
+  "directory.title": "റീസൈക്ലിംഗ് & എൻ‌ജിഒ ഡയറക്ടറി",
+  "directory.subtitle": "ഭക്ഷ്യ മാലിന്യങ്ങൾ ഉത്തരവാദിത്തത്തോടെ കൈകാര്യം ചെയ്യുന്ന വിശ്വസനീയമായ റీసൈക്ലിംഗ് പങ്കാളികൾ, എൻ‌ജിഒകൾ, കാർഷിക സംഘടനകളുമായി ബന്ധപ്പെടുക.",
+
+  "directory.card1.title": "കമ്മ്യൂണിറ്റി ഫുഡ് ബാങ്ക്",
+  "directory.card1.text": "അധികമായി ശേഷിക്കുന്ന ഭക്ഷണം സ്വീകരിച്ച് ശെൽട്ടറുകളിലും ശിശു പരിചരണ കേന്ദ്രങ്ങളിലും വിതരണം ചെയ്യുന്നു.",
+  "directory.card1.button": "കോൺടാക്റ്റ്",
+
+  "directory.card2.title": "ഗ്രീൻസൈക്ല് കോംപോസ്റ്റേഴ്സ്",
+  "directory.card2.text": "ഭക്ഷ്യയോഗ്യമല്ലാത്ത മാലിന്യങ്ങളെ കോംപോസ്റ്റ് & ജൈവ–ഓർഗാനിക് വളമാക്കുന്നു.",
+  "directory.card2.button": "പിക്കപ്പ് അഭ്യർഥന",
+
+  "directory.card3.title": "അഗ്രോഫാം കലക്ടീവ്",
+  "directory.card3.text": "കർഷകരുമായി ചേർന്ന് ഭക്ഷ്യ ഉപോൽപ്പന്നങ്ങളെ മണ്ണ് മെച്ചപ്പെടുത്തുന്ന വളങ്ങളായി റീസൈക്കിൾ ചെയ്യുന്നു.",
+  "directory.card3.button": "അഭ്യർഥന അയയ്ക്കുക",
+
+  "listings.title": "പബ്ലിക് ലിസ്റ്റിംഗുകൾ",
+  "listings.subtitle": "ഉപയോക്താക്കൾ പങ്കുവച്ച ലഭ്യമായ ഭക്ഷണവും ഇനങ്ങളും",
+  "listings.filter.type": "എല്ലാ തരം",
+  "listings.filter.category": "എല്ലാ വിഭാഗങ്ങളും",
+  "listings.empty": "ലിസ്റ്റിംഗുകൾ ഒന്നും കണ്ടെത്തിയില്ല",
+
+  "contact.title": "ബന്ധപ്പെടുക & പിന്തുണ",
+  "contact.subtitle": "ചോദ്യങ്ങളുണ്ടോ, സഹായം വേണോ, അല്ലെങ്കിൽ ഞങ്ങളുമായി പങ്കാളിയാകണോ? നിങ്ങളെ സഹായിക്കാൻ ഞങ്ങൾ ഇവിടെ തന്നെയുണ്ട്.",
+  "contact.fullName": "പൂർണ്ണ പേര്",
+  "contact.fullName.placeholder": "നിങ്ങളുടെ പേര് നൽകുക",
+  "contact.email": "ഇമെയിൽ വിലാസം",
+  "contact.email.placeholder": "നിങ്ങളുടെ ഇമെയിൽ നൽകുക",
+  "contact.message": "സന്ദേശം",
+  "contact.message.placeholder": "നിങ്ങളെ എങ്ങനെ സഹായിക്കാം?",
+  "contact.send": "സന്ദേശം അയക്കുക",
+
+"donation.title": "ഭക്ഷണം സംഭാവന ചെയ്യുക",
+
+  "donation.foodTitle.label": "ഭക്ഷണത്തിന്റെ പേര്",
+  "donation.foodTitle.placeholder": "ഭക്ഷണത്തിന്റെ പേര് നൽകുക",
+
+  "donation.quantity.label": "അളവ്",
+  "donation.quantity.placeholder": "ഉദാ: 10 പ്ലേറ്റ്, 5 കിലോ, 20 പാക്കറ്റ്",
+
+  "donation.address.label": "പിക്കപ്പ് വിലാസം",
+  "donation.address.placeholder": "പൂർണ്ണ പിക്കപ്പ് വിലാസം നൽകുക",
+
+  "donation.image.label": "ഭക്ഷണത്തിന്റെ ചിത്രം",
+  "donation.image.upload": "ചിത്രം അപ്‌ലോഡ് ചെയ്യുക",
+  "donation.image.capture": "ഫോട്ടോ എടുക്കുക",
+
+  "donation.prepTime.label": "തയ്യാറാക്കിയ സമയം",
+  "donation.prepTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.packageTime.label": "പാക്ക് ചെയ്ത സമയം",
+  "donation.packageTime.placeholder": "dd-mm-yyyy  --:--",
+
+  "donation.notes.label": "കൂടുതൽ കുറിപ്പുകൾ",
+  "donation.notes.placeholder": "പ്രത്യേക നിർദ്ദേശങ്ങൾ അല്ലെങ്കിൽ ശ്രദ്ധിക്കേണ്ട കാര്യങ്ങൾ ഉണ്ടോ?",
+
+  "donation.submit": "സംഭാവന സമർപ്പിക്കുക",
+"directory.toast.contact": "ബന്ധപ്പെടാനുള്ള അഭ്യർത്ഥന അയച്ചു!",
+  "directory.toast.pickup": "പിക്കപ്പ് അഭ്യർത്ഥന സൃഷ്ടിച്ചു!",
+  "directory.toast.farm": "ഫാം അഭ്യർത്ഥന സമർപ്പിച്ചു!"
+
+
+
+
+
+}

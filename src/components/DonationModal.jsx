@@ -1,8 +1,21 @@
+// src/components/DonationModal.jsx
 import { useState } from "react";
+import {
+  X,
+  Upload,
+  AlertTriangle,
+  CheckCircle,
+  Loader2,
+  Camera,
+  MapPin,
+} from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-import { X, Upload, AlertTriangle, CheckCircle, Loader2, Camera, MapPin } from "lucide-react";
 import CameraCapture from "./CameraCapture";
-import { getCurrentLocation, getAddressFromCoordinates } from "../utils/LocationService";
+import {
+  getCurrentLocation,
+  getAddressFromCoordinates,
+} from "../utils/LocationService";
 import { db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useAuth } from "../context/AuthContext";
@@ -12,6 +25,7 @@ import { uploadToImgBB } from "../utils/uploadToImgBB";
 const API_BASE_URL = "http://localhost:5000";
 
 export default function DonationModal({ open, onClose, type = "food" }) {
+  const { t } = useTranslation();
   const { user } = useAuth();
   const { addToast } = useToast();
 
@@ -36,8 +50,8 @@ export default function DonationModal({ open, onClose, type = "food" }) {
 
   const config = {
     food: {
-      heading: "Donate Food",
-      title: "Food Title",
+      heading: t("donation.title"),
+      title: t("donation.foodTitle.label"),
       category: "edible",
     },
     medications: {
@@ -59,8 +73,10 @@ export default function DonationModal({ open, onClose, type = "food" }) {
       subCategory: "resalable-clothes",
     },
     "non-edible": {
-      heading: "Donate Non-Edible Items",
-      title: "Item Name",
+      // translated heading for non-edible
+      heading: t("donation.nonEdible.title"),
+      // used only as fallback; placeholder below handles real text
+      title: t("donation.nonEdible.item.placeholder"),
       category: "non-edible",
     },
   };
@@ -72,11 +88,10 @@ export default function DonationModal({ open, onClose, type = "food" }) {
     if (file) {
       setImageFile(file);
       setImagePreview(await uploadToImgBB(file));
-      setAnalysisResult(null); // Reset analysis when new image selected
+      setAnalysisResult(null);
     }
   };
 
-  // Handle capture from camera
   const handleCameraCapture = async (file) => {
     setImageFile(file);
     setImagePreview(await uploadToImgBB(file));
@@ -131,7 +146,8 @@ export default function DonationModal({ open, onClose, type = "food" }) {
       const errorResult = {
         classification: "NOT-EDIBLE",
         confidence: 0,
-        reasoning: "Failed to connect to food safety analysis service. Please try again.",
+        reasoning:
+          "Failed to connect to food safety analysis service. Please try again.",
         error: true,
       };
       setAnalysisResult(errorResult);
@@ -157,7 +173,7 @@ export default function DonationModal({ open, onClose, type = "food" }) {
       return;
     }
 
-    // For food donations, check AI analysis
+    // Food donations with AI analysis
     if (type === "food") {
       if (!imageFile) {
         addToast("Please upload a food image for safety analysis", "error");
@@ -169,7 +185,6 @@ export default function DonationModal({ open, onClose, type = "food" }) {
         return;
       }
 
-      // Use existing analysis result if available, otherwise run analysis
       let analysis = analysisResult;
       if (!analysis) {
         analysis = await analyzeFood();
@@ -180,18 +195,17 @@ export default function DonationModal({ open, onClose, type = "food" }) {
         return;
       }
 
-      // Check if food is safe - accept EDIBLE classification OR safe decisions
       const isEdible = analysis.classification === "EDIBLE";
-      const isSafeByDecision = analysis.decision === "SAFE_FOR_DONATION" || analysis.decision === "SAFE_WITH_ADVISORY";
+      const isSafeByDecision =
+        analysis.decision === "SAFE_FOR_DONATION" ||
+        analysis.decision === "SAFE_WITH_ADVISORY";
 
       if (!isEdible && !isSafeByDecision) {
         addToast("Food safety check failed. See details below.", "error");
         return;
       }
 
-      // Food is safe, proceed to save with AI analysis data
       try {
-        // Prepare document data with fallbacks to prevent undefined values
         const docData = {
           title: title || "Untitled",
           quantity: quantity || "1",
@@ -211,7 +225,6 @@ export default function DonationModal({ open, onClose, type = "food" }) {
             address: address || "",
           },
 
-          // AI Analysis data - ensure no undefined values
           aiAnalysis: {
             classification: analysis.classification || "UNKNOWN",
             confidence: analysis.confidence ?? 0,
@@ -229,8 +242,6 @@ export default function DonationModal({ open, onClose, type = "food" }) {
           createdAt: serverTimestamp(),
         };
 
-        console.log("Submitting to Firestore:", docData);
-
         await addDoc(collection(db, "food_listings"), docData);
 
         addToast("Food donation submitted successfully!", "success");
@@ -238,12 +249,13 @@ export default function DonationModal({ open, onClose, type = "food" }) {
         onClose();
       } catch (err) {
         console.error("Firestore error:", err);
-        console.error("Error code:", err.code);
-        console.error("Error message:", err.message);
-        addToast(`Error submitting donation: ${err.message || "Unknown error"}`, "error");
+        addToast(
+          `Error submitting donation: ${err.message || "Unknown error"}`,
+          "error"
+        );
       }
     } else {
-      // Non-food donations (original behavior)
+      // Non-food donations
       try {
         await addDoc(collection(db, "food_listings"), {
           title,
@@ -300,10 +312,9 @@ export default function DonationModal({ open, onClose, type = "food" }) {
 
     return (
       <div
-        className={`p-4 rounded-xl border-2 ${isEdible
-          ? "bg-green-50 border-green-200"
-          : "bg-red-50 border-red-200"
-          }`}
+        className={`p-4 rounded-xl border-2 ${
+          isEdible ? "bg-green-50 border-green-200" : "bg-red-50 border-red-200"
+        }`}
       >
         <div className="flex items-center gap-2 mb-2">
           {isEdible ? (
@@ -312,8 +323,9 @@ export default function DonationModal({ open, onClose, type = "food" }) {
             <AlertTriangle className="text-red-600" size={24} />
           )}
           <span
-            className={`font-bold text-lg ${isEdible ? "text-green-700" : "text-red-700"
-              }`}
+            className={`font-bold text-lg ${
+              isEdible ? "text-green-700" : "text-red-700"
+            }`}
           >
             {isEdible ? "Safe for Donation" : "Not Safe for Donation"}
           </span>
@@ -328,12 +340,14 @@ export default function DonationModal({ open, onClose, type = "food" }) {
           <div className="text-sm text-gray-700 mb-2">
             <span className="font-medium">Risk Level:</span>{" "}
             <span
-              className={`px-2 py-0.5 rounded text-xs font-medium ${analysisResult.risk_level === "VERY_LOW" || analysisResult.risk_level === "LOW"
-                ? "bg-green-100 text-green-800"
-                : analysisResult.risk_level === "MODERATE"
+              className={`px-2 py-0.5 rounded text-xs font-medium ${
+                analysisResult.risk_level === "VERY_LOW" ||
+                analysisResult.risk_level === "LOW"
+                  ? "bg-green-100 text-green-800"
+                  : analysisResult.risk_level === "MODERATE"
                   ? "bg-yellow-100 text-yellow-800"
                   : "bg-red-100 text-red-800"
-                }`}
+              }`}
             >
               {analysisResult.risk_level}
             </span>
@@ -344,10 +358,13 @@ export default function DonationModal({ open, onClose, type = "food" }) {
           <div className="mt-3 p-3 bg-white rounded-lg">
             <p className="font-medium text-gray-800 mb-1">Reasoning:</p>
             {typeof analysisResult.reasoning === "string" ? (
-              <p className="text-sm text-gray-600">{analysisResult.reasoning}</p>
+              <p className="text-sm text-gray-600">
+                {analysisResult.reasoning}
+              </p>
             ) : (
               <p className="text-sm text-gray-600">
-                {analysisResult.reasoning.final_assessment || JSON.stringify(analysisResult.reasoning)}
+                {analysisResult.reasoning.final_assessment ||
+                  JSON.stringify(analysisResult.reasoning)}
               </p>
             )}
           </div>
@@ -355,7 +372,8 @@ export default function DonationModal({ open, onClose, type = "food" }) {
 
         {analysisResult.advisory && (
           <div className="mt-2 text-sm text-amber-700 bg-amber-50 p-2 rounded">
-            <span className="font-medium">Advisory:</span> {analysisResult.advisory}
+            <span className="font-medium">Advisory:</span>{" "}
+            {analysisResult.advisory}
           </div>
         )}
       </div>
@@ -377,26 +395,33 @@ export default function DonationModal({ open, onClose, type = "food" }) {
         </h2>
 
         <div className="space-y-4 max-h-[70vh] overflow-y-auto pr-2">
+          {/* Title input */}
           <input
             className="w-full p-3 border rounded-xl"
-            placeholder={current.title}
+            placeholder={
+              type === "food"
+                ? t("donation.foodTitle.placeholder")
+                : type === "non-edible"
+                ? t("donation.nonEdible.item.placeholder")
+                : current.title
+            }
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
 
+          {/* Quantity */}
           <input
             className="w-full p-3 border rounded-xl"
-            placeholder="Quantity"
+            placeholder={t("donation.quantity.placeholder")}
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
           />
 
-
-
+          {/* Address */}
           <div className="relative">
             <input
               className="w-full p-3 border rounded-xl pr-12"
-              placeholder="Pickup Address"
+              placeholder={t("donation.address.placeholder")}
               value={address}
               onChange={(e) => setAddress(e.target.value)}
             />
@@ -426,15 +451,16 @@ export default function DonationModal({ open, onClose, type = "food" }) {
           {/* Food-specific fields */}
           {type === "food" ? (
             <>
-              {/* Image Upload */}
+              {/* Image upload + camera */}
               <div className="space-y-2">
                 <label className="block text-sm font-medium text-gray-700">
-                  Food Image <span className="text-red-500">*</span>
+                  {t("donation.image.label")}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <div className="flex items-center gap-4">
                   <label className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-xl cursor-pointer transition">
                     <Upload size={20} />
-                    <span>Upload Image</span>
+                    <span>{t("donation.image.upload")}</span>
                     <input
                       type="file"
                       accept="image/*"
@@ -448,7 +474,7 @@ export default function DonationModal({ open, onClose, type = "food" }) {
                     className="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 rounded-xl cursor-pointer transition"
                   >
                     <Camera size={20} />
-                    <span>Take Photo</span>
+                    <span>{t("donation.image.capture")}</span>
                   </button>
 
                   {imageFile && (
@@ -468,59 +494,70 @@ export default function DonationModal({ open, onClose, type = "food" }) {
                 )}
               </div>
 
-              {/* Preparation Time */}
+              {/* Prep time */}
               <div className="space-y-1">
                 <label className="block text-sm font-medium text-gray-700">
-                  Preparation Time <span className="text-red-500">*</span>
+                  {t("donation.prepTime.label")}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="datetime-local"
                   className="w-full p-3 border rounded-xl"
+                  placeholder={t("donation.prepTime.placeholder")}
                   value={preparationTime}
                   onChange={(e) => setPreparationTime(e.target.value)}
                 />
               </div>
 
-              {/* Package Time */}
+              {/* Package time */}
               <div className="space-y-1">
                 <label className="block text-sm font-medium text-gray-700">
-                  Package Time <span className="text-red-500">*</span>
+                  {t("donation.packageTime.label")}{" "}
+                  <span className="text-red-500">*</span>
                 </label>
                 <input
                   type="datetime-local"
                   className="w-full p-3 border rounded-xl"
+                  placeholder={t("donation.packageTime.placeholder")}
                   value={packageTime}
                   onChange={(e) => setPackageTime(e.target.value)}
                 />
               </div>
 
-              {/* Analysis Result */}
               {renderAnalysisResult()}
             </>
           ) : (
+            // Non-food image URL (translated placeholder)
             <input
               className="w-full p-3 border rounded-xl"
-              placeholder="Image URL (optional)"
+              placeholder={t("donation.nonEdible.image.placeholder")}
               value={image}
               onChange={(e) => setImage(e.target.value)}
             />
           )}
 
+          {/* Notes */}
           <textarea
             className="w-full p-3 border rounded-xl"
-            placeholder="Additional notes"
+            placeholder={
+              type === "non-edible"
+                ? t("donation.nonEdible.notes.placeholder")
+                : t("donation.notes.placeholder")
+            }
             rows={3}
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
           />
 
+          {/* Submit button */}
           <button
             onClick={submitDonation}
             disabled={isAnalyzing}
-            className={`w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 ${isAnalyzing
-              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-              : "bg-[#C3E5E7] text-black hover:bg-[#B1DBDD]"
-              }`}
+            className={`w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 ${
+              isAnalyzing
+                ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                : "bg-[#C3E5E7] text-black hover:bg-[#B1DBDD]"
+            }`}
           >
             {isAnalyzing ? (
               <>
@@ -528,10 +565,9 @@ export default function DonationModal({ open, onClose, type = "food" }) {
                 Analyzing Food Safety...
               </>
             ) : (
-              "Submit Donation"
+              t("donation.submit")
             )}
           </button>
-           
         </div>
       </div>
 
