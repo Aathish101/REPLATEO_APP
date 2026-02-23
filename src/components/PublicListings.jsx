@@ -170,11 +170,12 @@ export default function PublicListings() {
             >
               <div className="h-40 bg-gray-100 rounded overflow-hidden">
                 {item.image ? (
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
+                 <img
+  src={item.image}
+  alt={item.title}
+  className="w-full h-full object-cover"
+  referrerPolicy="no-referrer"
+/>
                 ) : (
                   <div className="flex items-center justify-center h-full text-gray-400">
                     No Image
