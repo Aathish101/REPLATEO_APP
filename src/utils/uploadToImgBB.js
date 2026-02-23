@@ -14,6 +14,6 @@ export const uploadToImgBB = async (imageFile) => {
 
   const data = await res.json();
 
-  // ✅ USE THIS
-  return data.data.display_url;
+  // ✅ IMPORTANT FIX
+  return data.data.url;
 };
