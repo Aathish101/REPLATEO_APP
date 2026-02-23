@@ -1,21 +1,22 @@
-export const uploadToCloudinary = async (file) => {
+export const uploadToImgBB = async (imageFile) => {
   const formData = new FormData();
-  formData.append("file", file);
-  formData.append("upload_preset", "replateo_unsigned");
+  formData.append("image", imageFile);
 
-  const response = await fetch(
-    "https://api.cloudinary.com/v1_1/dwz3sh3uc/image/upload",
+  const apiKey = "YOUR_IMGBB_KEY";
+
+  const res = await fetch(
+    `https://api.imgbb.com/1/upload?key=${apiKey}`,
     {
       method: "POST",
       body: formData,
     }
   );
 
-  const data = await response.json();
+  const data = await res.json();
 
-  if (!data.secure_url) {
-    throw new Error("Upload failed");
+  if (!data.success) {
+    throw new Error("ImgBB upload failed");
   }
 
-  return data.secure_url;
+  return data.data.url; // ✅ USE url NOT display_url
 };

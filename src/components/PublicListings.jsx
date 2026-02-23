@@ -169,18 +169,21 @@ export default function PublicListings() {
               className="border rounded-2xl shadow-sm p-5 bg-white/70 backdrop-blur-md transition-all hover:shadow-lg"
             >
               <div className="h-40 bg-gray-100 rounded overflow-hidden">
-                {item.image ? (
-                 <img
-  src={item.image}
-  alt={item.title}
-  className="w-full h-full object-cover"
-  referrerPolicy="no-referrer"
-/>
-                ) : (
-                  <div className="flex items-center justify-center h-full text-gray-400">
-                    No Image
-                  </div>
-                )}
+        {item.image ? (
+  <img
+    src={item.image}
+    alt={item.title}
+    className="w-full h-full object-cover"
+    referrerPolicy="no-referrer"
+    onError={(e) => {
+      e.target.src = "https://via.placeholder.com/400x300?text=Image+Error";
+    }}
+  />
+) : (
+  <div className="flex items-center justify-center h-full text-gray-400">
+    No Image
+  </div>
+)}
               </div>
 
               <h3 className="text-xl font-bold mt-3">{item.title}</h3>

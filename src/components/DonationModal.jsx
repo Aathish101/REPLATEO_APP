@@ -22,8 +22,7 @@ import { useAuth } from "../context/AuthContext";
 import { useToast } from "../context/ToastContext";
 import { uploadToImgBB } from "../utils/uploadToImgBB";
 
-const API_BASE_URL = "http://localhost:5000";
-
+const API_BASE_URL = "https://replateo-com-1.onrender.com";
 export default function DonationModal({ open, onClose, type = "food" }) {
   const { t } = useTranslation();
   const { user } = useAuth();
