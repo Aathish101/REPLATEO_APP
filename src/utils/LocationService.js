@@ -49,13 +49,7 @@ export const getCurrentLocation = () => {
 export const getAddressFromCoordinates = async (lat, lng) => {
     try {
         const response = await fetch(
-            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
-            {
-                headers: {
-                    "Accept-Language": "en-US", // Request English results
-                    "User-Agent": "Replateo/1.0", // Good practice for OSM API
-                },
-            }
+            `https://replateo-com-1.onrender.com/api/reverse-geocode?lat=${lat}&lng=${lng}`
         );
 
         if (!response.ok) {
@@ -64,7 +58,6 @@ export const getAddressFromCoordinates = async (lat, lng) => {
 
         const data = await response.json();
 
-        // Construct a readable address string
         if (data && data.display_name) {
             return data.display_name;
         } else {
