@@ -4,6 +4,8 @@ import { useToast } from "../context/ToastContext";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+const API_BASE_URL = import.meta.env.VITE_API_URL;
+
 export default function AuthPage() {
   const { login, register, googleLogin, resetPassword, user } = useAuth();
   const { addToast } = useToast();
@@ -41,7 +43,7 @@ export default function AuthPage() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/send-otp", {
+      const res = await fetch(`${API_BASE_URL}/api/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: form.email }),
@@ -72,7 +74,7 @@ export default function AuthPage() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/verify-otp", {
+      const res =await fetch(`${API_BASE_URL}/api/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
