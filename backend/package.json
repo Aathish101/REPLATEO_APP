@@ -1,0 +1,26 @@
+{
+    "name": "replateo-backend",
+    "version": "1.0.0",
+    "description": "Node.js backend for Replateo (Migrated from Python)",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "node --watch server.js"
+    },
+    "dependencies": {
+        "@google/generative-ai": "^0.24.1",
+        "axios": "^1.13.5",
+        "cors": "^2.8.6",
+        "csv-writer": "^1.6.0",
+        "dotenv": "^17.2.4",
+        "express": "^5.2.1",
+        "firebase-admin": "^13.6.1",
+        "multer": "^2.0.2",
+        "nodemailer": "^8.0.1",
+        "resend": "^6.9.2"
+    },
+    "engines": {
+        "node": ">=18.0.0"
+    }
+}
