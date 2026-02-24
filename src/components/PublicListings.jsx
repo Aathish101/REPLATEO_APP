@@ -83,21 +83,17 @@ export default function PublicListings() {
       });
 
       if (item.userId) {
-        await addDoc(collection(db, "notifications"), {
-          recipientId: item.userId,
-          senderId: user.uid,
-          senderName: user.displayName || user.email || "An NGO",
-          senderEmail: user.email,
-          itemId: item.id,
-          itemName: item.title,
-          message: `Your item "${item.title}" has been claimed by ${
-            user.displayName || "an NGO"
-          }.`,
-          type: "claim",
-          isRead: false,
-          createdAt: serverTimestamp(),
-        });
-      }
+  await addDoc(collection(db, "notifications"), {
+    userId: item.userId, // donor UID
+    title: "Donation Claimed ✅",
+    message: `Your item "${item.title}" has been claimed by ${
+      user.displayName || "an NGO"
+    }.`,
+    read: false,
+    relatedDonationId: item.id,
+    createdAt: serverTimestamp(),
+  });
+}
 
       addToast("Item claimed successfully & Donor notified", "success");
     } catch (error) {

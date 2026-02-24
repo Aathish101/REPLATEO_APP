@@ -17,8 +17,14 @@ import {
   getAddressFromCoordinates,
 } from "../utils/LocationService";
 import { db } from "../firebase";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { useAuth } from "../context/AuthContext";
+import { 
+  addDoc, 
+  collection, 
+  serverTimestamp,
+  getDocs,
+  query,
+  where
+} from "firebase/firestore";import { useAuth } from "../context/AuthContext";
 import { useToast } from "../context/ToastContext";
 import { uploadToImgBB } from "../utils/uploadToImgBB";
 
@@ -241,8 +247,28 @@ export default function DonationModal({ open, onClose, type = "food" }) {
           createdAt: serverTimestamp(),
         };
 
-        await addDoc(collection(db, "food_listings"), docData);
+// 1️⃣ Save donation
+const donationRef = await addDoc(collection(db, "food_listings"), docData);
 
+// 2️⃣ Get all NGOs
+const ngoQuery = query(
+  collection(db, "users"),
+  where("role", "==", "ngo")
+);
+
+const ngoSnapshot = await getDocs(ngoQuery);
+
+// 3️⃣ Create notification for each NGO
+for (const ngoDoc of ngoSnapshot.docs) {
+  await addDoc(collection(db, "notifications"), {
+    userId: ngoDoc.id,
+    title: "New Food Donation 🍱",
+    message: `${user.name || user.email} added a new donation`,
+    read: false,
+    relatedDonationId: donationRef.id,
+    createdAt: serverTimestamp(),
+  });
+}
         addToast("Food donation submitted successfully!", "success");
         resetForm();
         onClose();
@@ -255,38 +281,55 @@ export default function DonationModal({ open, onClose, type = "food" }) {
       }
     } else {
       // Non-food donations
-      try {
-        await addDoc(collection(db, "food_listings"), {
-          title,
-          quantity,
-          pickupAddress: address,
-          notes,
-          image,
+   try {
+  // 1️⃣ Save donation
+  const donationRef = await addDoc(collection(db, "food_listings"), {
+    title,
+    quantity,
+    pickupAddress: address,
+    notes,
+    image,
+    expiryDate: type === "medications" ? expiryDate : null,
+    type: "donation",
+    category: current.category,
+    subCategory: current.subCategory || null,
+    status: "available",
+    userId: user.uid,
+    createdBy: {
+      name: user.name || user.email,
+      email: user.email,
+      address: address,
+    },
+    claimedBy: null,
+    createdAt: serverTimestamp(),
+  });
 
-          expiryDate: type === "medications" ? expiryDate : null,
+  // 2️⃣ Get all NGOs
+  const ngoQuery = query(
+    collection(db, "users"),
+    where("role", "==", "ngo")
+  );
 
-          type: "donation",
-          category: current.category,
-          subCategory: current.subCategory || null,
-          status: "available",
+  const ngoSnapshot = await getDocs(ngoQuery);
 
-          userId: user.uid,
-          createdBy: {
-            name: user.name || user.email,
-            email: user.email,
-            address: address,
-          },
+  // 3️⃣ Notify each NGO
+  for (const ngoDoc of ngoSnapshot.docs) {
+    await addDoc(collection(db, "notifications"), {
+      userId: ngoDoc.id,
+      title: "New Donation Available 📦",
+      message: `${user.name || user.email} added a new donation`,
+      read: false,
+      relatedDonationId: donationRef.id,
+      createdAt: serverTimestamp(),
+    });
+  }
 
-          claimedBy: null,
-          createdAt: serverTimestamp(),
-        });
-
-        addToast("Donation submitted successfully!", "success");
-        resetForm();
-        onClose();
-      } catch (err) {
-        addToast("Error submitting donation", "error");
-      }
+  addToast("Donation submitted successfully!", "success");
+  resetForm();
+  onClose();
+} catch (err) {
+  addToast("Error submitting donation", "error");
+}
     }
   };
 

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
 import { useTranslation } from "react-i18next";
+import NotificationBell from "./NotificationBell";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -61,8 +62,7 @@ export default function Navbar() {
         <img src={logo} alt="Logo" className="h-12 rounded-lg shadow-md" />
 
         {/* DESKTOP MENU */}
-        <div className="hidden md:flex items-center gap-7 font-medium">
-          {[
+<div className="hidden md:flex items-center gap-7 font-medium">          {[
             ["/", t("nav.home")],
             ["/edible", t("nav.edible")],
             ["/non-edible", t("nav.nonEdible")],
@@ -120,12 +120,15 @@ export default function Navbar() {
             )}
           </div>
 
-          <button
-            onClick={user ? handleLogout : () => navigate("/auth")}
-            className={`px-4 py-2 rounded-xl text-white ${buttonClass}`}
-          >
-            {user ? t("nav.logout") : t("nav.login")}
-          </button>
+      {/* Notification Bell */}
+{user && <NotificationBell />}
+
+<button
+  onClick={user ? handleLogout : () => navigate("/auth")}
+  className={`px-4 py-2 rounded-xl text-white ${buttonClass}`}
+>
+  {user ? t("nav.logout") : t("nav.login")}
+</button>
         </div>
 
         {/* MOBILE TOGGLE */}
