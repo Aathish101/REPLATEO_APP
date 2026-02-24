@@ -11,7 +11,7 @@ export default function ResetPassword() {
 
   const [mode, setMode] = useState(null);
   const [oobCode, setOobCode] = useState(null);
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");"Food donation submitted successfully!", "success"
   const [loading, setLoading] = useState(false);
   const [newPassword, setNewPassword] = useState("");
 

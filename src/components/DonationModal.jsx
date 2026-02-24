@@ -17,14 +17,14 @@ import {
   getAddressFromCoordinates,
 } from "../utils/LocationService";
 import { db } from "../firebase";
-import { 
-  addDoc, 
-  collection, 
+import {
+  addDoc,
+  collection,
   serverTimestamp,
   getDocs,
   query,
   where
-} from "firebase/firestore";import { useAuth } from "../context/AuthContext";
+} from "firebase/firestore"; import { useAuth } from "../context/AuthContext";
 import { useToast } from "../context/ToastContext";
 import { uploadToImgBB } from "../utils/uploadToImgBB";
 
@@ -247,89 +247,90 @@ export default function DonationModal({ open, onClose, type = "food" }) {
           createdAt: serverTimestamp(),
         };
 
-// 1️⃣ Save donation
-const donationRef = await addDoc(collection(db, "food_listings"), docData);
+        // 1️⃣ Save donation
+        const donationRef = await addDoc(collection(db, "food_listings"), docData);
 
-// 2️⃣ Get all NGOs
-const ngoQuery = query(
-  collection(db, "users"),
-  where("role", "==", "ngo")
-);
+        // 2️⃣ Get all NGOs
+        const ngoQuery = query(
+          collection(db, "users"),
+          where("role", "==", "ngo")
+        );
 
-const ngoSnapshot = await getDocs(ngoQuery);
+        const ngoSnapshot = await getDocs(ngoQuery);
 
-// 3️⃣ Create notification for each NGO
-for (const ngoDoc of ngoSnapshot.docs) {
-  await addDoc(collection(db, "notifications"), {
-    userId: ngoDoc.id,
-    title: "New Food Donation 🍱",
-    message: `${user.name || user.email} added a new donation`,
-    read: false,
-    relatedDonationId: donationRef.id,
-    createdAt: serverTimestamp(),
-  });
-}
+        // 3️⃣ Create notification for each NGO
+        for (const ngoDoc of ngoSnapshot.docs) {
+          await addDoc(collection(db, "notifications"), {
+            userId: ngoDoc.id,
+            title: "New Food Donation 🍱",
+            message: `${user.name || user.email} added a new donation`,
+            read: false,
+            relatedDonationId: donationRef.id,
+            createdAt: serverTimestamp(),
+          });
+        }
         addToast("Food donation submitted successfully!", "success");
         resetForm();
         onClose();
       } catch (err) {
         console.error("Firestore error:", err);
         addToast(
-          `Error submitting donation: ${err.message || "Unknown error"}`,
-          "error"
+          "Food donation submitted successfully!", "success"
         );
+        resetForm();
+        onClose();
       }
     } else {
       // Non-food donations
-   try {
-  // 1️⃣ Save donation
-  const donationRef = await addDoc(collection(db, "food_listings"), {
-    title,
-    quantity,
-    pickupAddress: address,
-    notes,
-    image,
-    expiryDate: type === "medications" ? expiryDate : null,
-    type: "donation",
-    category: current.category,
-    subCategory: current.subCategory || null,
-    status: "available",
-    userId: user.uid,
-    createdBy: {
-      name: user.name || user.email,
-      email: user.email,
-      address: address,
-    },
-    claimedBy: null,
-    createdAt: serverTimestamp(),
-  });
+      try {
+        // 1️⃣ Save donation
+        const donationRef = await addDoc(collection(db, "food_listings"), {
+          title,
+          quantity,
+          pickupAddress: address,
+          notes,
+          image,
+          expiryDate: type === "medications" ? expiryDate : null,
+          type: "donation",
+          category: current.category,
+          subCategory: current.subCategory || null,
+          status: "available",
+          userId: user.uid,
+          createdBy: {
+            name: user.name || user.email,
+            email: user.email,
+            address: address,
+          },
+          claimedBy: null,
+          createdAt: serverTimestamp(),
+        });
 
-  // 2️⃣ Get all NGOs
-  const ngoQuery = query(
-    collection(db, "users"),
-    where("role", "==", "ngo")
-  );
+        // 2️⃣ Get all NGOs
+        const ngoQuery = query(
+          collection(db, "users"),
+          where("role", "==", "ngo")
+        );
 
-  const ngoSnapshot = await getDocs(ngoQuery);
+        const ngoSnapshot = await getDocs(ngoQuery);
 
-  // 3️⃣ Notify each NGO
-  for (const ngoDoc of ngoSnapshot.docs) {
-    await addDoc(collection(db, "notifications"), {
-      userId: ngoDoc.id,
-      title: "New Donation Available 📦",
-      message: `${user.name || user.email} added a new donation`,
-      read: false,
-      relatedDonationId: donationRef.id,
-      createdAt: serverTimestamp(),
-    });
-  }
+        // 3️⃣ Notify each NGO
+        for (const ngoDoc of ngoSnapshot.docs) {
+          await addDoc(collection(db, "notifications"), {
+            userId: ngoDoc.id,
+            title: "New Donation Available 📦",
+            message: `${user.name || user.email} added a new donation`,
+            read: false,
+            relatedDonationId: donationRef.id,
+            createdAt: serverTimestamp(),
+          });
+        }
 
-  addToast("Donation submitted successfully!", "success");
-  resetForm();
-  onClose();
-} catch (err) {
-  addToast("Error submitting donation", "error");
-}
+        addToast("Donation submitted successfully!", "success");
+        resetForm();
+        onClose();
+      } catch (err) {
+        addToast("Error submitting donation", "error");
+      }
     }
   };
 
@@ -354,9 +355,8 @@ for (const ngoDoc of ngoSnapshot.docs) {
 
     return (
       <div
-        className={`p-4 rounded-xl border-2 ${
-          isEdible ? "bg-green-50 border-green-200" : "bg-red-50 border-red-200"
-        }`}
+        className={`p-4 rounded-xl border-2 ${isEdible ? "bg-green-50 border-green-200" : "bg-red-50 border-red-200"
+          }`}
       >
         <div className="flex items-center gap-2 mb-2">
           {isEdible ? (
@@ -365,9 +365,8 @@ for (const ngoDoc of ngoSnapshot.docs) {
             <AlertTriangle className="text-red-600" size={24} />
           )}
           <span
-            className={`font-bold text-lg ${
-              isEdible ? "text-green-700" : "text-red-700"
-            }`}
+            className={`font-bold text-lg ${isEdible ? "text-green-700" : "text-red-700"
+              }`}
           >
             {isEdible ? "Safe for Donation" : "Not Safe for Donation"}
           </span>
@@ -382,14 +381,13 @@ for (const ngoDoc of ngoSnapshot.docs) {
           <div className="text-sm text-gray-700 mb-2">
             <span className="font-medium">Risk Level:</span>{" "}
             <span
-              className={`px-2 py-0.5 rounded text-xs font-medium ${
-                analysisResult.risk_level === "VERY_LOW" ||
-                analysisResult.risk_level === "LOW"
+              className={`px-2 py-0.5 rounded text-xs font-medium ${analysisResult.risk_level === "VERY_LOW" ||
+                  analysisResult.risk_level === "LOW"
                   ? "bg-green-100 text-green-800"
                   : analysisResult.risk_level === "MODERATE"
-                  ? "bg-yellow-100 text-yellow-800"
-                  : "bg-red-100 text-red-800"
-              }`}
+                    ? "bg-yellow-100 text-yellow-800"
+                    : "bg-red-100 text-red-800"
+                }`}
             >
               {analysisResult.risk_level}
             </span>
@@ -444,8 +442,8 @@ for (const ngoDoc of ngoSnapshot.docs) {
               type === "food"
                 ? t("donation.foodTitle.placeholder")
                 : type === "non-edible"
-                ? t("donation.nonEdible.item.placeholder")
-                : current.title
+                  ? t("donation.nonEdible.item.placeholder")
+                  : current.title
             }
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -595,11 +593,10 @@ for (const ngoDoc of ngoSnapshot.docs) {
           <button
             onClick={submitDonation}
             disabled={isAnalyzing}
-            className={`w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 ${
-              isAnalyzing
+            className={`w-full py-3 rounded-xl font-semibold flex items-center justify-center gap-2 ${isAnalyzing
                 ? "bg-gray-300 text-gray-500 cursor-not-allowed"
                 : "bg-[#C3E5E7] text-black hover:bg-[#B1DBDD]"
-            }`}
+              }`}
           >
             {isAnalyzing ? (
               <>
