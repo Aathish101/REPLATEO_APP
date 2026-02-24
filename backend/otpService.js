@@ -23,25 +23,34 @@ export const sendOTPEmail = async (email) => {
   try {
     console.log(`📡 Sending OTP via EmailJS to ${normalizedEmail}`);
 
-await axios.post(
-  "https://api.emailjs.com/api/v1.0/email/send",
-  {
-    service_id: process.env.EMAILJS_SERVICE_ID,
-    template_id: process.env.EMAILJS_TEMPLATE_ID,
-    user_id: process.env.EMAILJS_PUBLIC_KEY,     // 🔥 PUBLIC KEY
-    accessToken: process.env.EMAILJS_PRIVATE_KEY, // 🔥 PRIVATE KEY
-    template_params: {
-      to_email: normalizedEmail,
-      otp: otp,
-      time: "15 minutes",
-    },
-  },
-  {
-    headers: {
-      "Content-Type": "application/json",
-    },
-  }
-);
+    // 🔥 ADD THIS DEBUG BLOCK HERE
+    console.log("===== ENV DEBUG =====");
+    console.log("SERVICE:", process.env.EMAILJS_SERVICE_ID);
+    console.log("TEMPLATE:", process.env.EMAILJS_TEMPLATE_ID);
+    console.log("PUBLIC:", process.env.EMAILJS_PUBLIC_KEY);
+    console.log("PRIVATE:", process.env.EMAILJS_PRIVATE_KEY);
+    console.log("=====================");
+
+    await axios.post(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      {
+        service_id: process.env.EMAILJS_SERVICE_ID,
+        template_id: process.env.EMAILJS_TEMPLATE_ID,
+        user_id: process.env.EMAILJS_PUBLIC_KEY,
+        accessToken: process.env.EMAILJS_PRIVATE_KEY,
+        template_params: {
+          to_email: normalizedEmail,
+          otp: otp,
+          time: "15 minutes",
+        },
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
     otpStore.set(normalizedEmail, {
       otp,
       expires: Date.now() + 15 * 60 * 1000,
