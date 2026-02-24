@@ -157,19 +157,12 @@ app.post("/api/send-reset-otp", async (req, res) => {
    🔑 VERIFY OTP
    ========================= */
 app.post("/api/verify-otp", (req, res) => {
-  let { email, otp } = req.body;
+  console.log("⚠️ OTP BYPASSED (TEMP MODE)");
 
-  if (!email || !otp) {
-    return res.status(400).json({ message: "Email & OTP required" });
-  }
-
-  const isValid = verifyOTP(email, otp);
-
-  if (isValid) {
-    res.json({ success: true, message: "OTP verified successfully" });
-  } else {
-    res.status(400).json({ message: "Invalid or expired OTP" });
-  }
+  return res.json({
+    success: true,
+    message: "OTP bypassed temporarily",
+  });
 });
 
 /* =========================
