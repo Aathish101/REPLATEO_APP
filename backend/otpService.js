@@ -32,24 +32,18 @@ export const sendOTPEmail = async (email) => {
     console.log("=====================");
 
     await axios.post(
-      "https://api.emailjs.com/api/v1.0/email/send",
-      {
-        service_id: process.env.EMAILJS_SERVICE_ID,
-        template_id: process.env.EMAILJS_TEMPLATE_ID,
-        user_id: process.env.EMAILJS_PUBLIC_KEY,
-        accessToken: process.env.EMAILJS_PRIVATE_KEY,
-        template_params: {
-          to_email: normalizedEmail,
-          otp: otp,
-          time: "15 minutes",
-        },
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
+  "https://api.emailjs.com/api/v1.0/email/send",
+  {
+    service_id: process.env.EMAILJS_SERVICE_ID,
+    template_id: process.env.EMAILJS_TEMPLATE_ID,
+    user_id: process.env.EMAILJS_PUBLIC_KEY,
+    template_params: {
+      to_email: normalizedEmail,
+      otp: otp,
+      time: "15 minutes",
+    },
+  }
+);
 
     otpStore.set(normalizedEmail, {
       otp,
