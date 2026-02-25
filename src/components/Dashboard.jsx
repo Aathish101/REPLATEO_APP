@@ -12,11 +12,13 @@ import {
   doc,
   addDoc,
   serverTimestamp,
+  getDoc
 } from "firebase/firestore";
 import { db } from "../firebase";
 
 export default function Dashboard({ openAuthModal }) {
   const { user } = useAuth();
+  const [role, setRole] = useState(null);
   const { addToast } = useToast();
 
   const [activeTab, setActiveTab] = useState("overview"); // overview | notifications | claimed
@@ -42,7 +44,20 @@ export default function Dashboard({ openAuthModal }) {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
-  // 🚫 Not logged in
+  // 🔹 FETCH USER ROLE FROM FIRESTORE
+useEffect(() => {
+  if (!user) return;
+
+  const fetchRole = async () => {
+    const snap = await getDoc(doc(db, "users", user.uid));
+    if (snap.exists()) {
+      setRole(snap.data().role);
+    }
+  };
+
+  fetchRole();
+}, [user]);   // ✅ correct
+ // 🚫 Not logged in
   if (!user) {
     return (
       <section className="page-section relative min-h-screen overflow-hidden bg-white">
@@ -73,57 +88,64 @@ export default function Dashboard({ openAuthModal }) {
   }
 
   // 🔹 USER DONATIONS
-  useEffect(() => {
-    const q = query(
-      collection(db, "food_listings"),
-      where("userId", "==", user.uid),
-      orderBy("createdAt", "desc")
-    );
+  // 🔹 USER DONATIONS (FOR ALL USERS)
+useEffect(() => {
+  if (!user) return;
 
-    const unsub = onSnapshot(q, (snap) => {
-      let donations = 0;
-      let pending = 0;
-      let claimed = 0;
+  const q = query(
+    collection(db, "food_listings"),
+    where("userId", "==", user.uid),
+    orderBy("createdAt", "desc")
+  );
 
-      const arr = snap.docs.map((d) => {
-        const data = { id: d.id, ...d.data() };
+  const unsub = onSnapshot(q, (snap) => {
+    let donations = 0;
+    let pending = 0;
+    let claimed = 0;
 
-        if (data.type === "donation") donations++;
-        if (data.status === "available") pending++;
-        if (data.status === "claimed") claimed++;
+    const arr = snap.docs.map((d) => {
+      const data = { id: d.id, ...d.data() };
 
-        return data;
-      });
+      if (data.type === "donation") donations++;
+      if (data.status === "available") pending++;
+      if (data.status === "claimed") claimed++;
 
-      setListings(arr);
-      setStats({ donations, pending, claimed });
+      return data;
     });
 
-    return () => unsub();
-  }, [user.uid]);
+    setListings(arr);
+    setStats({ donations, pending, claimed });
+  });
+
+  return () => unsub();
+}, [user]);
+     // ✅ correct
 
   // 🔹 ITEMS CLAIMED (NGO ONLY)
-  useEffect(() => {
-    if (user.role !== "ngo") return;
+ // 🔹 ITEMS CLAIMED (NGO ONLY)
+useEffect(() => {
+  if (!user || role !== "ngo") return;
 
-    const q = query(
-      collection(db, "food_listings"),
-      where("claimedBy", "==", user.uid)
+  const q = query(
+    collection(db, "food_listings"),
+    where("claimedBy", "==", user.uid)
+  );
+
+  const unsub = onSnapshot(q, (snap) => {
+    const arr = snap.docs.map((d) => ({
+      id: d.id,
+      ...d.data(),
+    }));
+
+    arr.sort(
+      (a, b) => (b.claimedAt?.seconds || 0) - (a.claimedAt?.seconds || 0)
     );
 
-    const unsub = onSnapshot(q, (snap) => {
-      const arr = snap.docs.map((d) => ({
-        id: d.id,
-        ...d.data(),
-      }));
-      // Sort client-side to avoid index issues
-      arr.sort((a, b) => (b.claimedAt?.seconds || 0) - (a.claimedAt?.seconds || 0));
-      setClaimedListings(arr);
-    });
+    setClaimedListings(arr);
+  });
 
-    return () => unsub();
-  }, [user]);
-
+  return () => unsub();
+}, [role, user]);
   // 🔹 NOTIFICATIONS (ALL USERS)
   const [notifications, setNotifications] = useState([]);
   useEffect(() => {
@@ -204,8 +226,8 @@ export default function Dashboard({ openAuthModal }) {
             )}
           </button>
 
-          {user.role === "ngo" && (
-            <button
+{role === "ngo" && (       
+       <button
               onClick={() => setActiveTab("claimed")}
               className={`px-4 py-2 font-semibold ${activeTab === "claimed" ? "text-orange-600 border-b-2 border-orange-600" : "text-gray-500"}`}
             >
@@ -299,8 +321,7 @@ export default function Dashboard({ openAuthModal }) {
         )}
 
         {/* TAB: CLAIMED ITEMS (NGO ONLY) */}
-        {activeTab === "claimed" && user.role === "ngo" && (
-          <>
+{activeTab === "claimed" && role === "ngo" && (          <>
             <h3 className="text-2xl font-bold text-orange-800 mb-4">
               Items You Claimed
             </h3>
