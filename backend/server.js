@@ -8,12 +8,12 @@ import { sendOTPEmail, verifyOTP, sendResetOTPEmail } from "./otpService.js";
 import { readFile } from "fs/promises";
 import admin from "firebase-admin";
 
-
-
 dotenv.config();
 
 console.log(`🚀 Starting Backend...`);
-console.log(`📧 Configured Email: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.replace(/(.{3}).*(@.*)/, "$1***$2") : "NOT SET"}`);
+console.log(
+  `📧 Configured Email: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.replace(/(.{3}).*(@.*)/, "$1***$2") : "NOT SET"}`,
+);
 
 const app = express();
 const PORT = Number(process.env.PORT) || 5000;
@@ -27,21 +27,23 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://127.0.0.1:5173",
   "https://replateo.vercel.app",
-  "https://replateo-app.vercel.app"
+  "https://replateo-app.vercel.app",
 ];
-app.use(cors({
-  origin: allowedOrigins,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true
-}));
-
-
-
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  }),
+);
 
 // 🔥 IMPORTANT for preflight
-
-
-
 
 /* =========================
    📦 MULTER
@@ -63,7 +65,7 @@ const serviceAccountPath = "./serviceAccountKey.json";
 
 try {
   const serviceAccount = JSON.parse(
-    await readFile(serviceAccountPath, "utf-8")
+    await readFile(serviceAccountPath, "utf-8"),
   );
 
   admin.initializeApp({
@@ -122,7 +124,7 @@ app.post("/api/send-otp", async (req, res) => {
     await sendOTPEmail(email, otp);
     res.json({ success: true, message: "OTP sent successfully" });
   } catch (err) {
-console.error("❌ Email error FULL:", err.response || err);
+    console.error("❌ Email error FULL:", err.response || err);
     res.status(500).json({ message: "Failed to send OTP" });
   }
 });
@@ -198,11 +200,10 @@ app.post("/api/reset-password", async (req, res) => {
       success: true,
       message: "Password reset successfully. You can now login.",
     });
-
   } catch (error) {
     console.error("❌ Firebase Password Update Error:", error);
 
-    if (error.code === 'auth/user-not-found') {
+    if (error.code === "auth/user-not-found") {
       return res.status(404).json({ message: "User not found in system." });
     }
 
@@ -228,7 +229,7 @@ app.post("/api/analyze-food", upload.single("image"), async (req, res) => {
       req.file.buffer,
       preparationTime,
       packageTime,
-      req.file.mimetype
+      req.file.mimetype,
     );
 
     await logAnalysis({
@@ -248,7 +249,7 @@ app.get("/api/reverse-geocode", async (req, res) => {
 
   try {
     const response = await fetch(
-      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
     );
 
     const data = await response.json();
@@ -260,7 +261,7 @@ app.get("/api/reverse-geocode", async (req, res) => {
       address.suburb,
       address.city || address.town,
       address.state,
-      address.postcode
+      address.postcode,
     ]
       .filter(Boolean)
       .join(", ");
@@ -274,5 +275,5 @@ app.get("/api/reverse-geocode", async (req, res) => {
    🚀 START
 ========================= */
 app.listen(PORT, () => {
-console.log(`✅ Backend running on port ${PORT}`);
+  console.log(`✅ Backend running on port ${PORT}`);
 });
