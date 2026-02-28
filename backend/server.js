@@ -27,19 +27,12 @@
       "https://replateo.vercel.app",
       "https://replateo-app.vercel.app",
     ];
-    app.use(
-      cors({
-        origin: function (origin, callback) {
-          if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-          } else {
-            callback(new Error("Not allowed by CORS"));
-          }
-        },
-        methods: ["GET", "POST", "PUT", "DELETE"],
-        credentials: true,
-      }),
-    );
+ app.use(
+  cors({
+    origin: true,   // allow all origins temporarily
+    credentials: true,
+  })
+);
 
     // 🔥 IMPORTANT for preflight
 
@@ -251,32 +244,42 @@
       }
     });
     app.get("/api/reverse-geocode", async (req, res) => {
-      const { lat, lng } = req.query;
+  try {
+    const { lat, lng } = req.query;
 
-      try {
-        const response = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
-        );
+    if (!lat || !lng) {
+      return res.status(400).json({ error: "Latitude & Longitude required" });
+    }
 
-        const data = await response.json();
+    const response = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`
+    );
 
-        const address = data.address;
+    const data = await response.json();
 
-        const cleanAddress = [
-          address.road,
-          address.suburb,
-          address.city || address.town,
-          address.state,
-          address.postcode,
-        ]
-          .filter(Boolean)
-          .join(", ");
+    if (!data || !data.address) {
+      return res.status(404).json({ error: "Address not found" });
+    }
 
-        res.json({ display_name: cleanAddress });
-      } catch (error) {
-        res.status(500).json({ error: "Failed to fetch address" });
-      }
-    });
+    const address = data.address;
+
+    const cleanAddress = [
+      address.road,
+      address.suburb,
+      address.city || address.town,
+      address.state,
+      address.postcode,
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    res.json({ display_name: cleanAddress || data.display_name });
+
+  } catch (error) {
+    console.error("Reverse geocode error:", error);
+    res.status(500).json({ error: "Reverse geocode failed" });
+  }
+});
     /* =========================
       🚀 START
     ========================= */
