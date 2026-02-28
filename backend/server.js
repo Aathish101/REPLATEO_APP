@@ -1,286 +1,285 @@
-  import express from "express";
-  import cors from "cors";
-  import multer from "multer";
-  import dotenv from "dotenv";
-  import { analyzeFoodImage } from "./foodAnalyzer.js";
-  import { logAnalysis } from "./csvStorage.js";
-  import { sendOTPEmail, verifyOTP, sendResetOTPEmail } from "./otpService.js";
-  import admin from "firebase-admin";
-import { readFile } from "fs/promises";
-  dotenv.config();
+    import express from "express";
+    import cors from "cors";
+    import multer from "multer";
+    import dotenv from "dotenv";
+    import { analyzeFoodImage } from "./foodAnalyzer.js";
+    import { logAnalysis } from "./csvStorage.js";
+    import { sendOTPEmail, verifyOTP, sendResetOTPEmail } from "./otpService.js";
+    import admin from "firebase-admin";
+    dotenv.config();
 
-  console.log(`🚀 Starting Backend...`);  
-  console.log(
-    `📧 Configured Email: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.replace(/(.{3}).*(@.*)/, "$1***$2") : "NOT SET"}`,
-  );
+    console.log(`🚀 Starting Backend...`);  
+    console.log(
+      `📧 Configured Email: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.replace(/(.{3}).*(@.*)/, "$1***$2") : "NOT SET"}`,
+    );
 
-  const app = express();
-  const PORT = Number(process.env.PORT) || 5000;
+    const app = express();
+    const PORT = Number(process.env.PORT) || 5000;
 
-  app.use(express.json());
+    app.use(express.json());
 
-  /* =========================
-    🔧 MIDDLEWARE
-  ========================= */
-  const allowedOrigins = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://replateo.vercel.app",
-    "https://replateo-app.vercel.app",
-  ];
-  app.use(
-    cors({
-      origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-          callback(null, true);
-        } else {
-          callback(new Error("Not allowed by CORS"));
-        }
-      },
-      methods: ["GET", "POST", "PUT", "DELETE"],
-      credentials: true,
-    }),
-  );
-
-  // 🔥 IMPORTANT for preflight
-
-  /* =========================
-    📦 MULTER
-  ========================= */
-  const upload = multer({
-    storage: multer.memoryStorage(),
-    limits: { fileSize: 10 * 1024 * 1024 },
-  });
-
-  /* =========================
-    📧 EMAIL CONFIG (DEPRECATED - MOVED TO otpService.js)
+    /* =========================
+      🔧 MIDDLEWARE
     ========================= */
-  // Redundant configuration removed. Logic now handled by otpService.js
-
-  /* =========================
-    🔥 FIREBASE ADMIN INIT
-    ========================= */
- /* =========================
-   🔥 FIREBASE ADMIN INIT
-========================= */
-
-try {
-  if (
-    process.env.FIREBASE_PROJECT_ID &&
-    process.env.FIREBASE_CLIENT_EMAIL &&
-    process.env.FIREBASE_PRIVATE_KEY
-  ) {
-    admin.initializeApp({
-      credential: admin.credential.cert({
-        projectId: process.env.FIREBASE_PROJECT_ID,
-        clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
-        privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://replateo.vercel.app",
+      "https://replateo-app.vercel.app",
+    ];
+    app.use(
+      cors({
+        origin: function (origin, callback) {
+          if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+          } else {
+            callback(new Error("Not allowed by CORS"));
+          }
+        },
+        methods: ["GET", "POST", "PUT", "DELETE"],
+        credentials: true,
       }),
+    );
+
+    // 🔥 IMPORTANT for preflight
+
+    /* =========================
+      📦 MULTER
+    ========================= */
+    const upload = multer({
+      storage: multer.memoryStorage(),
+      limits: { fileSize: 10 * 1024 * 1024 },
     });
 
-    console.log("🔥 Firebase Admin Initialized Successfully");
-  } else {
-    throw new Error("Missing Firebase environment variables");
-  }
-} catch (error) {
-  console.warn("⚠️ Firebase Admin NOT initialized.");
-  console.warn(error.message);
-}
+    /* =========================
+      📧 EMAIL CONFIG (DEPRECATED - MOVED TO otpService.js)
+      ========================= */
+    // Redundant configuration removed. Logic now handled by otpService.js
 
+    /* =========================
+      🔥 FIREBASE ADMIN INIT
+      ========================= */
   /* =========================
-    🔔 CREATE NOTIFICATION
+    🔥 FIREBASE ADMIN INIT
   ========================= */
-  async function createNotification(userId, title, message) {
-    try {
-      await admin.firestore().collection("notifications").add({
-        userId: userId,
-        title: title,
-        message: message,
-        read: false,
-        createdAt: admin.firestore.FieldValue.serverTimestamp(),
+
+  try {
+    if (
+      process.env.FIREBASE_PROJECT_ID &&
+      process.env.FIREBASE_CLIENT_EMAIL &&
+      process.env.FIREBASE_PRIVATE_KEY
+    ) {
+      admin.initializeApp({
+        credential: admin.credential.cert({
+          projectId: process.env.FIREBASE_PROJECT_ID,
+          clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+          privateKey: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, "\n"),
+        }),
       });
 
-      console.log("🔔 Notification created for:", userId);
-    } catch (error) {
-      console.error("❌ Notification error:", error);
+      console.log("🔥 Firebase Admin Initialized Successfully");
+    } else {
+      throw new Error("Missing Firebase environment variables");
     }
+  } catch (error) {
+    console.warn("⚠️ Firebase Admin NOT initialized.");
+    console.warn(error.message);
   }
 
-  app.get("/", (req, res) => {
-    res.send("🚀 REPLATEO Backend is running successfully!");
-  });
-
-  /* =========================
-    ✅ HEALTH
-  ========================= */
-  app.get("/api/health", (req, res) => {
-    res.json({ status: "healthy" });
-  });
-
-  /* =========================
-    📧 SEND OTP
+    /* =========================
+      🔔 CREATE NOTIFICATION
     ========================= */
- app.post("/api/send-otp", async (req, res) => {
-  const { email } = req.body;
+    async function createNotification(userId, title, message) {
+      try {
+        await admin.firestore().collection("notifications").add({
+          userId: userId,
+          title: title,
+          message: message,
+          read: false,
+          createdAt: admin.firestore.FieldValue.serverTimestamp(),
+        });
 
-  if (!email) {
-    return res.status(400).json({ message: "Email required" });
-  }
-
-  const result = await sendOTPEmail(email);
-
-  if (!result) {
-    return res.status(500).json({ message: "Failed to send OTP" });
-  }
-
-  return res.json({ success: true, message: "OTP sent successfully" });
-});
-
-  /* =========================
-    📧 SEND RESET OTP
-    ========================= */
-  app.post("/api/send-reset-otp", async (req, res) => {
-  const { email } = req.body;
-
-  if (!email) {
-    return res.status(400).json({ message: "Email required" });
-  }
-
-  const result = await sendResetOTPEmail(email);
-
-  if (!result) {
-    return res.status(500).json({ message: "Failed to send reset OTP" });
-  }
-
-  return res.json({
-    success: true,
-    message: "Reset OTP sent successfully",
-  });
-});
-
-  /* =========================
-    🔑 VERIFY OTP
-    ========================= */
-  app.post("/api/verify-otp", async (req, res) => {
-    const { email, otp } = req.body;
-
-    if (!email || !otp) {
-      return res.status(400).json({ message: "Email & OTP required" });
+        console.log("🔔 Notification created for:", userId);
+      } catch (error) {
+        console.error("❌ Notification error:", error);
+      }
     }
+
+    app.get("/", (req, res) => {
+      res.send("🚀 REPLATEO Backend is running successfully!");
+    });
+
+    /* =========================
+      ✅ HEALTH
+    ========================= */
+    app.get("/api/health", (req, res) => {
+      res.json({ status: "healthy" });
+    });
+
+    /* =========================
+      📧 SEND OTP
+      ========================= */
+  app.post("/api/send-otp", async (req, res) => {
+    const { email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({ message: "Email required" });
+    }
+
+    const result = await sendOTPEmail(email);
+
+    if (!result) {
+      return res.status(500).json({ message: "Failed to send OTP" });
+    }
+
+    return res.json({ success: true, message: "OTP sent successfully" });
+  });
+
+    /* =========================
+      📧 SEND RESET OTP
+      ========================= */
+    app.post("/api/send-reset-otp", async (req, res) => {
+    const { email } = req.body;
+
+    if (!email) {
+      return res.status(400).json({ message: "Email required" });
+    }
+
+    const result = await sendResetOTPEmail(email);
+
+    if (!result) {
+      return res.status(500).json({ message: "Failed to send reset OTP" });
+    }
+
+    return res.json({
+      success: true,
+      message: "Reset OTP sent successfully",
+    });
+  });
+
+    /* =========================
+      🔑 VERIFY OTP
+      ========================= */
+    app.post("/api/verify-otp", async (req, res) => {
+      const { email, otp } = req.body;
+
+      if (!email || !otp) {
+        return res.status(400).json({ message: "Email & OTP required" });
+      }
+
+      const isValid = await verifyOTP(email, otp);
+
+      if (isValid) {
+        res.json({ success: true, message: "OTP verified successfully" });
+      } else {
+        res.status(400).json({ message: "Invalid or expired OTP" });
+      }
+    });
+
+    /* =========================
+      🔑 RESET PASSWORD (Placeholder)
+      ========================= */
+    app.post("/api/reset-password", async (req, res) => {
+      const { email, otp, newPassword } = req.body;
+
+      if (!email || !otp || !newPassword) {
+        return res.status(400).json({ message: "All fields required" });
+      }
 
     const isValid = await verifyOTP(email, otp);
+      if (!isValid) {
+        return res.status(400).json({ message: "Invalid or expired OTP" });
+      }
 
-    if (isValid) {
-      res.json({ success: true, message: "OTP verified successfully" });
-    } else {
-      res.status(400).json({ message: "Invalid or expired OTP" });
-    }
-  });
+      try {
+        // 1. Get User by Email
+        const userRecord = await admin.auth().getUserByEmail(email);
 
-  /* =========================
-    🔑 RESET PASSWORD (Placeholder)
+        // 2. Update Password
+        await admin.auth().updateUser(userRecord.uid, {
+          password: newPassword,
+        });
+
+        console.log(`✅ Password updated for ${email}`);
+
+        res.json({
+          success: true,
+          message: "Password reset successfully. You can now login.",
+        });
+      } catch (error) {
+        console.error("❌ Firebase Password Update Error:", error);
+
+        if (error.code === "auth/user-not-found") {
+          return res.status(404).json({ message: "User not found in system." });
+        }
+
+        res.status(500).json({ message: "Failed to update password in system." });
+      }
+    });
+
+    /* =========================
+      🍱 ANALYZE FOOD
     ========================= */
-  app.post("/api/reset-password", async (req, res) => {
-    const { email, otp, newPassword } = req.body;
+    app.post("/api/analyze-food", upload.single("image"), async (req, res) => {
+      try {
+        if (!req.file) {
+          return res.status(400).json({ error: "Image required" });
+        }
 
-    if (!email || !otp || !newPassword) {
-      return res.status(400).json({ message: "All fields required" });
-    }
+        const { preparationTime, packageTime } = req.body;
+        if (!preparationTime || !packageTime) {
+          return res.status(400).json({ error: "Times required" });
+        }
 
-  const isValid = await verifyOTP(email, otp);
-    if (!isValid) {
-      return res.status(400).json({ message: "Invalid or expired OTP" });
-    }
+        const result = await analyzeFoodImage(
+          req.file.buffer,
+          preparationTime,
+          packageTime,
+          req.file.mimetype,
+        );
 
-    try {
-      // 1. Get User by Email
-      const userRecord = await admin.auth().getUserByEmail(email);
+        await logAnalysis({
+          imageFilename: req.file.originalname,
+          preparationTime,
+          packageTime,
+          analysisResult: result,
+        });
 
-      // 2. Update Password
-      await admin.auth().updateUser(userRecord.uid, {
-        password: newPassword,
-      });
-
-      console.log(`✅ Password updated for ${email}`);
-
-      res.json({
-        success: true,
-        message: "Password reset successfully. You can now login.",
-      });
-    } catch (error) {
-      console.error("❌ Firebase Password Update Error:", error);
-
-      if (error.code === "auth/user-not-found") {
-        return res.status(404).json({ message: "User not found in system." });
+        res.json(result);
+      } catch (err) {
+        res.status(500).json({ error: err.message });
       }
+    });
+    app.get("/api/reverse-geocode", async (req, res) => {
+      const { lat, lng } = req.query;
 
-      res.status(500).json({ message: "Failed to update password in system." });
-    }
-  });
+      try {
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
+        );
 
-  /* =========================
-    🍱 ANALYZE FOOD
-  ========================= */
-  app.post("/api/analyze-food", upload.single("image"), async (req, res) => {
-    try {
-      if (!req.file) {
-        return res.status(400).json({ error: "Image required" });
+        const data = await response.json();
+
+        const address = data.address;
+
+        const cleanAddress = [
+          address.road,
+          address.suburb,
+          address.city || address.town,
+          address.state,
+          address.postcode,
+        ]
+          .filter(Boolean)
+          .join(", ");
+
+        res.json({ display_name: cleanAddress });
+      } catch (error) {
+        res.status(500).json({ error: "Failed to fetch address" });
       }
-
-      const { preparationTime, packageTime } = req.body;
-      if (!preparationTime || !packageTime) {
-        return res.status(400).json({ error: "Times required" });
-      }
-
-      const result = await analyzeFoodImage(
-        req.file.buffer,
-        preparationTime,
-        packageTime,
-        req.file.mimetype,
-      );
-
-      await logAnalysis({
-        imageFilename: req.file.originalname,
-        preparationTime,
-        packageTime,
-        analysisResult: result,
-      });
-
-      res.json(result);
-    } catch (err) {
-      res.status(500).json({ error: err.message });
-    }
-  });
-  app.get("/api/reverse-geocode", async (req, res) => {
-    const { lat, lng } = req.query;
-
-    try {
-      const response = await fetch(
-        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`,
-      );
-
-      const data = await response.json();
-
-      const address = data.address;
-
-      const cleanAddress = [
-        address.road,
-        address.suburb,
-        address.city || address.town,
-        address.state,
-        address.postcode,
-      ]
-        .filter(Boolean)
-        .join(", ");
-
-      res.json({ display_name: cleanAddress });
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch address" });
-    }
-  });
-  /* =========================
-    🚀 START
-  ========================= */
-  app.listen(PORT, () => {
-    console.log(`✅ Backend running on port ${PORT}`);
-  });
+    });
+    /* =========================
+      🚀 START
+    ========================= */
+    app.listen(PORT, () => {
+      console.log(`✅ Backend running on port ${PORT}`);
+    });
