@@ -47,23 +47,24 @@ export const getCurrentLocation = () => {
 };
 
 export const getAddressFromCoordinates = async (lat, lng) => {
-    try {
-        const response = await fetch(
-  `${import.meta.env.VITE_API_URL}/api/reverse-geocode?lat=${lat}&lng=${lng}`
-);
-        if (!response.ok) {
-            throw new Error("Failed to fetch address");
-        }
+  try {
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/reverse-geocode?lat=${lat}&lng=${lng}`
+    );
 
-        const data = await response.json();
-
-        if (data && data.display_name) {
-            return data.display_name;
-        } else {
-            throw new Error("Address not found");
-        }
-    } catch (error) {
-        console.error("Reverse geocoding error:", error);
-        throw new Error("Could not determine address from location");
+    if (!response.ok) {
+      throw new Error("Failed to fetch address");
     }
-};
+
+    const data = await response.json();
+
+    if (data && data.display_name) {
+      return data.display_name;
+    } else {
+      throw new Error("Address not found");
+    }
+  } catch (error) {
+    console.error("Reverse geocoding error:", error);
+    throw new Error("Could not determine address from location");
+  }
+};;
