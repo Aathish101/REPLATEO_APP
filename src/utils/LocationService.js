@@ -49,9 +49,8 @@ export const getCurrentLocation = () => {
 export const getAddressFromCoordinates = async (lat, lng) => {
     try {
         const response = await fetch(
-            `https://replateo-com-1.onrender.com/api/reverse-geocode?lat=${lat}&lng=${lng}`
-        );
-
+  `${import.meta.env.VITE_API_URL}/api/reverse-geocode?lat=${lat}&lng=${lng}`
+);
         if (!response.ok) {
             throw new Error("Failed to fetch address");
         }

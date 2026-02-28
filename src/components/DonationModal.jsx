@@ -28,7 +28,7 @@ import {
 import { useToast } from "../context/ToastContext";
 import { uploadToImgBB } from "../utils/uploadToImgBB";
 
-const API_BASE_URL = "https://replateo-com-1.onrender.com";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 export default function DonationModal({ open, onClose, type = "food" }) {
   const { t } = useTranslation();
   const { user } = useAuth();
