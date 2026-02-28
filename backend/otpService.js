@@ -7,12 +7,14 @@ export const generateOTP = () => {
   return crypto.randomInt(100000, 999999).toString();
 };
 
-// 📧 Gmail Transporter
+// 📧 Brevo SMTP Transporter
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp-relay.brevo.com",
+  port: 587,
+  secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: process.env.EMAIL_USER,   // a39971001@smtp-brevo.com
+    pass: process.env.EMAIL_PASS,   // SMTP key
   },
 });
 
