@@ -5,7 +5,6 @@
   import { analyzeFoodImage } from "./foodAnalyzer.js";
   import { logAnalysis } from "./csvStorage.js";
   import { sendOTPEmail, verifyOTP, sendResetOTPEmail } from "./otpService.js";
-  import { readFile } from "fs/promises";
   import admin from "firebase-admin";
 
   dotenv.config();
@@ -61,22 +60,23 @@
   /* =========================
     🔥 FIREBASE ADMIN INIT
     ========================= */
-  const serviceAccountPath = "./serviceAccountKey.json";
+ /* =========================
+   🔥 FIREBASE ADMIN INIT
+========================= */
 
-  try {
-    const serviceAccount = JSON.parse(
-      await readFile(serviceAccountPath, "utf-8"),
-    );
+try {
+  const serviceAccount = JSON.parse(
+    process.env.FIREBASE_SERVICE_ACCOUNT
+  );
 
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-    });
+  admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+  });
 
-    console.log("🔥 Firebase Admin Initialized");
-  } catch (error) {
-    console.warn("⚠️ Firebase Admin NOT initialized.");
-    console.warn(error.message);
-  }
+  console.log("🔥 Firebase Admin Initialized");
+} catch (error) {
+  console.error("❌ Firebase Admin failed:", error.message);
+}
 
   /* =========================
     🔔 CREATE NOTIFICATION
