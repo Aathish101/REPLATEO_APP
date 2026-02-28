@@ -1,12 +1,13 @@
 import nodemailer from "nodemailer";
 import crypto from "crypto";
+import admin from "firebase-admin";
 
-const otpStore = new Map();
-
+// 🔢 Generate OTP
 export const generateOTP = () => {
   return crypto.randomInt(100000, 999999).toString();
 };
 
+// 📧 Gmail Transporter
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -15,6 +16,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+// 📤 Send OTP
 export const sendOTPEmail = async (email) => {
   const normalizedEmail = email.toLowerCase();
   const otp = generateOTP();
@@ -30,36 +32,53 @@ export const sendOTPEmail = async (email) => {
       `,
     });
 
-    otpStore.set(normalizedEmail, {
+    // 🔥 Store OTP in Firestore
+    await admin.firestore().collection("otps").doc(normalizedEmail).set({
       otp,
       expires: Date.now() + 15 * 60 * 1000,
     });
 
-    console.log("✅ OTP sent successfully via Gmail");
+    console.log("✅ OTP sent & stored in Firestore");
     return true;
 
   } catch (error) {
-    console.error("❌ Gmail OTP Error:", error);
+    console.error("❌ Gmail OTP Error:", error.message);
     return false;
   }
 };
 
-export const verifyOTP = (email, otp) => {
+// ✅ Verify OTP (Firestore version)
+export const verifyOTP = async (email, otp) => {
   const normalizedEmail = email.toLowerCase();
-  const record = otpStore.get(normalizedEmail);
 
-  if (!record) return false;
-  if (Date.now() > record.expires) {
-    otpStore.delete(normalizedEmail);
+  try {
+    const doc = await admin
+      .firestore()
+      .collection("otps")
+      .doc(normalizedEmail)
+      .get();
+
+    if (!doc.exists) return false;
+
+    const data = doc.data();
+
+    if (Date.now() > data.expires) {
+      await admin.firestore().collection("otps").doc(normalizedEmail).delete();
+      return false;
+    }
+
+    if (data.otp === otp.toString()) {
+      await admin.firestore().collection("otps").doc(normalizedEmail).delete();
+      return true;
+    }
+
+    return false;
+
+  } catch (error) {
+    console.error("❌ OTP Verify Error:", error.message);
     return false;
   }
-
-  if (record.otp === otp.toString()) {
-    otpStore.delete(normalizedEmail);
-    return true;
-  }
-
-  return false;
 };
 
+// 🔁 Reset OTP reuse
 export const sendResetOTPEmail = sendOTPEmail;
