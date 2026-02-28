@@ -6,10 +6,10 @@
   import { logAnalysis } from "./csvStorage.js";
   import { sendOTPEmail, verifyOTP, sendResetOTPEmail } from "./otpService.js";
   import admin from "firebase-admin";
-
+import { readFile } from "fs/promises";
   dotenv.config();
 
-  console.log(`🚀 Starting Backend...`);
+  console.log(`🚀 Starting Backend...`);  
   console.log(
     `📧 Configured Email: ${process.env.EMAIL_USER ? process.env.EMAIL_USER.replace(/(.{3}).*(@.*)/, "$1***$2") : "NOT SET"}`,
   );
@@ -64,9 +64,11 @@
    🔥 FIREBASE ADMIN INIT
 ========================= */
 
+
+const serviceAccountPath = "/etc/secrets/serviceAccountKey.json";
 try {
   const serviceAccount = JSON.parse(
-    process.env.FIREBASE_SERVICE_ACCOUNT
+    await readFile(serviceAccountPath, "utf-8")
   );
 
   admin.initializeApp({
@@ -75,7 +77,8 @@ try {
 
   console.log("🔥 Firebase Admin Initialized");
 } catch (error) {
-  console.error("❌ Firebase Admin failed:", error.message);
+  console.warn("⚠️ Firebase Admin NOT initialized.");
+  console.warn(error.message);
 }
 
   /* =========================
